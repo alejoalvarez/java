@@ -69,7 +69,7 @@ public class FunctionsExample {
 This example accepts **Function** as an argument, convert a **List** into a ** Map**
 
 ```cs
-FunctionsExample1.java
+Functions1.java
 
 package com.alejo.functions1;
 
@@ -110,6 +110,8 @@ public class Functions1 {
 This example accepts **Function** as an argument, convert a **List** of String into another **List** of String, which was hashed with SHA256.
 
 ```cs
+Functions1.java
+
 package com.alejo.functions1;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -119,11 +121,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-public class Java8Function4 {
+public class Functions1 {
 
     public static void main(String[] args) {
 
-        Java8Function4 obj = new Java8Function4();
+        Functions1 obj = new Functions1();
 
         List<String> list = Arrays.asList("node", "c++", "java", "javascript");
 
