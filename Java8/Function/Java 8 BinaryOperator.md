@@ -13,7 +13,7 @@ public interface BinaryOperator<T> extends BiFunction<T,T,T> {
 }
 ```
 
-The **BiFunction** tajes two argument of any type, and returns a result of any type.
+The **BiFunction** takes two argument of any type, and returns a result of any type.
 
 ```cs
 BiFunction,java
