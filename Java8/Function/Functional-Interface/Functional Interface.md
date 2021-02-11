@@ -8,6 +8,17 @@ A functional interface can implement one or more methods by default, but you mus
 
 They become important when using lambdas expressions.
 
+Six basics function interfaces:
+  
+|Interface|Signature|Example|
+|---|---|---|
+|UnaryOperator<T>|T apply(T t)|String::toLowerCase, Math::tan|
+|BinaryOperator<T>| T apply(T t1, T t2)|BigInteger::add, Math::pow|
+|Function<T, R>|  R apply(T t)| Arrays::asList, Integer::toBinaryString|
+|Predicate<T, U>|boolean test(T t, U u)| String::isEmpty, Character::isDigit  |
+|Supplier<T>|T get() | LocalDate::now, Instant::now|
+|Consumer<T>|void accept(T t)|System.out::println, Error::printStackTrace|
+
 It is recommended to use the **@FunctionalInterface** annotation to follow good development practices.
 
 
