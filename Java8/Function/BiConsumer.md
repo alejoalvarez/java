@@ -85,7 +85,7 @@ public class JavaBiConsumer3 {
 
 ```
 
-## 2. Map.forEach
+## 3. Map.forEach
 
 In the JDK source code, **Map.forEach** accepts a **BiConsumer**  as a argument
 
