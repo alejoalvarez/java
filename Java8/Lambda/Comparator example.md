@@ -1,7 +1,9 @@
 # Java 8 Lambda: Comparator example #
 
-<center>
-<img src="https://alejoalvarez.github.io/Images/Java-Lambda/lambda1.png"></center>
+<p align="center">
+  <img src="https://alejoalvarez.github.io/Images/Java-Lambda/lambda1.png">
+</p>
+
 
 In this example, we will show you how to use java 8 Lambda expression to write a **Comparator** to sort a list.
 
