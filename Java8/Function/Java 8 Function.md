@@ -18,7 +18,7 @@ public interface Function<T, R> {
 * T - Type of the input to the function.
 * R - Type of the result of the function.
 
-1. Function <T,R>
+## 1. Function <T,R>
 
 This example takes a  ```<T>``` **String** and returns the length of the string as ```<R>``` **Integer**
 
@@ -41,7 +41,7 @@ public class FunctionExample {
 
 ```
 
-2. Chain Function <T, R>
+## 2. Chain Function <T, R>
 
 This example chains the **Function** with **andThen()**.
 
@@ -64,7 +64,7 @@ public class FunctionsExample {
 
 ```
 
-3. List to Map
+## 3. List to Map
 
 This example accepts **Function** as an argument, convert a **List** into a ** Map**
 
@@ -105,7 +105,7 @@ public class Functions1 {
 }
 ```
 
-4. List to List
+## 4. List to List
 
 This example accepts **Function** as an argument, convert a **List** of String into another **List** of String, which was hashed with SHA256.
 
