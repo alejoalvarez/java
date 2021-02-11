@@ -1,6 +1,8 @@
 # Java 8 Method References #
 
-In Java 8, the double colon (::) operator is called method refences. Rfer to the following examples:
+In Java 8, the double colon (::) operator is called method refences. Refer to the following examples:
+
+They are a new feature of Java 8 that allows us to refer to the constructor methods through a functional interface, in other words, we can implement the functionality of an abstract method through the implementation of an already implemented method, assigning the implemented method to the abstract method. This can stand out a bit strange, especially because java was, until version 8, a too strict language.
 
 Anonymous class to print a list.
 
