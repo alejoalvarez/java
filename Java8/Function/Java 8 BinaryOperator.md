@@ -1,11 +1,11 @@
 # Java 8 BinaryOperator #
 
-In Java 8, **BinaryOperator** is a functional interface and it exends **BiFunction**.
+In Java 8, **BinaryOperator** is a functional interface and it extends **BiFunction**.
 
 The **BinaryOperator** takes two arguments of the same type and returns a result of the same type of its arguments.
 
 ```cs
-Binaryoperator.java
+BinaryOperator.java
 
 @FunctionalInterface
 public interface BinaryOperator<T> extends BiFunction<T,T,T> {
