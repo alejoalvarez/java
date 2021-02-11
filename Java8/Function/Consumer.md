@@ -1,6 +1,6 @@
 # Java 8 Consumer #
 
-In Java 8, **Consumer** is a functional interface, it takes an
+In Java 8, **Consumer** is a functional interface, it takes an argument and returns nothing
 
 
 ```cs
