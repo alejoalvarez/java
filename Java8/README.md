@@ -1,6 +1,3 @@
-# Java
-Topics about Java 8
-
 # Table of Contents
 * [Default Methods](https://github.com/alejoalvarez/Java/tree/main/Java8/Default%20Method)
 * [Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java8/Lambda)
