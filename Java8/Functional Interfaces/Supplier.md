@@ -1,6 +1,6 @@
 # Java 8 Supplier #
 
-In Java 8, **Consumer** is a functional interface, it takes no arguments and returns a result.
+In Java 8, **Supplier** is a functional interface, it takes no arguments and returns a result a given generic type.
 
 
 ```java
