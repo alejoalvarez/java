@@ -32,10 +32,5 @@ Topics about Java 8
   
 [Parallel Streams](https://github.com/alejoalvarez/Java/blob/main/Java8/Parallel%20Streams/Parallel%20Streams.md)</br>
 [Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map/Map.md)</br>
-[Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API.md)
-* [Clock](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Clock)
-* [Timezones](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Timezomes)
-* [LocalTime](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/LocalTime)
-* [LocalDate](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/LocalDate)
-* [LocalDateTime](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/LocalDateTime) 
+[Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20API/Date%20API.md)
 [Annotations](https://github.com/alejoalvarez/Java/tree/main/Java8/Annotations.md)
