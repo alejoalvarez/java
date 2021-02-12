@@ -21,6 +21,8 @@
   * [match](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-match.md)
   * [count](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-count.md)
   * [reduce](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-reduce.md)
+  * [collect](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-collect.md)
+  * [flatMap](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-flatMap.md)
 * [Parallel Streams](https://github.com/alejoalvarez/Java/blob/main/Java8/Parallel%20Streams/Parallel%20Streams.md)
 * [Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map/Map.md)
 * [Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20API/Date%20API.md)
