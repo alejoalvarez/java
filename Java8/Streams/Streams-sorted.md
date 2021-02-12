@@ -3,6 +3,17 @@
 Sorted is an intermediate operation which returns a sorted view of the stream. The elements are sorted in natural order unless you pass a custom ```Comparator```.
 
 ```java
+
+List<String> stringCollection = new ArrayList<>();
+stringCollection.add("ddd2");
+stringCollection.add("aaa2");
+stringCollection.add("bbb1");
+stringCollection.add("aaa1");
+stringCollection.add("bbb3");
+stringCollection.add("ccc");
+stringCollection.add("bbb2");
+stringCollection.add("ddd1");
+
 stringCollection
     .stream()
     .sorted()
