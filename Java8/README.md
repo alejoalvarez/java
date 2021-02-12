@@ -6,11 +6,9 @@ Topics about Java 8
 
 
 # Table of Contents
-[Default Methods](https://github.com/alejoalvarez/Java/tree/main/Java8/Default%20Method)
-
-[Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java8/Lambda)
-
-[Functional Interfaces](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/Functional%20Interface.md)
+[Default Methods](https://github.com/alejoalvarez/Java/tree/main/Java8/Default%20Method)</br>
+[Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java8/Lambda)</br> 
+[Functional Interfaces](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/Functional%20Interface.md) </br>
 *  [Predicate](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/Predicate.md)
 *  [Function](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/Function.md)
 *  [Supplier](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/Supplier.md)
@@ -23,8 +21,7 @@ Topics about Java 8
 *  [BinaryOperator](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/BinaryOperator.md)
 *  [UnaryOperator](https://github.com/alejoalvarez/Java/blob/main/Java8/Functional%20Interfaces/UnaryOperator.md)
 
-[Method References](https://github.com/alejoalvarez/Java/tree/main/Java8/Method%20Reference)
-
+[Method References](https://github.com/alejoalvarez/Java/tree/main/Java8/Method%20Reference)</br>
 [Streams](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams.md)
 * [filter](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-filter.md)
 * [sorted](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-sorted.md)
@@ -33,12 +30,8 @@ Topics about Java 8
 * [count](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-count.md)
 * [reduce](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-reduce.md)
   
-[Parallel Streams](https://github.com/alejoalvarez/Java/tree/main/Java8/Parallel%20%Streams.md)
-* [Sequential sort](https://github.com/alejoalvarez/Java/tree/main/Java8/Parallel%20%Streams/Sequental-sort)
-* [Parallel sort](https://github.com/alejoalvarez/Java/tree/main/Java8/Parallel%20%Streams/Parallel-sort)
-
-[Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map.md)
-
+[Parallel Streams](https://github.com/alejoalvarez/Java/tree/main/Java8/Parallel%20%Streams.md)</br>
+[Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map.md)</br>
 [Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API.md)
 * [Clock](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Clock)
 * [Timezones](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Timezomes)
