@@ -20,7 +20,7 @@ This interface is going to mark us an error at compilation time, because it is n
 
 ## Practical example
 
-[See code](PENDING)
+[See code](https://github.com/alejoalvarez/Java/tree/main/Java8/Default%20Method/Example%201)
 
 Let's imagine that we are programming a system that processes orders of various types, as in the case of an ERP, this system could create various types of orders, such as a purchase, sale, shipment order, etc. All these orders could have something in common, such as, for example, a total, a list of items associated with the order and the items could have a number of products and a price, likewise the details would have a total.
 
