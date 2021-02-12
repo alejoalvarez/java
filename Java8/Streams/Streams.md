@@ -287,5 +287,4 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 
 In this example ```sorted``` is never been called because ```filter``` reduces the input collection to just one element. So the performance is greatly increased for larger input collections.
     
-    
-    
+  
