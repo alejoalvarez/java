@@ -30,8 +30,8 @@ Topics about Java 8
 * [count](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-count.md)
 * [reduce](https://github.com/alejoalvarez/Java/blob/main/Java8/Streams/Streams-reduce.md)
   
-[Parallel Streams](https://github.com/alejoalvarez/Java/tree/main/Java8/Parallel%20%Streams.md)</br>
-[Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map.md)</br>
+[Parallel Streams](https://github.com/alejoalvarez/Java/blob/main/Java8/Parallel%20Streams/Parallel%20Streams.md)</br>
+[Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map/Map.md)</br>
 [Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API.md)
 * [Clock](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Clock)
 * [Timezones](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20%API/Timezomes)
