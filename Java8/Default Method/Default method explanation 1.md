@@ -20,6 +20,8 @@ This interface is going to mark us an error at compilation time, because it is n
 
 ## Practical example
 
+[See code](PENDING)
+
 Let's imagine that we are programming a system that processes orders of various types, as in the case of an ERP, this system could create various types of orders, such as a purchase, sale, shipment order, etc. All these orders could have something in common, such as, for example, a total, a list of items associated with the order and the items could have a number of products and a price, likewise the details would have a total.
 
 The interesting thing here is that if all the orders have a total, wouldn't it be good to have a definition of the default method that calculates the total and at the same time the items also implement their method to obtain the total? In the same way, if an order has items, it would not be good to define a method that allows adding the items.
