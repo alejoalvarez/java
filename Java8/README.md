@@ -32,5 +32,5 @@ Topics about Java 8
   
 [Parallel Streams](https://github.com/alejoalvarez/Java/blob/main/Java8/Parallel%20Streams/Parallel%20Streams.md)</br>
 [Map](https://github.com/alejoalvarez/Java/tree/main/Java8/Map/Map.md)</br>
-[Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20API/Date%20API.md)
+[Date API](https://github.com/alejoalvarez/Java/tree/main/Java8/Date%20API/Date%20API.md) </br>
 [Annotations](https://github.com/alejoalvarez/Java/tree/main/Java8/Annotations.md)
