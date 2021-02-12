@@ -2,6 +2,7 @@
 
 In Java 8, **Predicate** is a functional interface; which accepts an argument and returns a boolean. Usually, it used to apply in a filter for a collection of objects.
 
+The interface contains varios default methods for composing predicates to complex logical terms (and, or, negate)
 
 ```cs
 @FunctionalInterface
