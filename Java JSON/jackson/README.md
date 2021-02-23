@@ -93,11 +93,11 @@ public class JavaObjectToJSON {
         Staff staff = new Staff();
 
         staff.setName("alejo");
-        staff.setAge(28);
+        staff.setAge(123);
         staff.setPosition(new String[]{"Developer", "Student"});
         Map<String, BigDecimal> salary = new HashMap() {{
-            put("2013", new BigDecimal(100000));
-            put("2016", new BigDecimal(140000));
+            put("2013", new BigDecimal(130000));
+            put("2016", new BigDecimal(160000));
             put("2021", new BigDecimal(210000));
         }};
         staff.setSalary(salary);
@@ -127,7 +127,7 @@ public class JsonToJavaObject {
             Staff staff = mapper.readValue(new File("c:\\test\\staff.json"), Staff.class);
 
             // JSON string to Java object
-            String jsonInString = "{\"name\":\"mkyong\",\"age\":37,\"skills\":[\"java\",\"python\"]}";
+            String jsonInString = "{\"name\":\"alejo\",\"age\":123,\"skills\":[\"java\",\"python\"]}";
             Staff staff2 = mapper.readValue(jsonInString, Staff.class);
 
             // compact print
@@ -235,4 +235,221 @@ ObjectMapper mapper = new ObjectMapper();
 
 // ignore all null fields globally
 mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+```
+
+## @JsonView
+
+```java
+public class CompanyViews {
+
+    public static class Normal{};
+
+    public static class Manager extends Normal{};
+}
+```
+
+Normal view only displays name and age, Manager view is able to display all.
+
+```java
+import com.fasterxml.jackson.annotation.JsonView;
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+public class Staff {
+
+    @JsonView(CompanyViews.Normal.class)
+    private String name;
+
+    @JsonView(CompanyViews.Normal.class)
+    private int age;
+
+    @JsonView(CompanyViews.Manager.class)
+    private String[] position;
+
+    @JsonView(CompanyViews.Manager.class)
+    private List<String> skills;
+
+    @JsonView(CompanyViews.Manager.class)
+    private Map<String, BigDecimal> salary;
+}
+```
+
+```java
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class JacksonExample {
+
+    public static void main(String[] args) {
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        Staff staff = createStaff();
+
+        try {
+
+            // to enable pretty print
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            // normal
+            String normalView = mapper
+                .writerWithView(CompanyViews.Normal.class)
+                .writeValueAsString(staff);
+
+            System.out.format("Normal views\n%s\n", normalView);
+
+            // manager
+            String managerView = mapper
+                .writerWithView(CompanyViews.Manager.class)
+                .writeValueAsString(staff);
+
+            System.out.format("Manager views\n%s\n", managerView);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Staff createStaff() {
+
+        Staff staff = new Staff();
+
+        staff.setName("alejo");
+        staff.setAge(123);
+        staff.setPosition(new String[]{"Developer", "Student"});
+        Map<String, BigDecimal> salary = new HashMap() {{
+            put("2013", new BigDecimal(130000));
+            put("2016", new BigDecimal(160000));
+            put("2021", new BigDecimal(210000));
+        }};
+        staff.setSalary(salary);
+        staff.setSkills(Arrays.asList("java", "python", "node"));
+
+        return staff;
+    }
+}
+```
+
+```
+Output >>>
+
+Normal views
+{
+  "name" : "alejo",
+  "age" : 123
+}
+
+Manager views
+{
+  "name" : "alejo",
+  "age" : 123,
+  "position" : [ "Developer", "Student" ],
+  "skills" : [ "java", "python", "node" ],
+  "salary" : {
+    "2013" : 130000,
+    "2016" : 160000,
+    "2021" : 210000
+  }
+}
+```
+
+## @JsonIgnore and @JsonIngnoreProperties
+
+By default, Jackson includes all the fields, even static or transient fields.
+
+
+* @JsonIgnore to ignore fields on field level.
+
+```java
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class Staff {
+
+    private String name;
+    private int age;
+    private String[] position;
+    
+    @JsonIgnore
+    private List<String> skills;
+    
+    @JsonIgnore
+    private Map<String, BigDecimal> salary;
+}
+```
+
+```
+Output >>>
+
+{
+  "name" : "alejo",
+  "age" : 28,
+  "position" : [ "Developer", "Student" ]
+}
+```
+
+* @JsonIgnoreProperties to ignore fields on class level.
+
+```java
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"salary", "position"})
+public class Staff {
+
+    private String name;
+    private int age;
+    private String[] position;
+    private List<String> skills;
+    private Map<String, BigDecimal> salary;
+}
+```
+
+```
+Output >>>
+
+{
+  "name" : "alejo",
+  "age" : 123,
+  "skills" : [ "java", "python", "node" ]
+}
+```
+
+### Convert JSON array String to List
+
+```java
+    String json = "[{\"name\":\"alejo\", \"age\":123}, {\"name\":\"alejo2\", \"age\":123}]";
+
+    List<Staff> list = Arrays.asList(mapper.readValue(json, Staff[].class));
+    
+    // or like this:
+    // List<Staff> list = mapper.readValue(json, new TypeReference<List<Staff>>(){});
+```
+
+
+### Convert JSON string to Map 
+
+```java
+String json = "{\"name\":\"alejo\", \"age\":\"123\"}";
+            
+    Map<String, String> map = mapper.readValue(json, Map.class);
+    
+    // or like this:
+    //Map<String, String> map = mapper.readValue(json, new TypeReference<Map<String, String>>(){});
+
+    map.forEach((k, v) -> System.out.format("[key]:%s \t[value]:%s\n", k, v));
+```
+
+```
+Output >>>
+
+[key]:name 	[value]:alejo
+[key]:age 	[value]:123
 ```
