@@ -556,7 +556,6 @@ class TestReporterDemo {
 
         testReporter.publishEntry(values);
     }
-
 }
 ```
 
@@ -614,7 +613,6 @@ interface TestLifecycleLogger {
         logger.info(() -> String.format("Finished executing [%s]",
             testInfo.getDisplayName()));
     }
-
 }
 ```
 
@@ -670,7 +668,6 @@ Another possible application of this feature is to write tests for interface con
 public interface Testable<T> {
 
     T createValue();
-
 }
 ```
 
