@@ -35,7 +35,6 @@ JUnit Jupiter supports the following annotations for configuring tests and exten
 | @RegisterExtension | Used to register extensions programmatically via fields. Such fields are inherited unless they are shadowed.|
 | @TempDir | Used to supply a temporary directory via field injection or parameter injection in a lifecycle method or test method; located in the org.junit.jupiter.api.io package.|
 
-Taken of https://junit.org/junit5/docs/current/user-guide/#writing-tests
 
 ## Meta Annotations and Composed Annotations
 
