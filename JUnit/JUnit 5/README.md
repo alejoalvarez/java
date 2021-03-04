@@ -339,7 +339,6 @@ class AssumptionsDemo {
         // perform these assertions in all environments
         assertEquals(42, calculator.multiply(6, 7));
     }
-
 }
 ```
 
