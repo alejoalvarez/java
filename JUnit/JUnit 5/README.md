@@ -146,7 +146,6 @@ class DisplayNameGeneratorDemo {
         @ValueSource(ints = { -1, -4 })
         void if_it_is_negative(int year) {
         }
-
     }
 
     @Nested
@@ -161,9 +160,7 @@ class DisplayNameGeneratorDemo {
         @ValueSource(ints = { 2016, 2020, 2048 })
         void if_it_is_one_of_the_following_years(int year) {
         }
-
     }
-
 }
 ```
 
