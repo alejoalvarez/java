@@ -1,5 +1,3 @@
-# Java CORE / Java Standard Edition
-
 # Table of Contents
 1. [JDK - JRE - JVM](#jdk-jre-jvm)
 2. [Multiplatform](#multiplatform-java)
