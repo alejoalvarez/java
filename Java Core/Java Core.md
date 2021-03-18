@@ -636,4 +636,25 @@ public class Main {
 }
 ```
 
+**Instance method:**
 
+It is the one that is invoked on an instance
+
+```java
+Person p1 = new Person();
+p1.getName(); // to invoke it you need to create an object of the class
+```
+
+**Class method (static)**
+
+It is the one that can be invoked without existing an instance
+
+```java
+public static String getName(){}
+nameClass.nameMethod(){...}
+
+```
+- When a class is defined with static, the attributes no longer belong to the object, it belongs to the class, this means that if we make a modification to the value of this attribute, all the objects that are using this attribute will be modified
+- Another perculiarity of a static attribute is that it does not need to be an instance, it can be called only by referencing the name of the class
+
+Static helps save memory as the class is invoked directly and no additional object creation is required
