@@ -573,6 +573,10 @@ For attributes, methods and constructors, you can use the one of the following:
 - **default** => The code is only accessible in the same package. This is used when you don't specify a modifier
 - **protected** => The code is accessible in the same package and subclasses
 
+<p align="center">
+<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/AccessModifiers.jpeg">
+</p>
+
 ### Non-Access Modifiers 
 
 For classes, you can use either final or abstract:
