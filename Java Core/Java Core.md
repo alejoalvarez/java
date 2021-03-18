@@ -1,8 +1,8 @@
 # Java CORE / Java Standard Edition
 
 # Table of Contents
-1. [JDK - JRE - JVM](#example)
-2. [Multiplatform](#example2)
+1. [JDK - JRE - JVM](#jdk-jre-jvm)
+2. [Multiplatform](#multiplatform-java)
 3. [Why use java?](#example3)
 4. [Development platforms](#example4)
 5. [Reserved words](#example5)
@@ -551,6 +551,7 @@ It can be written in 3 ways:
 - public static void main(String args[]){}
 - public static void main(String [] args){}
 - public static void main(String… args){} 
+<<<<<<< HEAD
 
 ## Modifiers
 
@@ -631,3 +632,5 @@ public class Main {
   }
 }
 ```
+=======
+>>>>>>> 69c260df89d8d1caa66a4f555b06961cca821835
