@@ -551,7 +551,6 @@ It can be written in 3 ways:
 - public static void main(String args[]){}
 - public static void main(String [] args){}
 - public static void main(String… args){} 
-<<<<<<< HEAD
 
 ## Modifiers
 
@@ -632,5 +631,4 @@ public class Main {
   }
 }
 ```
-=======
->>>>>>> 69c260df89d8d1caa66a4f555b06961cca821835
+
