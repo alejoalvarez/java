@@ -665,3 +665,41 @@ nameClass.nameMethod(){...}
 - Another perculiarity of a static attribute is that it does not need to be an instance, it can be called only by referencing the name of the class
 
 Static helps save memory as the class is invoked directly and no additional object creation is required
+
+### Enum
+
+An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+
+Example 1:
+```java
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+
+Level myVar = Level.MEDIUM;// 
+```
+
+Example 2:
+```java
+@Getter
+@RequiredArgsConstructor
+public enum DocumentTypeEnum {
+    CD (0),
+    CC(1),
+    CE(2),
+    NIT(3),
+    TI(4),
+    PAS(5),
+    IEPN(6),
+    IEPJ(7),
+    FD(8),
+    RC(9);
+
+    private final int code;
+}
+
+
+```
+
