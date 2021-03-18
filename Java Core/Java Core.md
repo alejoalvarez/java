@@ -1,8 +1,8 @@
 # Java CORE / Java Standard Edition
 
 # Table of Contents
-1. [JDK - JRE - JVM](#example)
-2. [Multiplatform](#example2)
+1. [JDK - JRE - JVM](#jdk-jre-jvm)
+2. [Multiplatform](#multiplatform-java)
 3. [Why use java?](#example3)
 4. [Development platforms](#example4)
 5. [Reserved words](#example5)
