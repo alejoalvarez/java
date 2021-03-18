@@ -182,7 +182,7 @@ Narrowing Casting (manually) - converting a larger type to a smaller size type
 double -> float -> long -> int -> char -> short -> byte
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/castingType.jpeg">
+<img height="280" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/castingType.jpeg">
 </p>
 
 ## Control instructions
