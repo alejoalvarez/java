@@ -1,5 +1,5 @@
 # Table of Contents
-* [JDK - JRE - JVM]((https://github.com/alejoalvarez/Java/blob/main/Java%20Core/JDK-JRE-JVM.md)
+* [JDK - JRE - JVM](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/JDK-JRE-JVM.md)
 * [Multiplatform](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Multiplatform.md)
 * [Why use java?](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/WhyUseJava.md)
 * [Development Platforms](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/DevelopmentPlatforms.md)
@@ -7,7 +7,7 @@
 * [Comments](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Comments.md)
 * [Identifiers](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Identifiers.md)
 * [Variables](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Variables.md)
-* [Constant] (https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Constant.md)
+* [Constant](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Constant.md)
 * [Data Types](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/DataTypes.md)
 * [Control Instructions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ControlInstructions.md)
 * [Operators](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Operators.md)
@@ -18,4 +18,10 @@
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [ArraysList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArraysList.md)
+* [LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
+* [HashMap](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashMap.md)
+* [HashSet](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashSet.md)
+* [Iterator](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Iterator.md)
+* [Threads](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads.md)
+
 
