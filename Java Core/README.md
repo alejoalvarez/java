@@ -23,5 +23,6 @@
 * [HashSet](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashSet.md)
 * [Iterator](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Iterator.md)
 * [Threads](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads.md)
+* [Exceptions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Exceptions.md)s
 
 
