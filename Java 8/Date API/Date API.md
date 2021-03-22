@@ -13,8 +13,6 @@ Java 8 created a series of new date and time APIs in **java.time** package.
 * **java.time.Period** – Measures time in years, months and days.
 * **java.time.TemporalAdjuster** – Adjust date.
 
-
-
 ## Clock
 
 Clock provides access to the current date and time. Clocks are aware of a timezone and may be used instead of **System.currentTimeMillis()** to retrieve the current milliseconds. Such an instantaneous point on the time-line is also represented by the class **Instant**. Instants can be used to create legacy **java.util.Date** objects.
