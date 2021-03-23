@@ -17,12 +17,19 @@
 * [User input](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/UserInputs.md)
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
-* [ArraysList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArraysList.md)
+
+Collections
+* [Collections Hierarchy](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/collections.md)
+* [ArrayList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArrayList.md)
 * [LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
 * [HashMap](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashMap.md)
 * [HashSet](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashSet.md)
 * [Iterator](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Iterator.md)
+
+Exceptions
+* [Exceptions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Exceptions.md)
+
+Threads
 * [Threads](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads.md)
-* [Exceptions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Exceptions.md)s
-
-
+* [Threads example](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads1.md)
+* [Executors](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ThreadsExecutors.md)
