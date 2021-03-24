@@ -33,3 +33,6 @@ Threads
 * [Threads](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads.md)
 * [Threads example](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads1.md)
 * [Executors](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ThreadsExecutors.md)
+
+Generics
+* [Generics](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Generics.md)
