@@ -17,6 +17,7 @@
 * [User input](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/UserInputs.md)
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
+* [String](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/String.md)
 
 Collections
 * [Collections Hierarchy](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/collections.md)
