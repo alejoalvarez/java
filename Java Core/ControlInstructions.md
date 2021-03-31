@@ -37,14 +37,23 @@ variable = 	condition ? expressionTrue: expressionFalse
 
 
 **Loops**
+
+In programming languages, loops are used to execute a set of instructions/functions repeatedly when some conditions become true. There are three types of loops in Java.
+
+
 - while
 The while loop loops through a block of code as long as a specified condition is true:
 
 Sintax
 ```java
     while (condition) {
-  // code block to be executed
-}
+    // code block to be executed
+    }
+
+    // Infinitive loop
+    while (true) {
+    // code block to be executed
+    }
 ```
 - do
 The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true
@@ -55,6 +64,14 @@ Syntax
     // code block to be executed
     }   
     while (condition);
+
+    //Infinitive loop
+    do {
+    // code block to be executed
+    }   
+    while (true);
+
+
 ```
 - for
 When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
@@ -63,6 +80,11 @@ Syntax
 ```java
     for (instruction1 ; limit; instruction2){
         instructions;
+    }
+
+    // infinitive loop
+    for(;;){  
+    //code to be executed  
     }
 ```
 
