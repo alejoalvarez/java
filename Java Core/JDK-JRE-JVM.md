@@ -23,6 +23,7 @@ The JDK contains a private Java Virtual Machine (JVM) and a few other resources 
 **Components JDK**
 
 |appletviewer: |	This tool is used to run and debug Java applets without a web browser.|
+|---|---|
 |apt: |	It is an annotation-processing tool.|
 |extcheck: |	it is a utility that detects JAR file conflicts.|
 |idlj: |	An IDL-to-Java compiler. This utility generates Java bindings from a given Java IDL file.|
@@ -129,7 +130,7 @@ Each thread has a private JVM stack, created at the same time as thread.
 
 A new frame is created each time a method is invoked. A frame is destroyed when its method invocation completes.
 
-## Program Counter Register
+## Program Counter Register
 PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
 
 ## Native Method Stack
