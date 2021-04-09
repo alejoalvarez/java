@@ -1,0 +1,15 @@
+# Hashing function
+
+A hashing function or a hash function is the Hierarchical data structure in Java. Hashing function converts a group of characters (called a key) into a small integer value of a certain length called a hash value or hash codes or hash. In short, this hash function maps keys to some values. The hash value represents the original string of characters into some integer value and this value is normally smaller than the original value.
+
+We use hashing functions for indexing and locating items in databases as it is easier to find the shorter hash value than the longer string. The main application of Hashing can is in encryption. We can also call this function as a message digest function or hashing algorithm.
+
+```HashMap:``` HashMap is a collection class in Java that stores the elements as key-value pairs.
+
+Approaches to deal with hashing are:
+
+**Chaining**
+In this approach, each slot of the hash table contains a link that points to a singly-linked list containing key-value pairs with the same hash.
+
+**Open Addressing**
+In open addressing, we store all the elements in the hash table itself. Each table section contains either Nil or a record. 

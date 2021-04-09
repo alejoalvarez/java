@@ -25,6 +25,11 @@ Data Structures
 * [Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Queue.md)
 * [Graph](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Graph.md)
 * [Set](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Set.md)
+* [Binary Trees](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/BinaryTrees.md)
+* [Binary search tree](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/BinarySearchTrees.md)
+* [Binary Heap](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/BinaryHeap.md)
+* [Hashing function](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashingFunction.md)
+
 
 Collections
 * [Collections Hierarchy](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/collections.md)
