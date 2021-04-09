@@ -17,6 +17,7 @@
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [String](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/String.md)
+* [Garbage Collector](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/GarbageCollector.md)
 
 Data Structures
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
@@ -29,7 +30,6 @@ Data Structures
 * [Binary search tree](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/BinarySearchTrees.md)
 * [Binary Heap](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/BinaryHeap.md)
 * [Hashing function](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/HashingFunction.md)
-
 
 Collections
 * [Collections Hierarchy](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/collections.md)
