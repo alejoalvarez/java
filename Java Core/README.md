@@ -18,6 +18,14 @@
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [String](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/String.md)
 
+Data Structures
+* [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
+* [LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
+* [Stack](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Stack.md)
+* [Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Queue.md)
+* [Graph](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Graph.md)
+* [Set](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Set.md)
+
 Collections
 * [Collections Hierarchy](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/collections.md)
 * [ArrayList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArrayList.md)

@@ -4,6 +4,22 @@ Objects in which more than one variable can be saved according to their size and
 - One-dimensional arrays (called vectors)
 - Multidimensional arrays (we call arrays)
 
+Important 
+- Arrays can have data items of simple and similar types such as int or float, or even user-defined datatypes like structures and objects.
+- The common data type of array elements is known as the base type of the array.
+- Arrays are considered as objects in Java.
+- The indexing of the variable in an array starts from 0.
+- We must define an array before we can use it to store information.
+- The storage of arrays in Java is in the form of dynamic allocation in the heap area.
+- We can find the length of arrays using the member ‘length’.
+- The size of an array must be an int value.
+
+Arrays can be of 3 types:
+
+- Single Dimensional Arrays
+- Two-dimensional Arrays
+- Multi-dimensional arrays
+
 Example one-dimensional
 
 ```java
