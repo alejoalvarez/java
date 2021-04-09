@@ -1,7 +1,7 @@
 ## Why use java?
 
 - Object oriented
-- Language compiled and embedded at the same time
+- Language compiled and Interpreted at the same time, Java integrates the power of Compiled Languages with the flexibility of Interpreted Languages.
 - Strongly typed
 - Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
 - Simplicity
