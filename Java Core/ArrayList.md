@@ -4,6 +4,19 @@ The **ArrayList** class is a resizable array, which can be found in the ```java.
 
 The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. 
 
+Important
+
+- Arrays can have data items of simple types such as int or float, or even user-defined datatypes like structures and objects.
+- The common data type of array elements is known as the base type of the array.
+- Arrays are considered as objects in Java.
+- The indexing of the variable in an array starts from 0.
+- Like other variables in Java, an array must be defined before it can be used to store information.
+- Arrays in Java are stored in the form of dynamic allocation in the heap area.
+- We can find the length of arrays using the member ‘length’.
+- The size of an array must be an int value.
+- Object class is a superclass of the Array.
+- Array implements the two interfaces: Serializable and Cloneable.
+
 Example
 Create an ArrayList object called cars that will store strings:
 
