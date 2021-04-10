@@ -19,8 +19,8 @@ S, U, V, etc. –2nd, 3rd, 4th types
 
 If before it was declared in a GenericsMethodClass class
 
-```java
-public class GenericMethodClass {
+```java[
+public class GenericMethodClass {]
     public <T> void printElement(T element){
         System.out.println(element);
     }
