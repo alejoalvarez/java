@@ -6,7 +6,9 @@ The compiler will treat any interfaces metting the definition of a functional in
 
 A functional interface can implement one or more methods by default, but you must necessarily have a single abstract method (Abstract method is a method without implementation).
 
-They become important when using lambdas expressions.
+A functional interface is an interface in which there is only one abstract method. A functional interface has only one functionality to exhibit. From Java 8 onwards, we can use lambda expressions to represent the instance of a functional interface. There can be any number of default and static methods in a functional interface that have an implementation. Some of the examples of functional interfaces in Java are Runnable, ActionListener, Comparable interfaces. We had to use anonymous inner class objects to implement functional interfaces before Java 8.
+
+
 
 Six basics function interfaces:
   
@@ -48,3 +50,40 @@ Let's see how in line 8 we define a lambda expression where "Hello" concatenates
 Hello Alejo Alvarez
 Hello world!
 ```
+
+
+### Examples Lambda Expressions
+
+| Expressions | Descriptions |
+|---|---|
+| () -> {}  | No parameters; void result |
+| () -> 91 | No parameters, expression bod|
+| () -> null | No parameters, expression body |
+| () -> { return 91; } | No parameters, block body with return |
+| () -> { System.gc(); } | No parameters, void block body |
+| (int x) -> x+1 | Single declared-type argument|
+| (int x) -> { return x+1; } | same as above|
+| (x) -> x+1 | Single inferred-type argument, same as below|
+| x -> x+1 | Parentheses optional for single inferred-type case|
+| (String s) -> s.length() | Single declared-type argument|
+| (Thread t) -> { t.start(); } | Single declared-type argument|
+| s -> s.length() | Single inferred-type argument|
+| t -> { t.start(); } | Single inferred-type argument|
+| (int x, int y) -> x+y | Multiple declared-type parameters|
+| (x,y) -> x+y | Multiple inferred-type parameters|
+| (x, final y) -> x+y | Illegal: can’t modify inferred-type parameters|
+| (x, int y) -> x+y | Illegal: can’t mix inferred and declared types|
+
+
+Example Lmabda using functional interface
+```java
+public class Example {
+  public static void main(String args[]) {
+    //lambda expression to create the object
+    new Thread(() - >{
+      System.out.println("Created a new thread");
+    }).start();
+  }
+}
+```
+

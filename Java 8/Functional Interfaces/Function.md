@@ -2,6 +2,8 @@
 
 In Java 8, **Function** is a functional interface; it takes an argument (Object of type T) and returns an object (object of type R). The argument and output can be a different type.
 
+The Java Function interface or java.util.function.Function interface is one of the most important functional interfaces
+
 Default methods can be used to chain multiple functions together (compose, andThen).
 
 ```cs
