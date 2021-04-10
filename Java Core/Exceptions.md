@@ -31,9 +31,6 @@ Some common examples of Exceptions in Java are:
 - Network connection loss in the middle of a communication
 - JVM has run out of memory.
 
-**Checked** – Extends ```java.lang.Exception```, for recoverable condition, try-catch the exception explicitly, compile error.
-**Unchecked** – Extends ```java.lang.RuntimeException```, for unrecoverable condition, like programming errors, no need try-catch, runtime error.
-
 
 ## Difference between Checked and Unchecked Exceptions**
 
@@ -45,6 +42,22 @@ The classes which inherit RuntimeException are known as unchecked exceptions e.g
 
 **Error**
 Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+**Checked** – Extends ```java.lang.Exception```, for recoverable condition, try-catch the exception explicitly, compile error.
+**Unchecked** – Extends ```java.lang.RuntimeException```, for unrecoverable condition, like programming errors, no need try-catch, runtime error.
+
+
+## Java Exception Methods
+
+The Following list shows some important methods available in the Throwable class.
+
+|Method |	Description|
+|---|---|
+|public String getMessage()	| It returns a detailed description of the occurred exception. |
+|public Throwable getCause() |	Returns the cause of the occurred exception.|
+|public String toString()	| Returns the result of the getMessage() method.|
+|public void printStackTrace()	| Prints the result of the toString() method with the stack trace.|
+|public StackTraceElement [] getStackTrace()	| Returns an array containing each element of the stack trace. |
 
 **Hierarchy Exceptions**
 
