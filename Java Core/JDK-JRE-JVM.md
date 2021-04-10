@@ -170,3 +170,4 @@ The following are a few important differences between JDK, JVM, and JRE.
 - JDK is for the development environment whereas JRE is for the run time environment.
 - JVM runs inside the JRE environment. JRE contains class libraries, Java Virtual Machine and other files other than development tools like compiler and debugger.
 - JRE is a subset of JDK. JDK contains JRE along with development tools such as compiler, debugger, etc.
+
