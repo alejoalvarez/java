@@ -243,7 +243,6 @@ public interface Runnable {
 }
 ```
 
-
 Here is declaration of the Callable interface:
 
 ```java
