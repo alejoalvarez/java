@@ -52,3 +52,7 @@ Generics
 
 Reflection
 * [Reflection](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Reflection.md)
+
+Annotations
+* [Annotations](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Annotations.md)
+
