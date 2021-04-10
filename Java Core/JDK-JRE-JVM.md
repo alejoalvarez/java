@@ -91,11 +91,37 @@ JVM provides definitions for the:
 
 ### Classloader
 
+<p align="center">
+<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/Java-classLoader.jpeg">
+</p>
+
 Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
 
 - Bootstrap ClassLoader: This is the first classloader which is the super class of Extension classloader. It loads the rt.jar file which contains all class files of Java Standard Edition like java.lang package classes, java.net package classes, java.util package classes, java.io package classes, java.sql package classes etc.
 - Extension ClassLoader: This is the child classloader of Bootstrap and parent classloader of System classloader. It loades the jar files located inside $JAVA_HOME/jre/lib/ext directory.
 - System/Application ClassLoader: This is the child classloader of Extension classloader. It loads the classfiles from classpath. By default, classpath is set to current directory. You can change the classpath using "-cp" or "-classpath" switch. It is also known as Application classloader.
+
+**Initialization**
+
+This operation involves the assignment of all static variables with their specific values in the block of the program. In this phase, there is an assignment of all static variables with their values defined in the code and static block. The execution takes place from top to bottom in a class and from parent to child in the class hierarchy.
+
+**Loading**
+
+This operation loads files from secondary memory into the main memory (RAM) for execution. The Classloader reads the .class file, generates the corresponding binary data, and saves it in the method area.
+
+JVM stores some information for each .class file in the method area. This information is:
+
+The fully qualified name of the loaded class and its immediate parent class.
+Whether .class file is related to interface or an enum or a class.
+Modifier, Variables and Method information, etc.
+After loading the .class file, JVM creates an object of type Class to represent this file in the heap memory. The programmers can use this Class object for getting class level information like the name of the class, parent name, methods, and variable information, etc. To get this object reference we can use the getClass() method of Object class.
+
+Linking
+This operation combines different files in the main program together. It performs verification, preparation, and (optionally) resolution.
+
+Verification: The Verification phase checks the correctness of the .class file. It means that it checks that the file formation and generation is by a valid compiler or not. If the verification fails then we get a java.lang.Verify Exception.
+Preparation: JVM allocates memory for class variables and initializes the memory to default values.
+Resolution: Resolution is the process of replacing symbolic references with direct references. It uses searching into the method area to locate the referenced entity.
 
 ```java
 //Let's see an example to print the classloader name  
@@ -115,26 +141,12 @@ public class ClassLoaderExample
 ```
 These are the internal classloaders provided by Java. If you want to create your own classloader, you need to extend the ClassLoader class.
 
-
-## Class(Method) Area
-Class(Method) Area stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
-
-## Heap
-It is the runtime data area in which objects are allocated.
-
-## Stack
-
-Java Stack stores frames. It holds local variables and partial results, and plays a part in method invocation and return.
-
-Each thread has a private JVM stack, created at the same time as thread.
-
-A new frame is created each time a method is invoked. A frame is destroyed when its method invocation completes.
-
-## Program Counter Register
-PC (program counter) register contains the address of the Java virtual machine instruction currently being executed.
-
-## Native Method Stack
-It contains all the native methods used in the application.
+## JVM Memory area
+- Method Area– It stores the structure of each class like method data, field data, runtime pool, metadata.
+- Heap– Heap is the runtime area where object allocation takes place.
+- Stacks– Stacks store the partial results and local variables of a program. Whenever a thread is created, there is a simultaneous creation of JVM stack. When we invoke a method, a new frame creates and destroys at the same time when the invocation process completes.
+- PC Registers – It stores the address of the currently executing JVM instruction.
+- Native Method Stacks – It includes all the native methods required in any application. It is not written in java.
 
 ## Execution Engine
 It contains:
@@ -145,3 +157,16 @@ It contains:
 
 ## Java Native Interface
 Java Native Interface (JNI) is a framework which provides an interface to communicate with another application written in another language like C, C++, Assembly etc. Java uses JNI framework to send output to the Console or interact with OS libraries.
+
+## Method Libraries
+
+Native Libraries is a collection of the Native Libraries(C, C++) which are essential for the Execution Engine.
+
+## Diference between JDK, JRE, JVM 
+
+The following are a few important differences between JDK, JVM, and JRE.
+
+- JVM stands for Java Virtual machine, JDK stands for Java development kit, and JRE stands for Java runtime environment.
+- JDK is for the development environment whereas JRE is for the run time environment.
+- JVM runs inside the JRE environment. JRE contains class libraries, Java Virtual Machine and other files other than development tools like compiler and debugger.
+- JRE is a subset of JDK. JDK contains JRE along with development tools such as compiler, debugger, etc.
