@@ -8,6 +8,29 @@ There are two types of exceptions :
 - **checked exception**
 - **unchecked exception** 
 
+
+## What is Java Exception?
+Exception, in general, refers to some contradiction or unexpected situation, or in short, an unexpected error that occurs during program execution. There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
+
+The reason for this is that sometimes the resources are not available or sometimes the range of an array is invalid. These types of anomalous situations are called exceptions and the way to handle them is called exception handling.
+
+The unexpected errors or bugs during the runtime or normal execution of a program is a Java Exception.
+
+This exception causes disruption in the execution of the program.
+
+**Examples of Java Exception**
+
+Some common examples of Exceptions in Java are:
+
+- Divide by zero errors
+- Trying to access the array elements with an invalid index
+- Invalid input data by the user
+- Hard disk crash
+- Opening a file that does not exist
+- Heap memory exhausted
+- Network connection loss in the middle of a communication
+- JVM has run out of memory.
+
 **Checked** – Extends ```java.lang.Exception```, for recoverable condition, try-catch the exception explicitly, compile error.
 **Unchecked** – Extends ```java.lang.RuntimeException```, for unrecoverable condition, like programming errors, no need try-catch, runtime error.
 
