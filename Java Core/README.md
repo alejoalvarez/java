@@ -46,6 +46,7 @@ Threads
 * [Threads](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads.md)
 * [Threads example](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads1.md)
 * [Executors](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ThreadsExecutors.md)
+* [Synchronized](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Synchronized.md)
 
 Generics
 * [Generics](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Generics.md)
@@ -56,3 +57,5 @@ Reflection
 Annotations
 * [Annotations](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Annotations.md)
 
+POJO vs Java Beans
+* [Annotations](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/POJO-JavaBeans.md)
