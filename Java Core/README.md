@@ -60,3 +60,6 @@ Annotations
 
 POJO vs Java Beans
 * [Annotations](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/POJO-JavaBeans.md)
+
+Serialization
+* [Serialization](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Serialization.md)
