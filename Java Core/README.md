@@ -18,6 +18,7 @@
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [String](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/String.md)
 * [Garbage Collector](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/GarbageCollector.md)
+* [Regular Expressions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/RegularExpressions.md)
 
 Data Structures
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
