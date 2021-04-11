@@ -88,6 +88,8 @@ It allows executing the generics without specifying the data type, that is, this
 
 ### Wildcard unbounded (use extends)
 
+We use the Unbounded wildcards when we want to specify the type of wildcard with the wildcard character ?.  We generally use this wildcard when the code inside the method is using the Object functionality and also when the code inside the method does not depend upon the parameter type.
+
 ```java
 public void list(List<?> list){
     for(Object a : list){
@@ -131,6 +133,9 @@ public void listUpperBounded(List<? extends Person> list){
 Any type of the indicated subclass is used, for the example any subclass of Person
 
 ### Wildcard lowerBounded
+
+We use the Lower Bounded wildcards to widen the use of the type of variable. For example, if we want to add the list of integers in our method we can use the List<Integer>, but using this we will be bound to use only the list of integers. So here, we can also use the List<Number> and List<Object> to store the list of integers. So we use the Lower Bounded wildcard to achieve this. We can use this by a wildcard character ? and put a super keyword after that followed by the lower bound.
+Example: <? super LowerBound>
 
 ```java
 public void listLowerBounded(List<? super Student> list){
