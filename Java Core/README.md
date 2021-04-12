@@ -1,6 +1,7 @@
 # Table of Contents
 * [JDK - JRE - JVM](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/JDK-JRE-JVM.md)
 * [Multiplatform](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Multiplatform.md)
+* [Versions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Versions.md)
 * [Why use java?](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/WhyUseJava.md)
 * [Development Platforms](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/DevelopmentPlatforms.md)
 * [Reserved words](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ReservedWords.md)
