@@ -474,7 +474,7 @@ class TestingAStackDemo {
 }
 ```
 
-### Dependency Injection for Constructor and Methods
+### Dependency Injection for Constructor and Methods
 
 In all prior JUnit versions, test constructors or methods were not allowed to have parameters (at least not with the standard Runner implementations). As one of the major changes in JUnit Jupiter, both test constructors and methods are now permitted to have parameters. This allows for greater flexibility and enables Dependency Injection for constructors and methods.
 
