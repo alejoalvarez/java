@@ -1,6 +1,5 @@
 # Table of Contents
-* [PENDING](PENDING)
+* [String New Methods](PENDING)
+* [Files New Methods](PENDING)
+* [Var in lambda expression](PENDING)
 
-<p align="center">
-<img height="250" src="PENDING">
-</p>
