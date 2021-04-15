@@ -43,7 +43,7 @@ This interface contains the following methods.
 |boolean	|destroyForcibly()|	It requests the process to be killed forcibly.|
 |boolean	|equals(Object other)	| It returns true if other object is non-null, is of the same implementation, and represents the same system process; otherwise it It returns false.|
 |int	|hashCode() |	It returns a hash code value for this ProcessHandle.|
-|ProcessHandle.Info	|info()|	It returns a snapshot of information about the process.|
+| ProcessHandle.Info|info()|	It returns a snapshot of information about the process.|
 |boolean |	isAlive()	|It tests whether the process represented by this ProcessHandle is alive.|
 |static Optional<ProcessHandle>	|of(long pid)	|It returns an Optional<ProcessHandle> for an existing native process.|
 |CompletableFuture<ProcessHandle>	|onExit()	|It returns a CompletableFuture<ProcessHandle> for the termination of the process.|
@@ -72,6 +72,8 @@ public static interface ProcessHandle.Info
 |Optional<String>	|user()	|It returns the user of the process.|
 
 Java 9 Process API Example
+
+```java
 public class ProcessApiExample {  
     public static void main(String[] args) {  
         ProcessHandle currentProcess = ProcessHandle.current();     // Current processhandle  
@@ -84,3 +86,5 @@ public class ProcessApiExample {
         System.out.println("Process's parent "+currentProcess.parent());  // Parent of the process  
     }  
 } 
+```
+

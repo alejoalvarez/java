@@ -8,11 +8,9 @@ Oracle has released Java 9 with rich set of new features. It includes various up
 * [@SafeVarargs Annotation](PENDING)
 * [Collection Factory Methods](PENDING)
 * [Process API Improvement](PENDING)
-* [New Version-String Scheme](PENDING)
-* [JShell: The Java Shell (REPL)](PENDING)
-* [Process API Improvement](PENDING)
 * [Control Panel](PENDING)
 * [Stream API Improvement](PENDING)
 * [Installer Enhancement for Microsoft windows and many more](PENDING)
 
 
+* JShell: The Java Shell (REPL)
