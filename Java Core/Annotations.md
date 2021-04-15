@@ -47,7 +47,10 @@ The type annotations are applicable to any place where there is a use of a type.
 Code to demonstrate a Type Annotation
 
 ```java
-import java.lang.annotation. * ; @Target(ElementType.TYPE_USE)@interface TypeAnnoDemo {}
+import java.lang.annotation.* ; 
+
+@Target(ElementType.TYPE_USE)
+@interface TypeAnnoDemo {}
 public class MyClass {
   public static void main(String[] args) {@TypeAnnoDemo String s = "Hello,I am annotated with a type annotation";
     System.out.println(s);
@@ -64,20 +67,25 @@ I am annotated with a type annotation
 There is a use of annotation with the return type of the function”);
 ```
 
-### Repeating Annotations in java
+### Repeating Annotations in java
 
 Repeating Annotations are the annotations that we apply to a single item more than once. The repeating annotations must be annotated with the @Repeatable annotation, which is present in the java.lang.annotation package. The value of this annotation specifies the container type for the repeatable annotation. There is a container specified as an annotation whose value field is an array of the repeatable annotation type. Hence, to create a repeatable annotation, firstly we need to create the container annotation, and then specify the annotation type as an argument to the @Repeatable annotation.
 
 
 ```java
-import java.lang. * ;@Retention(RetentionPolicy.RUNTIME)@Repeatable(MyRepeatedAnnos.class)@interface MyWords {
+import java.lang.* ;
+
+@Retention(RetentionPolicy.RUNTIME)@Repeatable(MyRepeatedAnnos.class)@interface MyWords {
   String word()
 default "Hello World";
   int value()
 default 0;
 }
+
 // Creating a container annotation
-@Retention(RetentionPolicy.RUNTIME)@interface MyRepeatedAnnotations {
+@Retention(RetentionPolicy.RUNTIME)
+
+@interface MyRepeatedAnnotations {
   MyWords[] value();
 }
 public class MyClass {
@@ -102,4 +110,84 @@ public class MyClass {
 RESULT
 @MyRepeatedAnnotations(value={@MyWords(value=1, word=”Data”), @Words(value=2, word=”Flair”)})
 
+```
+
+## Custom annotations
+
+```java
+public @interface ExampleAnnotation{
+
+  String name();
+  String description();
+}
+
+class Main{
+  @ExampleAnnotation(name = "test", description = "test annotation")
+  public void testMethod(){
+    // implementation
+  }
+}
+```
+
+## Properties
+
+- @Target - Specifies the type of element to which the annotation is to be associated.
+  - ElementType.TYPE - can be applied to any element of the class.
+  - ElementType.FIELD - can be applied to a member of the class.
+  - ElementType.METHOD - can be applied to a method
+  - ElementType.PARAMETER - can be applied to parameters of a method.
+  - ElementType.CONSTRUCTOR - can be applied to constructors
+  - ElementType.LOCAL_VARIABLE - can be applied to local variables
+  - ElementType.ANNOTATION_TYPE - indicates that the declared type itself is an annotation type.
+- @Retention - Specifies the retention level of the annotation.
+  - RetentionPolicy.SOURCE - Retained only at the code level; ignored by the compiler.
+  - RetentionPolicy.CLASS - Held at compile time, but ignored at run time.
+  - RetentionPolicy.RUNTIME - Held at run time, only accessible at run time.
+- @Documented - Will cause the annotation to be mentioned in the javadoc.
+
+
+Example
+
+```java
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.reflect.Method;
+ 
+@Retention(RetentionPolicy.RUNTIME)  // annotation is used in Runtime
+@interface MyAnnotation{
+     
+    String key();
+    String value();
+}
+ 
+public class MyAnnotationTest {
+ 
+    @MyAnnotation(key="site", value="alejo.com")
+    public void myAnnotationTestMethod(){
+         
+        try {
+            Class<? extends MyAnnotationTest> cls = this.getClass();
+            Method mth = cls.getMethod("myAnnotationTestMethod");
+            MyAnnotation myAnnotation = mth.getAnnotation(MyAnnotation.class);
+            System.out.println("key: " + myAnnotation.key());
+            System.out.println("value: " + myAnnotation.value());
+        } catch (SecurityException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+     
+    public static void main(String a[]){
+         
+        MyAnnotationTest mat = new MyAnnotationTest();
+        mat.myAnnotationTestMethod();
+    }
+}
+
+// RESULT
+key: site
+value: alejo.com
 ```
