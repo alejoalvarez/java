@@ -10,7 +10,3 @@ Oracle has released Java 9 with rich set of new features. It includes various up
 * [Process API Improvement](PENDING)
 * [Control Panel](PENDING)
 * [Stream API Improvement](PENDING)
-* [Installer Enhancement for Microsoft windows and many more](PENDING)
-
-
-* JShell: The Java Shell (REPL)
