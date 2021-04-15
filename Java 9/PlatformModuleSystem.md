@@ -43,12 +43,14 @@ To create module, it is recommended to follow given directory structure, it is s
 
 ```The name of the directory containing a module's sources should be equal to the name of the module, e.g. com.alejo.```
 
+```
 src
 |___com.alejo
    |__com
    | |___alejo
    |   |____Hello.java
    |_module-info.java
+```
 
 Create a file module-info.java, inside this file, declare a module by using module identifier and provide module name same as the directory name that contains it. In our case, our directory name is com.javatpoint.
 
@@ -84,12 +86,14 @@ javac -d mods --module-source-path src/ --module com.alejo
 
 After compiling, it will create a new directory that contains the following structure.
 
+```
 mods/
  |_____com.alejo
     |___com
     |  |____alejo
     |    |___Hello.class
     |___module-info.class
+```
 
 Now, we have a compiled module that can be just run.
 
@@ -124,4 +128,7 @@ module com.alejo {
 See, we created an empty module but it contains a java.base module. Why? Because all Java modules are linked to java.base module and it is default module.
 
 
-
+**List module**
+```sh
+java --list-modules
+```
