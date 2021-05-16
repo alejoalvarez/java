@@ -125,7 +125,7 @@ RESULT
 
 ```
 
-## It cannot be used in the following context:
+## It cannot be used in the following context:
 
 While working with Local type inference, we must aware that it has restricted scope and can be used in limited scenarios. The following are the scenarios where Java does not allow to use of var.
 
@@ -135,7 +135,7 @@ While working with Local type inference, we must aware that it has restricted sc
 - Not allowed in the method return type
 - Not allowed in method parameters
 
-## Example: Where var can't be used
+## Example: Where var can't be used
 Let's have an example where we will not use the var:
 
 ```java
