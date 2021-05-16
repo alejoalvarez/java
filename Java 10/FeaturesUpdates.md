@@ -17,7 +17,7 @@ Java 10 version is scheduled to be a short-term release and its updates and life
 - Root Certificates
 - Time-Based Release Versioning
 
-## Local Variable Type Inference
+## Local Variable Type Inference
 
 Type inference is a concept that allows a compiler to infer the type of variable or data. Java already uses type inference in collections and anonymous inner class using <> diamond operator. In Java 10 version, this feature is enhanced to extend type inference to declarations of local variables with initializers.
 
