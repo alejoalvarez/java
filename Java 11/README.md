@@ -1,9 +1,9 @@
 # Table of Contents
-* [String New Methods](PENDING)
-* [Files New Methods](PENDING)
-* [Var in lambda expression](PENDING)
-* [Nest-Based Access Control](PENDING)
-* [HTTP Client API](PENDING)
+* [String New Methods](https://github.com/alejoalvarez/Java/blob/main/Java%2011/StringNewMethods.md)
+* [Files New Methods](https://github.com/alejoalvarez/Java/blob/main/Java%2011/FilesNewMethods.md)
+* [Var in lambda expression](https://github.com/alejoalvarez/Java/blob/main/Java%2011/Var-LambdaExpression.md)
+* [Nest-Based Access Control](https://github.com/alejoalvarez/Java/blob/main/Java%2011/Nest-Based-Access-Control.md)
+* [HTTP Client API](https://github.com/alejoalvarez/Java/blob/main/Java%2011/HTTP-Client-API.md)
 
 * [JEP 309: Dynamic Class-File Constants](https://openjdk.java.net/jeps/309)
 - Extends class-file format to support a new constant-pool form, CONSTANT_Dynamic, target language designers and compiler implementors
