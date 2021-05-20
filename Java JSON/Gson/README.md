@@ -14,6 +14,8 @@ JsonNull: Represents a null object
 <img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/gson.png">
 </p>
 
+[See an example](https://github.com/alejoalvarez/Java-Exercises/blob/main/Exercise-JSON/Gson/exercise3.md)
+
 Gson provide simple **toJson()** and **fromJson()** methods to convert Java objects to / from JSON.
 
 ```toJson()``` – Java object to JSON
