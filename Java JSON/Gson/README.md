@@ -1,5 +1,19 @@
 # Gson - parse to Json
 
+It is a Java API developed by google that is used to convert Java objects to JSON (serialization) and JSON to Java objects (deserialization)
+
+This library structures the JSON as follows:
+
+**JsonElement**: This class represents an object in the JSON that can be one of the following 4 types:
+- **JsonObject**: This class represents an object in the JSON, that is, a set of key-value pairs where the keys are strings and the values are another type of JsonElement
+- **JsonArray**: This class represents an array in the JSON, an array is a list of JsonElement each of which can be a different type. This is an ordered list, so the order in which the items are added is preserved
+- **JsonPrimitive**: This class represents a primitive data type or simple data object (String, Integer, Double, etc.)
+JsonNull: Represents a null object
+   
+<p align="center">
+<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/gson.png">
+</p>
+
 Gson provide simple **toJson()** and **fromJson()** methods to convert Java objects to / from JSON.
 
 ```toJson()``` – Java object to JSON
