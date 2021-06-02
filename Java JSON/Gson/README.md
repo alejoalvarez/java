@@ -11,7 +11,7 @@ This library structures the JSON as follows:
 JsonNull: Represents a null object
    
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/gson.png">
+<img height="300" src="https://user-images.githubusercontent.com/13514156/120520327-46319800-c399-11eb-9dcb-f51e888c234a.png">
 </p>
 
 [See an example](https://github.com/alejoalvarez/Java-Exercises/blob/main/Exercise-JSON/Gson/exercise3.md)
