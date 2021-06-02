@@ -159,7 +159,7 @@ For attributes, methods and constructors, you can use the one of the following:
 ```We cannot mark a class with a private access modifier in Java!!```
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/AccessModifiers.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120519706-893f3b80-c398-11eb-89b9-5368149984a5.jpeg">
 </p>
 
 ### Non-Access Modifiers 
