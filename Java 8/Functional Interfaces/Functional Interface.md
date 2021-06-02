@@ -23,26 +23,64 @@ Six basics function interfaces:
 
 It is recommended to use the **@FunctionalInterface** annotation to follow good development practices.
 
-
-<img src="https://alejoalvarez.github.io/Images/Java-Functional-Interface/FunctionalInterface1.png">
-
+```java
+public interface IFunctional {
+  public String sayHelloTo(String namePerson);
+} 
+```
 
 In this interface, we define a method that sends a greeting to the person that we pass as a parameter, but the body of the method is not yet defined.
 
-<img src="https://alejoalvarez.github.io/Images/Java-Functional-Interface/FunctionalInterface2.png">
-
+```java
+public interface IFunctional {
+  public String sayHelloTo(String namePerson);
+  
+  public default String sayHelloWorld(){
+    return "Hello World";
+  }
+}
+```
+    
 This second interface is also a functional interface, since it only has an abstract method.
 
 Another way to ensure that we are defining a functional inteface correctly is to annotate it with @FunctionalInterface, since when annotating it the IDE will automatically throw us an error if we do not comply with the rules of a functional interface. However, it is important to note that at runtime it will not give us a different behavior, since it is used to prevent errors when defining interfaces. Let's see how the previous class would look with this annotation:
 
-<img src="https://alejoalvarez.github.io/Images/Java-Functional-Interface/FunctionalInterface3.png">
-
+```java
+@FunctionalInterface
+public interface IFunctional {
+  public String sayHelloTo(String namePerson);
+  
+  public default String sayHelloWorld(){
+    return "Hello World";
+  }
+}
+``` 
+  
 ## Functional Interfaces with lambda expressions ##
 
 Let's see how you could use the IStrategy class using lambda expressions:
 
-<img src="https://alejoalvarez.github.io/Images/Java-Functional-Interface/FunctionalInterface4.png">
-
+```java
+ public class Main{
+  
+   public static void main(){
+      IFunctional functional1 = (name) -> "Hello " + name;
+      System.out.println(functional1.sayHelloTo("Alejo Alvarez"));
+      System.out.println(functional1.sayHelloWorld());
+   }
+ }  
+  
+@FunctionalInterface
+interface IFunctional {
+  public String sayHelloTo(String namePerson);
+  
+  public default String sayHelloWorld(){
+    return "Hello World";
+  }
+}
+``` 
+  
+  
 Let's see how in line 8 we define a lambda expression where "Hello" concatenates with the name of the person that is passed as a parameter, then this expression is assigned to the variable to the **functional1** variable, which is of type **IFunctional**. After this we call the sayHelloTo method which returns the greeting to "Alejo Alvarez", followed in line 11 we call the sayHelloWord method, which sends a Hello Word.
 
 
