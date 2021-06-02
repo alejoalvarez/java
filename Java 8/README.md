@@ -1,3 +1,7 @@
+<p align="center">
+<img height="250" src="https://user-images.githubusercontent.com/13514156/120511196-c9e68700-c38f-11eb-9919-2ca0ee2b100f.png">
+</p>
+
 # Table of Contents
 * [Default Methods](https://github.com/alejoalvarez/Java/tree/main/Java%208/Default%20Method)
 * [Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java%208/Lambda)
@@ -28,6 +32,4 @@
 * [Date API](https://github.com/alejoalvarez/Java/tree/main/Java%208/Date%20API/Date%20API.md)
 * [forEach](https://github.com/alejoalvarez/Java/tree/main/Java%208/forEach/forEach.md)
 
-<p align="center">
-<img height="250" src="https://alejoalvarez.github.io/Images/java8.png">
-</p>
+
