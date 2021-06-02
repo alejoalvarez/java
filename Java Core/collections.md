@@ -77,8 +77,10 @@ These classes are more than enough to solve most of our requirements in programm
 An algorithm refers to the methods that perform useful computing operations, such as searching, sorting and shuffling on objects that implement collection interfaces. The algorithms are polymorphic: that is, we can use the same method on several different implementations of the appropriate Java collection interface. We define these algorithms as static methods within the Collections class.
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/Collections.jpeg">
+<img  src="https://user-images.githubusercontent.com/13514156/120520142-11254580-c399-11eb-961a-2d0bacdf89c2.jpeg">
 </p>
+
+
 
 As we can see, the highest element is the Collection interface, for which, based on its natural interface, we understand that it has a series of "basic" methods where its behavior will be defined as it is implemented in more elements. The Set and List interfaces are mainly derived from it.
 
