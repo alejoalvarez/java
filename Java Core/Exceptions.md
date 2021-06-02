@@ -9,7 +9,7 @@ There are two types of exceptions :
 - **unchecked exception** 
 
 
-## What is Java Exception?
+## What is Java Exception?
 Exception, in general, refers to some contradiction or unexpected situation, or in short, an unexpected error that occurs during program execution. There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
 
 The reason for this is that sometimes the resources are not available or sometimes the range of an array is invalid. These types of anomalous situations are called exceptions and the way to handle them is called exception handling.
