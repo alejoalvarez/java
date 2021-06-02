@@ -62,8 +62,9 @@ The Following list shows some important methods available in the Throwable class
 **Hierarchy Exceptions**
 
 <p align="center">
-<img height="300" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/hierarchyException.jpeg">
+<img height="400" src="https://user-images.githubusercontent.com/13514156/120519397-2d74b280-c398-11eb-90bf-90c145a303f0.jpeg">
 </p>
+
 
 | keyword | Description |
 |---|---|
