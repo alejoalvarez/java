@@ -1,7 +1,7 @@
 # Serialization
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/serialization.png">
+<img src="https://user-images.githubusercontent.com/13514156/120519900-ca375000-c398-11eb-906e-6212d7f7816f.png">
 </p>
 
 The basic concept is that we will convert the object into the form of a byte array and we will send that byte array to the server that we will again convert this byte array into the object. Basically the process of converting the object into the byte stream is called Serialization; we say that we serialize the object into the byte array. And, when we convert the byte stream back to the object then we call it Deserialization; we say that the byte stream is being deserialized to the object.
@@ -178,7 +178,7 @@ class Teacher extends Employee {
 Now we can easily serialize the object of the Teacher class that extends the Employee class. As the Employee class is Serializable, the Teacher class will automatically become Serializable without implementing the Serializable interface.
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/Serialization-De-Serialization-in-java.png">
+<img src="https://user-images.githubusercontent.com/13514156/120519953-d8856c00-c398-11eb-969b-3353a6955517.png">
 </p>
 
 ## Java Serialization with the static data member
