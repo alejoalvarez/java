@@ -3,15 +3,14 @@
 Multitasking and Threads (Thread and Runnable) allows us to execute several processes at the same time; in other words, concurrently and that is why it allows us to make programs that run in less time and are more efficient. Obviously we cannot execute infinite processes concurrently since the hardware has its limitations, but it is rare today that computers that do not have more than one core, therefore in a processor with two cores, two processes could be run at the same time and thus our program would use the hardware resources to the maximum. To see it, let's put the example of the 4 sequential processes
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/thread1.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120513472-f00d2680-c391-11eb-8853-a1b306c45971.jpeg">
 </p>
 
 If instead of doing it sequentially, it is done with 4 threads, the program would run in 20 seconds (longer process execution time)
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/thread2.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120513544-00250600-c392-11eb-976d-9448f6f573a0.jpeg">
 </p>
-
 
 Example:
 
@@ -87,7 +86,7 @@ public class Main{
 As we can see, the purchase of customer 1 is processed first and then the purchase of customer 2, taking a processing time of 26 seconds
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/thread3.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120513605-0e732200-c392-11eb-88cc-ba69a0d82a3f.jpeg">
 </p>
 
 What if instead of processing one client first and then another, we processed both at the same time? How long would it take for the program to run? Well, if instead of having only one Cashier (that is, a single thread), there were two Cashiers (that is, two threads or threads) we could process the two clients at the same time and take less time to execute the program. For this we must modify the class "Cashier.java" and make this class inherit from the Thread class to inherit and override some of its methods. First we are going to see how we code this new class "CashierThread.java" and then we will explain its characteristics.
@@ -153,7 +152,7 @@ This program is execute in 15 seconds
 In this example we see how the effect is as if two cashiers processed the customer's purchase in parallel without the result of the application suffering any variation in its final result, which is to process all customer purchases independently. . Graphically we see that the program has done the following in two different threads:
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/thread4.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120513660-1d59d480-c392-11eb-84ba-7cc758dd16d1.jpeg">
 </p>
 
 Another way to do the same but without inheriting from the "Thread" class is to implement the "Runnable" Interface. In this case we will not have nor will we be able to overwrite the methods of the Thread class since we will not use it and we will only have to overwrite the "run ()" method. In this case, it will only be necessary to implement the "run ()" method so that the processes implemented in that method are executed in a different thread. We are going to see an example of how using objects of the classes "Customer.java" and "Cashier.java" we can implement multitasking in the same class where the Main method of the application is called. Here is the encoding in the "MainRunnable.java" class:
