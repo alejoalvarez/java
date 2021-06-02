@@ -7,7 +7,7 @@ Binary Search Tree is the other most important hierarchical data structure in Ja
 - The left and right subtrees must be a Binary Search Tree.
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/BST.png">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120518528-4b8de300-c397-11eb-9464-4f3911cc45ed.png">
 </p>
 
 The primary use of a binary search tree is searching applications like maps where the data enters frequently. Binary search trees provide quick searching and accessing options which are fast as compared to the linked lists.
