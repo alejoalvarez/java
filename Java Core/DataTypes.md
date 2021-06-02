@@ -18,11 +18,11 @@ Wrapper types, the same as primitive types but as objects (Byte, Short, Integer 
 Note: ```The difference between int and Integer is that Integer being a wrapper allows null```
 
 <p align="center">
-<img height="250" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/primitiveType.jpeg">
+<img height="450" src="https://user-images.githubusercontent.com/13514156/120518760-855ee980-c397-11eb-8fc2-84834caf286a.jpeg">
 </p>
 
 <p align="center">
-<img height="250" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/objectType.jpeg">
+<img height="450" src="https://user-images.githubusercontent.com/13514156/120518815-96a7f600-c397-11eb-8a32-eb8498f14de1.jpeg">
 </p>
 
 There are 8 types of primitive data types:
@@ -37,7 +37,7 @@ There are 8 types of primitive data types:
 - double data type
 
 <p align="center">
-<img height="250" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/java-datatypes.jpeg">
+<img height="450" src="https://user-images.githubusercontent.com/13514156/120518877-a6bfd580-c397-11eb-954d-01ecb05d631d.jpeg">
 </p>
 
 **Boolean Data Type**
