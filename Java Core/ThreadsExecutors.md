@@ -15,9 +15,8 @@ The executor service framework helps in creating and managing threads in an appl
 ### Task Delegation
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/java-executorservice.png">
+<img src="https://user-images.githubusercontent.com/13514156/120513972-66118d80-c392-11eb-95ad-5dc1f711dd7e.png">
 </p>
-
 
 ### Creating an ExecutorService
 
@@ -56,7 +55,7 @@ ExecutorService is very similar to the thread pool. The implementation of the Ex
 The ThreadPoolExecutor executes the specified tasks using one of its internally pooled threads.
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/ThreadPoolExecutor.png">
+<img src="https://user-images.githubusercontent.com/13514156/120514020-74f84000-c392-11eb-8091-08875e6aa570.png">
 </p>
 
 **Creating a threadPoolExecutor**
