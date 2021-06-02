@@ -3,7 +3,7 @@
 Here some reserved words
 
 <p align="center">
-<img height="250" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/reservedWords.jpeg">
+<img height="250" src="https://user-images.githubusercontent.com/13514156/120519814-b1c73580-c398-11eb-982e-3b10162250b5.jpeg">
 </p>
 
 **abstract**: Java abstract keyword is used to declare abstract class. Abstract class can provide the implementation of interface. It can have abstract and non-abstract methods.
