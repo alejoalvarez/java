@@ -7,7 +7,7 @@
 - Java compiler
 
 <p align="center">
-<img height="250" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/JDK.png">
+<img height="250" src="https://user-images.githubusercontent.com/13514156/120519104-e1297280-c397-11eb-9491-d9b654d8de31.png">
 </p>
 
 ```JDK``` is an acronym for Java Development Kit. The Java Development Kit (JDK) is a software development environment which is used to develop Java applications and applets. It physically exists. It contains JRE + development tools.
@@ -85,14 +85,13 @@ JVM provides definitions for the:
 ## JVM Architecture
 
 <p align="center">
-<img height="450" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/JVM%20architecture.png">
+<img height="450" src="https://user-images.githubusercontent.com/13514156/120519163-f2727f00-c397-11eb-9d6d-7a52cd26b3df.png">
 </p>
-
 
 ### Classloader
 
 <p align="center">
-<img src="https://github.com/alejoalvarez/Images/blob/trunk/Java/Java-classLoader.jpeg">
+<img src="https://user-images.githubusercontent.com/13514156/120519220-fef6d780-c397-11eb-98dd-7028e6174682.jpeg">
 </p>
 
 Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.
