@@ -1,7 +1,7 @@
 # Streams - filter()
 
 <p align="center">
-<img height="250" src="https://alejoalvarez.github.io/Images/Java-Streams/Streams-filter1.png">
+<img height="250" src="https://user-images.githubusercontent.com/13514156/120511063-a58aaa80-c38f-11eb-8f15-0adc5e3370c0.png">
 </p>
 
 ## Example 1 - Streams filter() and collect()
