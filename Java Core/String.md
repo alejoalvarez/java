@@ -17,7 +17,7 @@ Java String class provides a lot of methods to perform operations on strings suc
 The java.lang.String class implements Serializable, Comparable and CharSequence interfaces.
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/string-implements.png">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120518319-12557300-c397-11eb-9838-7a9ff8501101.png">
 </p> 
 
 CharSequence Interface
@@ -25,7 +25,7 @@ CharSequence Interface
 The CharSequence interface is used to represent the sequence of characters. String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in java by using these three classes.
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/charsequence.png">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120518375-21d4bc00-c397-11eb-9a55-9c5033a437c0.png">
 </p> 
 
 The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created. For mutable strings, you can use StringBuffer and StringBuilder classes.
