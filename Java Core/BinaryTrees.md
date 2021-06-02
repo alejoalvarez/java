@@ -6,7 +6,7 @@ A binary tree is either empty (which is called a null tree), or it consists of a
 Each node in a binary tree can have zero, one or maximum two successors or child nodes: left successor or child node and right successor or child node. A terminal node (that is, a node with n successor) is called a leaf node.
 
 <p align="center">
-<img height="270" src="https://github.com/alejoalvarez/Images/blob/trunk/Java/binary-tree-in-java.jpeg">
+<img height="270" src="https://user-images.githubusercontent.com/13514156/120518632-64969400-c397-11eb-8ed9-7d1a210c62dc.jpeg">
 </p>
 
 Representation of Binary Trees
