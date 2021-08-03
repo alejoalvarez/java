@@ -29,6 +29,8 @@ P.S This Shenandoah GC became a product feature in Java 15 JEP 379.
 ## JEP 230: Microbenchmark Suite
 
 Added a range of Java Microbenchmark Harness (JMH) benchmarks to the JDK source code, for those interested to add or modify the JDK source code itself, now they have a way to compare the performance.
+
+More information: JEP 230: [Microbenchmark Suite](https://openjdk.java.net/jeps/230)
   
 ## JEP 325: Switch Expressions (Preview)
 
@@ -93,10 +95,17 @@ Note
 This switch expressions have a second preview in Java 13 (dropped the break in favor of yield), and this switch expressions became a standard feature in Java 14.
 ```
 
+More information: JEP 325: [JEP 325: Switch Expressions](https://openjdk.java.net/jeps/325)
+
 ## JEP 334: JVM Constants API
 
 A new package java.lang.constant, a list of new classes and interfaces to model the key class-file and run-time artifacts, for example, the constant pool.
   
+More information: JEP 334: [JEP 334: JVM Constants API](https://openjdk.java.net/jeps/334)
+  
 ## JEP 346: Promptly Return Unused Committed Memory from G1
 
 This JEP improves the performance of the Garbage-first (G1) collector. If the application is low of the activity or idle, G1 periodically trigger a concurrent cycle to determine overall Java heap usage and return unused Java heap memory to the operating system.
+
+More information: JEP 346: [JEP 346: Promptly Return Unused Committed Memory from G1](https://openjdk.java.net/jeps/346)
+
