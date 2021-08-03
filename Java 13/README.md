@@ -1,5 +1,4 @@
 # Table of Contents
-* [PENDING](PENDING)
 
 ## JEP 350 Dynamic CDS Archives
 
