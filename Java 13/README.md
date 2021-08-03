@@ -9,20 +9,25 @@ This command creates a CDS archive file of a ```.jar```
  ```
  $ java -XX:ArchiveClassesAtExit=hello.jsa -cp hello.jar Hello
  ```
+
  
 This command runs a .jar with an existing CDS archive.
   
 ```
 $  bin/java -XX:SharedArchiveFile=hello.jsa -cp hello.jar Hello
 ```
-  
+
 The Class Data Sharing (CDS) improves startup performance by creating a class-data archive once and reusing it so that the JVM needs not to recreate it again.
+
+More information: JEP 350: [Dynamic CDS Archives](https://openjdk.java.net/jeps/350)
 
 ## JEP 351 ZGC: Uncommit Unused Memory
 
 Java 11 introduced the JEP 333: Z Garbage Collector (Experimental); it provides a short pause times when cleaning up heap memories. However, it didn’t return unused heap memory to the operating system, even when it was unused for a long time.
 
 This JEP enhanced the ZGC by returning unused heap memory to the operating system.
+
+More information: JEP 351 ZGC: [Uncommit Unused Memory](https://openjdk.java.net/jeps/351)
 
 ## JEP-353 Reimplement the Legacy Socket API
 
@@ -74,6 +79,9 @@ public class JEP353 {
     }
 }
 ```
+
+More information: JEP-353: [Reimplement the Legacy Socket API](https://openjdk.java.net/jeps/353)
+
 ## JEP-354 Switch Expressions (Preview)
 
 Java 12 introduced JEP 325 Switch expressions. This JEP dropped break value in favor of yield keyword to return a value from switch expressions.
@@ -171,6 +179,8 @@ Or like this, mixed the use of arrow syntax and yield.
   }
 ```
 
+More information: JEP-354: [Switch Expressions (Preview)](https://openjdk.java.net/jeps/354)
+
 ## JEP-355 Text Blocks (Preview)
 
 This JEP introduces a multi-line string literal, a text block, finally.
@@ -211,3 +221,4 @@ Now Java 13
                 """;
   ```
 
+More information: JEP-355: [Text Blocks (Preview)](https://openjdk.java.net/jeps/355)
