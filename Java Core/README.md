@@ -13,7 +13,7 @@
 * [Control Instructions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ControlInstructions.md)
 * [Operators](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Operators.md)
 * [Methods](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Methods.md)
-* [Enums](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Enums.md)
+* Enums
 * [User input](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/UserInputs.md)
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
