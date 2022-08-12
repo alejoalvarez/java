@@ -180,7 +180,7 @@ finally block is always executed
 rest of code
 ```
 
-## throw 
+## throw 
 
 is used to explicitly throw an exception.
 
