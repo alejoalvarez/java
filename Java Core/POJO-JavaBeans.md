@@ -55,7 +55,7 @@ We can use the POJO class in any Java code. POJO class is not tied to the framew
 
 POJO behaves like an object that incorporates the business logic of the application. The following figure shows the working of a POJO class. From the image, you can clearly see that the controller interacts with the business logic. The business logic, in turn, interacts with the POJO class for getting access to the database.
 
-## What are Java Beans?
+## What are Java Beans?
 
 Java Beans are a special type of POJOs. But there are some restrictions on Java beans to become POJO. These restrictions are as follows:
 
