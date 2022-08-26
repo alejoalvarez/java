@@ -16,11 +16,11 @@ A singly-linked list is a linked list that stores data and the reference to the 
 There is a START pointer that stores the very first address of the linked list. The next pointer of the last or end node stores NULL value, which points to the last node of the list which does not point to any other node.
 
 
-### Doubly linked list
+### Doubly linked list
 
 It is the same as a singly-linked list with the difference that it has two pointers, one pointing to the previous node and one pointing to the next node in the sequence. Therefore, a doubly-linked list allows us to traverse in both the directions of the list.
 
-### Circular linked list
+### Circular linked list
 
 In the Circular Linked List, all the nodes align to form a circle. In this linked list, there is no NULL node at the end. We can define any node as the first node. Circular linked lists are useful in implementing a circular queue.
 
