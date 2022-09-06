@@ -1,4 +1,9 @@
-## JDK - JRE - JVM
+# Table of Contents
+1. [JDK-JRE-JVM](#JDK-JRE-JVM)
+3. [JVM Architecture](#JVM-Architecture)
+
+
+## JDK-JRE-JVM <a name="JDK-JRE-JVM"></a>
 
 **JDK** is Composed of 3 things:
 - **JRE** - Java Runtime Environment, contain the (JVM, libraries, javaw, etc)
@@ -82,7 +87,7 @@ JVM provides definitions for the:
 - Garbage-collected heap
 - Fatal error reporting etc.
 
-## JVM Architecture
+## JVM Architecture <a name="JVM-Architecture"></a>
 
 <p align="center">
 <img height="450" src="https://user-images.githubusercontent.com/13514156/120519163-f2727f00-c397-11eb-9d6d-7a52cd26b3df.png">
