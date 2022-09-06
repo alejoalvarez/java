@@ -61,35 +61,34 @@ The Pattern class is used to define or create regular expressions or patterns. T
 
 Example
 ```java
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
-public class Main
-{
-  public static void main(String args[])
-  {
-    //Using compile() matches() and matcher() methods
-    boolean match1=Pattern.compile("a.o").matcher("Alejo").matches();
-    // . represents a single character
-    System.out.println(match1);
-    //Using boolean matches method
-    boolean match2 = Pattern.matches("Alejo.", "Al");
-    // .. represents 2 characters
-    System.out.println(match2);
-    // text "Java" match pattern "Ja.."
-    System.out.println (Pattern.matches("Ja..", "Java"));
-    String str = "aaa";
-    System.out.println("Using the String matches method: "+str.matches(".a"));
-    System.out.println("Using Pattern matches method: "+Pattern.matches("a.a", str));
-  }
+public class PatternRegExp {
+
+    public static void main(String[] args) {
+        boolean match1 = Pattern.compile("a.e").matcher("ale").matches(); // . represent a single character
+        System.out.println(match1);
+
+        boolean match2 = Pattern.matches("Ja..", "Java"); // .. represent 2 characters
+        System.out.println(match2);
+
+        boolean match3 = Pattern.matches("Al...", "Alejo"); //... represent 3 characters
+        System.out.println(match3);
+
+        String str = "aaa";
+        System.out.println("String match method: " + str.matches(".a"));
+        System.out.println("Pattern matches method: " + Pattern.matches("a.a", str));
+    }
 }
+```
 
-//RESULT
+**Output**
+```
 true
 true
 true
-false
-Using the String matches method: true
-Using Pattern matches method: true
+String match method: false
+Pattern matches method: true
 ```
 
 ### java.util.Matcher class
@@ -115,70 +114,83 @@ The object of Matcher class is an engine which is used to perform match operatio
 Example
 
 ```java
-import java.util.regex.*;
+package regularexpressions;
 
-public class Main
-{
-  public static void main(String args[])
-  {
-    //Case Sensitive Searching
-    // Creating a pattern "Study" to be searched
-    Pattern pattern = Pattern.compile("Study");
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-    // Searching above pattern in "StudyJavaStudyAlejo"
-    Matcher match = pattern.matcher("StudyJavaStudyAlejo");
+public class MatcherRegExp {
 
-    // Printing start and end indexes of the pattern in text
-    System.out.println("Case Sensitive Searching:");
-    while (match.find())
+    public static void main(String[] args) {
 
-      System.out.println("Pattern found from " + match.start() +
-          " to " + (match.end()-1));
+        //Case Sensitive Searching
+        Pattern pattern = Pattern.compile("Study");
+        Matcher match = pattern.matcher("StudyJavaStudyAlejo");
+        System.out.println("Case Sensitive Searching:");
+        while (match.find()){     // Printing start and end indexes of the pattern in text
+            System.out.println("Pattern found from " + match.start() + " to " + (match.end() - 1) );
+        }
 
-    //Case Insensitive Searching
-    Pattern pattern1= Pattern.compile("al*",       Pattern.CASE_INSENSITIVE);
-    // Searching above pattern in "StudyJavaStudyAlejo"
-    Matcher match1 = pattern1.matcher("StudyJavaStudyAlejo");
-    System.out.println("\nCase InSensitive Searching:");
-    // Printing start and end indexes of the pattern in text
-    while (match1.find())
-      System.out.println("Pattern found from " + match1.start() +
-          " to " + (match1.end()-1));
+        //Case Insensitive Searching
+        Pattern pattern1= Pattern.compile("al", Pattern.CASE_INSENSITIVE);
+        Matcher match1 = pattern1.matcher("StudyJavaStudyAlejo");
+        System.out.println("\nCase InSensitive Searching:");
+        while (match1.find()) {     // Printing start and end indexes of the pattern in text
+            System.out.println("Pattern found from " + match1.start() + " to " + (match1.end() - 1));
+        }
 
-    // Splitting the String
+        // Splitting the String
+        String text = "Study@Alejo#Example&Of%Java";
+        String delimiter = "\\W";
+        Pattern pattern2 = Pattern.compile(delimiter, Pattern.CASE_INSENSITIVE);
+        String[] result = pattern2.split(text);
+        System.out.println("\nSplitting the String around special characters:");
+        for (String temp: result) {
+            System.out.println(temp);
+        }
 
-    String text = "Study@Alejo#Example&Of%Java";
-    String delimiter = "\\W";
-    Pattern pattern2 = Pattern.compile(delimiter, Pattern.CASE_INSENSITIVE);
+        // Replacing the String
+        System.out.println("\nReplacing the Strings with other String:");
+        String regex = "Python";
+        String inputString = "StudyAlejo Example2 Tutorial. " + "It is a Example2 Tutorial";
+        String replaceString = "Java";
+        Pattern pattern3 = Pattern.compile(regex); // get a Pattern object
+        Matcher matcher = pattern3.matcher(inputString); // get a matcher object
 
-    String[] result = pattern2.split(text);
-    System.out.println("\nSplitting the String around special characters:");
-    for (String temp: result)
-      System.out.println(temp);
+        System.out.println("Using replaceFirst() Method");
+        inputString = matcher.replaceFirst( replaceString);
+        System.out.println(inputString);
 
-    // Replacing the String
-    System.out.println("\nReplacing the Strings with other String:");
-    String regex = "Python";
-    String inputString = "StudyAlejo Example2 Tutorial. " + "It is a Example2 Tutorial";
-    String replaceString = "Java";
-
-    // get a Pttern object
-    Pattern pattern3 = Pattern.compile(regex);
-
-    // get a matcher object
-    Matcher m = pattern3.matcher(inputString);
-
-    System.out.println("Using replaceFirst() Method");
-    inputString = m.replaceFirst( replaceString);
-    System.out.println(inputString);
-
-    System.out.println("\nUsing replaceAll() Method");
-    inputString = m.replaceAll( replaceString);
-    System.out.println(inputString);
-  }
+        System.out.println("\nUsing replaceAll() Method");
+        inputString = matcher.replaceAll( replaceString);
+        System.out.println(inputString);
+    }
 }
+```
 
-//RESULT
+Output
+
+```
+Case Sensitive Searching:
+Pattern found from 0 to 4
+Pattern found from 9 to 13
+
+Case InSensitive Searching:
+Pattern found from 14 to 15
+
+Splitting the String around special characters:
+Study
+Alejo
+Example
+Of
+Java
+
+Replacing the Strings with other String:
+Using replaceFirst() Method
+StudyAlejo Example2 Tutorial. It is a Example2 Tutorial
+
+Using replaceAll() Method
+StudyAlejo Example2 Tutorial. It is a Example2 Tutorial
 
 ```
 
@@ -192,5 +204,8 @@ This class throws an unchecked exception to indicate a syntax error in a regular
 |---|---|
 | String getDescription() | It is used to get the description of the error |
 | int getIndex() | It is used to get the index of the error |
+| String getMessage() | This method gives a multiple-line string, describing the syntax error along with its index. It also gives the erroneous regular-expression pattern and indicates the index or error within the pattern |
 | String getPattern() | It is used to get the erroneous regular-expression pattern |
+
+
 
