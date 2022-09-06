@@ -23,47 +23,41 @@ The Meta characters used in the regular expressions are:
 |\b	| A word boundary|
 |\B | A non-word boundary|
 
-## The three classes in Java Regex are:
+**Classes in Java Regex:**
 
-- util.regex.Pattern=>	Used to create or define patterns/regular expressions
-- util.regex.Matcher=>	Used to interpret the pattern and performs match operations against an input string.
-- util.regex.PatternSyntaxException=> Used to throw an exception if the syntax of a regular expression is incorrect.
-And there is an interface:
+| Class	| Description |
+|---|---|
+| util.regex.Pattern | Used to create or define patterns/regular expressions |
+| util.regex.Matcher | Used to interpret the pattern and performs match operations against an input string|
+| util.regex.PatternSyntaxException | Used to throw an exception if the syntax of a regular expression is incorrect|
 
-## Interface Description
-- MatchResult interface => Used to find the result of a match operation for a regular expression
+**interface:**
+
+| Interface	| Description |
+|---|---|
+| MatchResult | Used to find the result of a match operation for a regular expression |
 
 ## Classes in Java Regular Expressions
 
-### java.util.Pattern class**
+### java.util.Pattern class
+
 
 The Pattern class is used to define or create regular expressions or patterns. This class is a compiled representation of regular expressions that can be used to define various types of patterns. There is no public constructor in Pattern class. We can use the public static method compile() of this class by passing regular expression as an argument which will create the pattern object after execution.
 
-**Methods of Pattern class**
+**Methods**
 
-1.1. static Pattern compile(String regex):
-
-This method compiles the specified regular expression into a pattern.
-
-1.2. static Pattern compile(String regex, int flags):
-
-This method is similar to the above method but takes one more argument called flag and is used to compile the given regular expression into a pattern with the given flags.
-
-- int flags():
-This method has no parameters and returns the match flags of a pattern.
-- Matcher matcher(CharSequence input):
-It creates a matcher that will match the given input against this pattern.
-- static boolean matches(String regex, CharSequence input):
-It is used to compile the given regular expression to match the given input String against it.
-- String pattern():
-This method is used to return the regular expression from which we compiled this pattern.
-- static String quote(String s):
-It is used to return a literal pattern String for the stated/input String.
-- String[ ] split(CharSequence input):
-It splits the given input sequence around matches of this pattern.
-- String[ ] split(CharSequence input, int limit):
-It is used to split the specified input sequence around matches of this pattern within a given limit.
-- String toString():
+| Method	| Description |
+|---|---|
+| static Pattern compile(String regex) | This method compiles the specified regular expression into a pattern |
+| static Pattern compile(String regex, int flags) | This method is similar to the above method but takes one more argument called flag and is used to compile the given regular expression into a pattern with the given flags |
+| int flags() | This method has no parameters and returns the match flags of a pattern |
+| Matcher matcher(CharSequence input) | It creates a matcher that will match the given input against this pattern |
+| Matcher matcher(CharSequence input) | It creates a matcher that will match the given input against this pattern |
+| static boolean matches(String regex, CharSequence input) | It is used to compile the given regular expression to match the given input String against it |
+| String pattern() | This method is used to return the regular expression from which we compiled this pattern |
+| static String quote(String s) | It is used to return a literal pattern String for the stated/input String |
+| String[ ] split(CharSequence input) | It splits the given input sequence around matches of this pattern |
+| String[ ] split(CharSequence input, int limit) |It is used to split the specified input sequence around matches of this pattern within a given limit |
 
 Example
 ```java
@@ -98,35 +92,32 @@ Using the String matches method: true
 Using Pattern matches method: true
 ```
 
-### java.util.Matcher class
+### java.util.Matcher class
 
 The object of Matcher class is an engine which is used to perform match operations of a given regular expression against an input string for multiple times. It finds for multiple occurrences of the regular expressions in the input text/string. Like the Pattern class, Matcher too has no public constructors. You can obtain an object of Matcher class from any object of Pattern class by invoking the matcher() method.
 
-**Methods of Pattern class**
-- int start():
-It is used to get the start index of the last character which is matched using find() method.
-- int end():
-It is used to get the end index of the last character which is matched using find() method.
-- boolean find():
-It is used to find multiple occurrences of the input sequence that matches the pattern.
--boolean find(int start):
-It attempts to find the occurrences of the input sequence that matches the pattern, starting at the specified index.
-- String group():
-This method returns the input subsequence matched by the previous match.
-- int groupCount():
-It is used to return the total number of matched subsequence in this matcher’s pattern.
-- boolean matches():
-It attempts to match the entire text against the pattern.
-- String replaceFirst(String Replacement):
-Replaces the first subsequence of the input sequence that matches the pattern with the specified replacement string.
-- String replaceAll(String Replacement):
-Replaces every subsequence of the input sequence that matches the pattern with the specified replacement string.
+**Methods**
+
+| Method	| Description |
+|---|---|
+| int start() | It is used to get the start index of the last character which is matched using find() method |
+| int end() | It is used to get the end index of the last character which is matched using find() method |
+| boolean find() | It is used to find multiple occurrences of the input sequence that matches the pattern |
+| boolean find(int start) | It attempts to find the occurrences of the input sequence that matches the pattern, starting at the specified index |
+| String group() | This method returns the input subsequence matched by the previous match |
+| int groupCount() | It is used to return the total number of matched subsequence in this matcher’s pattern |
+| boolean matches() | It attempts to match the entire text against the pattern |
+| String replaceFirst(String Replacement) | Replaces the first subsequence of the input sequence that matches the pattern with the specified replacement string |
+| String replaceAll(String Replacement) |Replaces every subsequence of the input sequence that matches the pattern with the specified replacement string |
+
+
+
+Example
 
 ```java
-package com.techvidvan.regularexpressions;
 import java.util.regex.*;
 
-public class MatcherClassDemo
+public class Main
 {
   public static void main(String args[])
   {
@@ -195,14 +186,11 @@ public class MatcherClassDemo
 
 This class throws an unchecked exception to indicate a syntax error in a regular-expression pattern.
 
-**Methods of Pattern class**
+**Methods**
 
-- String getDescription():
-It is used to get the description of the error.
-- int getIndex():
-It is used to get the index of the error.
-- String getMessage():
-This method gives a multiple-line string, describing the syntax error along with its index. It also gives the erroneous regular-expression pattern and indicates the index or error within the pattern.
-- String getPattern():
-It is used to get the erroneous regular-expression pattern
+| Method	| Description |
+|---|---|
+| String getDescription() | It is used to get the description of the error |
+| int getIndex() | It is used to get the index of the error |
+| String getPattern() | It is used to get the erroneous regular-expression pattern |
 
