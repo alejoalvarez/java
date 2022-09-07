@@ -221,3 +221,72 @@ public class Main {
   }
 }
 ```
+
+# Problem to study
+
+Create a project and within it create two classes. The first class must be called 'Card', with two attributes the "pint" and the card number. On the other hand, declare a class called 'Deck' that contains an ArrayList of type 'Card'. Print the cards in order according to how they were inserted and then shuffle and reprint.
+
+```java
+public class Card {
+    public enum Pint {
+        TREBOL, DIAMANTE, CORAZON, PICA
+    };
+
+    private int number;
+    private Pint pint;
+
+    Card(int number, Pint pint) {
+        this.number = number;
+        this.palo = palo;
+    }
+
+    public void print() {
+        System.out.println(number + " - " + pint.toString().toLowerCase());
+    }
+
+    public Pint getPint() {
+        return pint;
+    }
+}
+```
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Deck {
+    private ArrayList<Card> cards;
+
+    Deck() {
+        cards = new ArrayList<Card>(8);
+        cards.add(new Card(1, Card.Pint.TREBOL));
+        cards.add(new Card(2, Card.Pint.TREBOL));
+        cards.add(new Card(1, Card.Pint.DIAMANTE));
+        cards.add(new Card(2, Card.Pint.DIAMANTE));
+        cards.add(new Card(1, Card.Pint.PICA));
+        cards.add(new Card(2, Card.Pint.PICA));
+        cards.add(new Card(1, Card.Pint.CORAZON));
+        cards.add(new Card(2, Card.Pint.CORAZON));
+    }
+
+    public void print() {
+        for (Card card : cards)
+            card.print();
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
+    }
+
+    public static void main(String[] ar) {
+        Deck deck = new Deck();
+        System.out.println("Sorted deck of cards");
+        deck.print();
+        deck.shuffle();
+        System.out.println("Deck of cards after shuffling");
+        deck.print();
+    }
+}
+```
+
+In the constructor we create the ArrayList passing the value 8 since that will be the number of cards in our deck (if we do not pass 8 the ArrayList is automatically resized, passing a value is convenient for the program to be more efficient):
