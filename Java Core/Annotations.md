@@ -335,8 +335,10 @@ public class MyAnnotationTest {
         mat.myAnnotationTestMethod();
     }
 }
+```
 
-// RESULT
+Output
+```
 key: site
 value: alejo.com
 ```
