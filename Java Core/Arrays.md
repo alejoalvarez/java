@@ -256,25 +256,6 @@ public class CopyOfMethod{
 
 Output
 ```
-import java.util.Arrays;
-
-public class CopyOfMethod{
-  
-  public static void main(String[] args){
-
-    int array1[] = { 65, 20, 34, 56, 78, 97 }; //create arrays
-
-    // To print the elements in one line
-    System.out.println("Integer Array: "+ Arrays.toString(array1));
-
-    System.out.println("\nNew Arrays by copyOf method:");
-    System.out.println("Integer Array: "+ Arrays.toString( Arrays.copyOf(array1, 10)));
-  }
-}
-```
-
-Output
-```
 Integer Array: [65, 20, 34, 56, 78, 97]
 New Arrays by copyOf method:
 Integer Array: [65, 20, 34, 56, 78, 97, 0, 0, 0, 0]
