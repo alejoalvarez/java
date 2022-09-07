@@ -1,25 +1,30 @@
 # Generics
 
-Beginning with Java 5, generics have been added to provide compile-time type checking and eliminate the risk of ClassCastException that was common when working with collection classes.
-• Diamonds are used <>
+* Beginning with Java 5, generics have been added to provide compile-time type checking and eliminate the risk of **ClassCastException** that was common when working with collection classes.
+
+* Diamonds are used <>
 
 It has mainly two functionalities
-• Provides type safety (When I put generics I am doing type safety ie u)
-• Avoid casting
 
-• T is a letter of a stereotype
+* Provides type safety (When I put generics I am doing type safety ie u)
+* Avoid casting
+
+T is a letter of a stereotype
+```java
 Person <T> public class example
+```
+
 The most common type parameter names are:
-• E -> Element (widely used by the Java collections framework)
-• K -> key
-• N -> Number
-• T -> Type
-• V -> Value
-S, U, V, etc. –2nd, 3rd, 4th types
+* E -> Element (widely used by the Java collections framework)
+* K -> key
+* N -> Number
+* T -> Type
+* V -> Value
+* S, U, V, etc. –2nd, 3rd, 4th types
 
 If before it was declared in a GenericsMethodClass class
 
-```java[
+```java
 public class GenericMethodClass {]
     public <T> void printElement(T element){
         System.out.println(element);
@@ -82,9 +87,20 @@ public class GenericClass <U>{
 }
 ```
 
+## What is Wildcard in Java?
+
+Wildcards in Java are basically the question marks which we use in generic programming, it basically represents the unknown type. We use Java Wildcard  widely in situations such as in a type of parameter, local variable, or field and also as a return type.
+
+Unlike arrays, different instantiations of a generic type are not compatible with each other, not even explicitly. We can remove this incompatibility by using wildcard ‘?’ as an actual type parameter.
+
 ## Generics <?> (Generics wildcard or comodin card)
 
 It allows executing the generics without specifying the data type, that is, this data will be specified in runtime (runtime)
+
+There are 3 types of wildcards in Java: 
+- Upper bounded wildcards
+- Lower Bounded Wildcards
+- Unbounded Wildcards   
 
 ### Wildcard unbounded (use extends)
 
@@ -100,11 +116,9 @@ public void list(List<?> list){
         }
     }
 }
-```
 
 or
 
-```java
 public void list(List<? extends Object> list){
     for(Object a : list){
         if(a instanceof Student){
@@ -116,11 +130,39 @@ public void list(List<? extends Object> list){
 }
 ```
 
-• This means that ? It will write any data that inherits from the Object class
-• extends in generics refers to inheritance and implementation (that is, it serves for interfaces)
-Any type of Object is expected
+Another Example :
+
+```java
+import java.util. * ;
+
+public class UnboundedWildcard {
+  public static void main(String[] args) {
+    //Integer List
+    List < Integer > intList = Arrays.asList(10, 20, 30, 40);
+
+    //Double list
+    List < Double > doubleList = Arrays.asList(11.5, 13.6, 67.8, 43.7);
+
+    printList(intList);
+    printList(doubleList);
+  }
+  private static void printList(List < ?>list) {
+    System.out.println(list);
+  }
+}
+```
+
+Output
+```
+[10, 20, 30, 40]
+[11.5, 13.6, 67.8, 43.7]
+```
+
+This means that ```?``` It will write any data that inherits from the Object class extends in generics refers to inheritance and implementation (that is, it serves for interfaces) Any type of Object is expected
 
 ### Wildcard upperBounded
+
+The Upper Bounded wildcards are the wildcard that relaxes the restriction of the variable type. That is, if we want to relax the restriction on the type of the variable in the method, we can use this type of wildcards.
 
 ```java
 public void listUpperBounded(List<? extends Person> list){
@@ -132,10 +174,45 @@ public void listUpperBounded(List<? extends Person> list){
 
 Any type of the indicated subclass is used, for the example any subclass of Person
 
+Another example:
+
+```java
+public class UpperBoundWildcard {
+  public static void main(String[] args) {
+    //Upper Bounded Integer List
+    List < Integer > intList = Arrays.asList(10, 20, 30, 40);
+
+    //printing the sum of integer elements in list
+    System.out.println("Total sum is:" + sum(intList));
+
+    //Upper Bounded Double list
+    List < Double > doubleList = Arrays.asList(13.2, 15.6, 9.7, 22.5);
+
+    //printing the sum of double elements in list
+    System.out.print("Total sum is: " + sum(doubleList));
+  }
+  private static double sum(List < ?extends Number > myList) {
+    double sum = 0.0;
+    for (Number iterator: myList) {
+      sum = sum + iterator.doubleValue();
+    }
+    return sum;
+  }
+}
+```
+
+Output:
+```
+Total sum is: 100.0
+Total sum is: 61.0
+```
+
 ### Wildcard lowerBounded
 
-We use the Lower Bounded wildcards to widen the use of the type of variable. For example, if we want to add the list of integers in our method we can use the List<Integer>, but using this we will be bound to use only the list of integers. So here, we can also use the List<Number> and List<Object> to store the list of integers. So we use the Lower Bounded wildcard to achieve this. We can use this by a wildcard character ? and put a super keyword after that followed by the lower bound.
-Example: <? super LowerBound>
+We use the Lower Bounded wildcards to widen the use of the type of variable. For example, if we want to add the list of integers in our method we can use the List<Integer>, but using this we will be bound to use only the list of integers. So here, we can also use the List<Number> and List<Object> to store the list of integers. 
+
+So we use the Lower Bounded wildcard to achieve this. We can use this by a wildcard character ? and put a super keyword after that followed by the lower bound.
+Example: **<? super LowerBound>**
 
 ```java
 public void listLowerBounded(List<? super Student> list){
@@ -147,3 +224,40 @@ public void listLowerBounded(List<? super Student> list){
 
 We are only going to recognize those classes that are greater than the class that we are going to place in?, That's why super is used,
 
+```java
+import java.util. * ;
+public class LowerBoundWildcard {
+  public static void main(String[] args) {
+    //Lower Bounded Integer List
+    List < Integer > intList = Arrays.asList(10, 20, 30, 40);
+
+    //Passing Integer list object
+    printOnlyIntegerClassorSuperClass(intList);
+
+    //Number list
+    List < Number > numberList = Arrays.asList(10, 20, 30, 40);
+
+    //Passing Integer list object
+    printOnlyIntegerClassorSuperClass(numberList);
+  }
+
+  public static void printOnlyIntegerClassorSuperClass(List < ?super Integer > list) {
+    System.out.println(list);
+  }
+}
+```
+
+Output
+```
+[10, 20, 30, 40]
+[10, 20, 30, 40]
+```
+
+# Guidelines for Using Wildcard in Java
+
+Below is the guideline for using each type of variable in the following cases:
+
+- **Upper bound wildcard:** If the variable belongs to in type , i.e there is an in variable, we use the ‘extends’ keyword with a wildcard.
+- **Lower bound wildcard:** If the variable belongs to out type , i.e there is an out variable, we use ‘super’ keyword with a wildcard.
+- **Unbounded wildcard:** If we can access a variable using the Object class method, then we should prefer to use the unbounded wildcards.
+- **No wildcard:** If the variable is both in and out category, then there is no need to use the wildcards.
