@@ -25,7 +25,7 @@ The most common type parameter names are:
 If before it was declared in a GenericsMethodClass class
 
 ```java
-public class GenericMethodClass {]
+public class GenericMethodClass {
     public <T> void printElement(T element){
         System.out.println(element);
     }
@@ -261,3 +261,92 @@ Below is the guideline for using each type of variable in the following cases:
 - **Lower bound wildcard:** If the variable belongs to out type , i.e there is an out variable, we use ‘super’ keyword with a wildcard.
 - **Unbounded wildcard:** If we can access a variable using the Object class method, then we should prefer to use the unbounded wildcards.
 - **No wildcard:** If the variable is both in and out category, then there is no need to use the wildcards.
+
+# What is not allowed to do with Java Generics?
+
+## a) You can’t have a static field of type
+
+In your generic class, you can not define a static generic parameterized member. Any attempt to do so will generate a compile-time error. The error will be like: Cannot make a static reference to the non-static type T.
+
+```java
+public class GenericClass<T>{
+        private static T member; //This is not allowed
+}
+```
+
+## b) You can not create an instance of T
+
+We can also not create an object of T. Any attempt to do so will fail with an error: Cannot instantiate the type T. For example,
+
+```java
+public class GenericClass<T>{
+    public GenericClass(){    //Constructor created  
+        new T();  //Not Allowed
+    }
+}
+```
+
+## c) We can’t use primitive data types with Generics declaration
+
+We can’t declare generic expressions like List or Map <int, double>. But, we can use the ***wrapper classes*** in place of primitive data types and then use the primitives while passing the actual values. Auto-boxing converts these primitive types to their respective wrapper classes.
+
+```java
+final HashMap<int> id = new HashMap<>();    //Not allowed
+
+final HashMap<Integer> id = new HasMap<>();  //Allowed
+```
+
+## d) You can’t create Generic exception class
+
+We can’t pass an instance of generic type along with exception being thrown. This is not allowed in Java. For example, the following line causes an error.
+
+```
+// causes compiler error
+public class GenericClass<T> extends Exception {}
+```
+
+When you try to do this, you will get an error message like this: The generic class GenericException may not subclass java.lang.Throwable.
+
+Examples:
+
+```java
+public class GenericMethodDemo
+{
+  // defining generic method printArray
+  public static <E> void printArray( E[] inputArray )
+  {
+    for(E element : inputArray){
+      System.out.printf("%s ", element);
+    }
+    System.out.println();
+  }
+
+  public static void main(String args[])
+  {
+    Integer[] intArray = { 10, 20, 30, 40, 50 }; // Create arrays of Integer, Double and Character
+    Double[] doubleArray = { 1.2, 2.5, 4.6, 7.8 };
+    Character[] charArray = { 'A', 'l', 'e', 'j', 'o'};
+
+    System.out.println("Array integerArray contains:");
+    printArray(intArray); // pass an Integer array
+
+    System.out.println("\nArray doubleArray contains:");
+    printArray(doubleArray); // pass a Double array
+
+    System.out.println("\nArray characterArray contains:");
+    printArray(charArray); // pass a Character array
+  }
+}
+```
+
+Output 
+```
+Array integerArray contains:
+10 20 30 40 50
+Array doubleArray contains:
+1.2 2.5 4.6 7.8
+Array characterArray contains:
+Alejo
+```
+
+
