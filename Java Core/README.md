@@ -51,7 +51,7 @@ Threads
 * [Synchronized](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Synchronized.md)
 
 Generics
-* [Generics](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Generics.md)
+* [Generics - wildcard](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Generics.md)
 
 Reflection
 * [Reflection](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Reflection.md)
