@@ -22,7 +22,9 @@ In order to solve the above problems, we use data structures. Data structure sto
 
 # Data Structure Classification in Java
 
-IMAGE
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/188993876-03b1ae9a-6890-42dc-ba60-4a53dd3506b1.png">
+</p>
 
 - **Linear Data Structures:** In a linear data structure all the elements are arranged in the linear or sequential order. The linear data structure is a single level data structure.
 - **Non-Linear Data Structures:** The non-linear data structure does not arrange the data in a sequential manner as in linear data structures. Non-linear data structures are the multilevel data structure.
