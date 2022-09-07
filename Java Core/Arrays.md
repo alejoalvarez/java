@@ -101,3 +101,181 @@ public class CloningMultiDimensionalArray {
     }
 }
 ```
+
+# Methods of Java Array Class
+
+## int compare(array1, array2)
+
+This method compares two arrays in lexicographic order. 
+
+We pass two arrays as parameters to its methods. 
+It returns:
+- **1** if array1 is greater than array2,
+- **-1** if array1 is smaller than array2
+- **0** if both arrays are equal to each other.
+
+```java
+
+import java.util.Arrays;
+
+public class CompareMethod
+{
+  public static void main(String[] args){
+    int myArray1[] = { 10, 15, 32, 30 }; // Create the first Array
+    int myArray2[] = { 10, 25, 22 ,30}; // Create the second Array
+
+    // comparing both arrays
+    System.out.println("Comparing two integer arrays: " + Arrays.compare(myArray1, myArray2));
+  }
+}
+
+```
+
+Ouput
+```
+Comparing two integer arrays: -1
+```
+
+## void fill(originalArray, value)
+
+This method is used to fill the specific value to each element of the specified array with a specific type. This method can also be used with all the other primitive data types (byte, short, int, etc.).
+
+```java
+import java.util.Arrays;
+
+public class FillMethod{
+
+  public static void main(String[] args){
+
+    int myArray1[] = new int[5]; // Create the Array
+    int fillvalue = 15;
+    Arrays.fill(myArray1, fillvalue);
+
+    // To fill the arrays
+    System.out.println("Integer Array on filling: " + Arrays.toString(myArray1));
+  }
+}
+```
+
+Output
+```
+Integer Array on filling: [ 15,15,15,15,15 ]
+```
+
+## boolean equals(array1, array2)
+
+This method checks whether both the arrays are equal or not and gives the result either as true or false.
+
+```java
+import java.util.Arrays;
+
+public class EqualsMethod{
+
+  public static void main(String[] args){
+    //create arrays to be compared
+    int array1[] = { 45, 68, 34, 20, 56 };
+    int array2[] = { 45, 68, 34, 20, 56 };
+    int array3[] = { 55, 78, 44, 10, 56 };
+
+    System.out.println("Comparing array1 and array2: " + Arrays.equals(array1,array2));
+    System.out.println("Comparing array2 and array3: " + Arrays.equals(array2,array3));
+  }
+}
+```
+
+Output
+```
+import java.util.Arrays;
+
+public class EqualsMethod{
+  
+  public static void main(String[] args){
+    //create arrays to be compared
+    int array1[] = { 45, 68, 34, 20, 56 };
+    int array2[] = { 45, 68, 34, 20, 56 };
+    int array3[] = { 55, 78, 44, 10, 56 };
+
+    System.out.println("Comparing array1 and array2: " + Arrays.equals(array1,array2));
+    System.out.println("Comparing array2 and array3: " + Arrays.equals(array2,array3));
+  }
+}
+```
+
+Output
+```
+Comparing array1 and array2: true
+Comparing array2 and array3: false
+```
+
+## int binarySearch(array [], value)
+
+With the help of this method, we can find or search a specified value inside an array which is given as the first argument. As a result, this method returns the index of the element in the array. The array must be sorted for this search. If the element is not found, it returns a negative value.
+
+```java
+import java.util.Arrays;
+
+public class BinarySearch{
+
+  public static void main(String[] args){
+    //create arrays
+    int array1[] = { 20, 34,56,78,97 };
+    int intKey = 56;
+    System.out.println(intKey + " found at index = " + Arrays .binarySearch(array1, intKey));
+    System.out.println(20 + " found at index = " + Arrays .binarySearch(array1, 20));
+  }
+}
+```
+
+Output
+```
+56 found at index = 2
+20 found at index = 0
+```
+
+## copyOf(originalArray, newLength)
+
+We can copy the specified array to a new array with a specified length. The left spaces are assigned to default values in the new array.
+
+```java
+import java.util.Arrays;
+
+public class CopyOfMethod{
+  
+  public static void main(String[] args){
+
+    int array1[] = { 65, 20, 34, 56, 78, 97 }; //create arrays
+
+    // To print the elements in one line
+    System.out.println("Integer Array: "+ Arrays.toString(array1));
+
+    System.out.println("\nNew Arrays by copyOf method:");
+    System.out.println("Integer Array: "+ Arrays.toString( Arrays.copyOf(array1, 10)));
+  }
+}
+```
+
+Output
+```
+import java.util.Arrays;
+
+public class CopyOfMethod{
+  
+  public static void main(String[] args){
+
+    int array1[] = { 65, 20, 34, 56, 78, 97 }; //create arrays
+
+    // To print the elements in one line
+    System.out.println("Integer Array: "+ Arrays.toString(array1));
+
+    System.out.println("\nNew Arrays by copyOf method:");
+    System.out.println("Integer Array: "+ Arrays.toString( Arrays.copyOf(array1, 10)));
+  }
+}
+```
+
+Output
+```
+Integer Array: [65, 20, 34, 56, 78, 97]
+New Arrays by copyOf method:
+Integer Array: [65, 20, 34, 56, 78, 97, 0, 0, 0, 0]
+```
