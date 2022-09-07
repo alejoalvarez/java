@@ -62,5 +62,8 @@ Annotations
 POJO vs Java Beans
 * [POJO-JavaBeans](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/POJO-JavaBeans.md)
 
-Serialization
+Serialization - Cloneable - Marker Interface
+* [Marker Interface](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/MarkerInterface.md)
 * [Serialization](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Serialization.md)
+* [Cloneable](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Cloneable.md)
+
