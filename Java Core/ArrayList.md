@@ -1,5 +1,11 @@
 ## ArrayList
 
+- List implemented with an array
+- Efficient positional access
+- Expensive insertion and removal (less in last position which is instant)
+- When the size of the array is exceeded, a new larger one is created and the elements of the old one are copied into it.
+
+
 The difference between a built-in array and an ```ArrayList``` in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. 
 
 Important
@@ -15,7 +21,56 @@ Important
 - Object class is a superclass of the Array.
 - Array implements the two interfaces: Serializable and Cloneable.
 
-## Example
+
+```java
+import java.util.ArrayList; // To work with generic lists we must import the ArrayList class:
+
+public class DemoArrayList {
+
+    public static void printList(ArrayList<String> list) {
+        for (String item : list)
+            System.out.print(item + "-");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> list1 = new ArrayList<String>(); // We create an object of the ArrayList class:
+        // The list manages objects of the String class, then through the 'add' method we add nodes at the end:
+      	list1.add("Alejo");
+        list1.add("Juan");
+        list1.add("Maria");
+        printList(list1); // print elements of the list
+        
+      	list1.add(1, "Ana");
+       	printList(list1);
+        
+      	list1.remove(0); // To remove a node from the list we must call the 'remove' method and pass the position of the node to remove:
+        printList(list1);
+        
+        list1.remove("Juan");
+        printList(list1);
+        System.out.println("Total elements in list: " + list1.size());
+	
+        if (list1.contains("Ana")){
+            System.out.println("The name 'Ana' is store in list");
+      	} else{
+            System.out.println("The name 'Ana' isn't store in list");
+        }
+	
+       // To retrieve the data from a node without deleting it, we can use the 'get' method (in an ArrayList this method is very fast and does not    depend on the number of elements):
+    	 System.out.println("The second element in list is: " + list1.get(1)); 
+        
+      list1.clear(); // We remove all nodes from the list using the 'clear' method:
+	
+      if (list1.isEmpty()){
+        System.out.println("The list is empty");
+	    }   	
+    }
+}
+```
+
+
+## Another Example
 
 ```java
 import java.util.ArrayList;
