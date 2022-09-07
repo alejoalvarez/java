@@ -1,8 +1,14 @@
 ## LinkedList
 
-The **LinkedList** class is almost identical to the ArrayList:
+- The **LinkedList** class is almost identical to the ArrayList
+- The **LinkedList** in Java is another important type of data structure.
+- The LinkedList class implements the logic to work with generic lists, that is, we can insert and extract elements from any part of the list.
+- A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
+- Costly positional access.
+- Costly insertion and removal (Except in the first and last position, which is immediate).
+- Limited size
 
-The Linked Lists in Java is another important type of data structure. A Linked List is a collection of similar types of data elements, called nodes, which point to the next following nodes by means of pointers.
+A Linked List is a collection of similar types of data elements, called nodes, which point to the next following nodes by means of pointers.
 
 Types of linked list:
 - Singly-linked list
@@ -42,27 +48,12 @@ public class Main {
 }
 ```
 
-## ArrayList vs. LinkedList
-
-- The **LinkedList** class is a collection which can contain many objects of the same type, just like the **ArrayList**.
-- The **LinkedList** class has all of the same methods as the **ArrayList** class because they both implement the List interface. This means that you can add items, change items, remove items and clear the list in the same way.
-
-However, while the **ArrayList** class and the **LinkedList** class can be used in the same way, they are built very differently.
-
-## How the ArrayList works
-The ArrayList class has a regular array inside it. When an element is added, it is placed into the array. If the array is not big enough, a new, larger array is created to replace the old one and the old one is removed.
-
 ## How the LinkedList works
 The LinkedList stores its items in "containers." The list has a link to the first container and each container has a link to the next container in the list. To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
 
-## When To Use
-It is best to use an ```ArrayList``` when:
-	• You want to access random items frequently
-	• You only need to add or remove elements at the end of the list
 It is best to use a ```LinkedList``` when:
-	• You only use the list by looping through it instead of accessing random items
-	• You frequently need to add and remove items from the beginning, middle or end of the
-	list
+- You only use the list by looping through it instead of accessing random items
+- You frequently need to add and remove items from the beginning, middle or end of the	list
 
 ## Methods
 For many cases, the ArrayList is more efficient as it is common to need access to random items in the list, but the LinkedList provides several methods to do certain operations more efficiently:
@@ -75,4 +66,52 @@ For many cases, the ArrayList is more efficient as it is common to need access t
 |removeLast() |	Remove an item from the end of the list|
 |getFirst() | Get the item at the beginning of the list|
 |getLast() | Get the item at the end of the list|
+
+**Example with main methods of linkedlist**
+
+```java
+import java.util.LinkedList; // To work with generic lists we must import the LinkedList class:
+
+public class DemoLinkedList {
+
+    public static void printList(LinkedList<String> list) {
+        for (String item : list)
+            System.out.print(item + "-");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        LinkedList<String> list1 = new LinkedList<String>(); // We create an object of the LinkedList class:
+        // The list manages objects of the String class, then through the 'add' method we add nodes at the end:
+	list1.add("Alejo");
+        list1.add("Juan");
+        list1.add("Maria");
+        printList(list1); // print elements of the list
+        
+	list1.add(1, "Ana");
+	printList(list1);
+        
+	list1.remove(0);
+        printList(list1);
+        list1.remove("Juan");
+        printList(list1);
+        System.out.println("Total elements in list: " + list1.size());
+	
+        if (list1.contains("Ana")){
+            System.out.println("The name 'Ana' is store in list");
+	} else{
+            System.out.println("The name 'Ana' isn't store in list");
+        }
+	
+	// To retrieve the data from a node without deleting it, we can use the 'get' method:
+	System.out.println("The second element in list is: " + list1.get(1));
+        
+	list1.clear(); // We remove all nodes from the list using the 'clear' method:
+	
+        if (list1.isEmpty()){
+            System.out.println("The list is empty");
+	}	
+    }
+}
+```
 
