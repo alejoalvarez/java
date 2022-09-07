@@ -22,6 +22,7 @@
 * [Regular Expressions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/RegularExpressions.md)
 
 Data Structures
+* [DataStructures](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/DataStructures.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [Array vs ArrayList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Array-ArrayList.md)
 * [ArrayList vs LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArrayList-LinkedList.md)
