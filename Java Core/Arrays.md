@@ -185,24 +185,6 @@ public class EqualsMethod{
 
 Output
 ```
-import java.util.Arrays;
-
-public class EqualsMethod{
-  
-  public static void main(String[] args){
-    //create arrays to be compared
-    int array1[] = { 45, 68, 34, 20, 56 };
-    int array2[] = { 45, 68, 34, 20, 56 };
-    int array3[] = { 55, 78, 44, 10, 56 };
-
-    System.out.println("Comparing array1 and array2: " + Arrays.equals(array1,array2));
-    System.out.println("Comparing array2 and array3: " + Arrays.equals(array2,array3));
-  }
-}
-```
-
-Output
-```
 Comparing array1 and array2: true
 Comparing array2 and array3: false
 ```
