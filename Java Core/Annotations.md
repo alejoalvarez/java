@@ -11,6 +11,39 @@ Some points about Annotations are:
 - Annotations help to associate metadata or information to the elements of the program like classes, instance variables, interfaces, constructors, methods, etc.
 - We cannot consider Annotations as pure comments as they can change the way a compiler treats a program
 
+**Example**
+```java
+class Base {
+  public void display() {
+    System.out.println("Base class display() method");
+  }
+}
+public class Derived extends Base{
+  
+  @Override
+  public void display(int x) {
+    System.out.println("Derived class display(int) method");
+  }
+  
+  public static void main(String args[]) {
+    Derived obj = new Derived();
+    obj.display();
+  }
+}
+```
+
+Output
+```
+error: method does not override or implement a method from a supertype@Override
+```
+
+
+If we remove parameter (int x) from the method or if we remove the @override annotation from the code, then the program compiles fine. The output will be:
+
+Output
+```
+Base class display() method
+```
 
 ## Types of Java Annotations
 There are five types of nnotations which are:
@@ -61,8 +94,10 @@ public class MyClass {
             return 0;
       }
 }
+```
 
-RESULT
+Output
+```
 I am annotated with a type annotation
 There is a use of annotation with the return type of the function”);
 ```
@@ -75,11 +110,13 @@ Repeating Annotations are the annotations that we apply to a single item more th
 ```java
 import java.lang.* ;
 
-@Retention(RetentionPolicy.RUNTIME)@Repeatable(MyRepeatedAnnos.class)@interface MyWords {
+@Retention(RetentionPolicy.RUNTIME)
+@Repeatable(MyRepeatedAnnos.class)
+@interface MyWords {
   String word()
-default "Hello World";
+  default "Hello World";
   int value()
-default 0;
+  default 0;
 }
 
 // Creating a container annotation
@@ -88,12 +125,14 @@ default 0;
 @interface MyRepeatedAnnotations {
   MyWords[] value();
 }
+
 public class MyClass {
-  @MyWords(word = "Data", value = 1)@MyWords(word = "Flair", value = 2)
+  @MyWords(word = "Data", value = 1)
+  @MyWords(word = "Flair", value = 2)
   public static void myMethod() {
     MyClass obj = new MyClass();
     try {
-      Class < ?>c = obj.getClass();
+      Class <?>c = obj.getClass();
       Method m = c.getMethod("myMethod");
       Annotation a = m.getAnnotation(MyRepeatedAnnotations.class);
       System.out.println(anno);
@@ -106,10 +145,11 @@ public class MyClass {
     myMethod();
   }
 }
+```
 
-RESULT
+Output
+```
 @MyRepeatedAnnotations(value={@MyWords(value=1, word=”Data”), @Words(value=2, word=”Flair”)})
-
 ```
 
 ## Custom annotations
@@ -129,7 +169,109 @@ class Main{
 }
 ```
 
-## Properties
+## Predefined/ Standard Annotations in java
+Java has six built-in annotations as follows:
+
+###  @Override
+
+We should use @Override annotation while overriding a method in the child class to mark that method.
+
+This provides more readability to the code and avoids maintenance issues like you must change the signature in child classes (where we are using this annotation) while changing the method signature of the parent class otherwise, the compiler would throw compilation error.
+
+This is difficult to trace when you do not have used this annotation.
+
+```java
+class ParentClass {
+  public void display() {
+    System.out.println("Parent class display() method");
+  }
+
+  public static void main(String args[]) {
+    ParentClass obj = new ChildClass);
+    obj.display();
+  }
+}
+class ChildClass extends ParentClass {@Override
+  public void display() {
+    System.out.println("Child class display() method");
+  }
+}
+```
+
+Output
+```
+Child class display() method
+```
+
+### @Deprecated
+
+The @Deprecated annotation indicates that a marked class, method, or field is ‘deprecated’ and they are no longer in use. The compiler gives a warning message whenever there is a use of deprecated class, method, or field marked with the @Deprecated annotation in the program.
+
+When an element is deprecated, there is a need to document them using the Javadoc @deprecated tag. You should note that there is a difference between @Deprecated and @deprecated. @deprecated is for documentation purposes, and @Deprecated is for Annotations.
+
+```java
+public class Test {
+  
+  @Deprecated
+  public void display() {
+    System.out.println("display() method of Test class");
+  }
+  public static void main(String args[]) {
+    Test obj = new DeprecatedTest();
+    obj.display();
+  }
+}
+```
+
+Output
+```
+display() method of Test class
+```
+
+### @SuppressWarnings
+
+The @SupressWarnings annotation instructs the compiler to ignore specific warnings.
+
+For example in the below code, We are calling a deprecated method so the compiler should generate a warning, however, we are using @SuppressWarnings annotation that would suppress that deprecation warning.
+
+```java
+class Test {
+
+  @Deprecated
+  public void display() {
+    System.out.println("display() method of Test class");
+  }
+}
+
+public class SuppressWarningTest {
+  
+  @SuppressWarnings({
+    "checked",
+    "deprecation"
+  })
+  public static void main(String args[]) {
+    DeprecatedTest obj = new DeprecatedTest();
+    obj1.display();
+  }
+}
+```
+
+Output
+```
+display() method of Test class
+```
+
+### @Documented Annotations in Java
+
+The @Documented Annotation is a annotation that says a tool that there is a need for documenting an annotation. Annotations are not present in Javadoc comments.
+
+The @Documented annotation enables tools like Javadoc to process it and include the annotation type information in the generated document.
+
+### @Target
+
+The design of Target annotation is such that we can use them only as an annotation to another annotation. @Target Annotation takes one argument and this argument must be a constant value from the ElementType enumeration.
+
+The following table shows the constants along with the type of the declaration to which they correspond.
 
 - @Target - Specifies the type of element to which the annotation is to be associated.
   - ElementType.TYPE - can be applied to any element of the class.
@@ -144,6 +286,13 @@ class Main{
   - RetentionPolicy.CLASS - Held at compile time, but ignored at run time.
   - RetentionPolicy.RUNTIME - Held at run time, only accessible at run time.
 - @Documented - Will cause the annotation to be mentioned in the javadoc.
+
+### @Inherited
+
+@Inherited is a marker annotation that we can use only on the annotation declaration. It affects only annotations used on class declarations. @Inherited annotation causes the subclass to inherit the annotation for a superclass.
+
+Therefore, whenever there is a request to a subclass for a specific annotation, and if the annotation is absent in the subclass, then it checks its superclass. If that annotation is present in the superclass, and if it is annotated with @Inherited, then it returns that annotation.
+
 
 
 Example
