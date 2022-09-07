@@ -24,7 +24,7 @@
 Data Structures
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [Array vs ArrayList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Array-ArrayList.md)
-* [ArraysList vs LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArraysList-LinkedList.md)
+* [ArrayList vs LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ArrayList-LinkedList.md)
 * [LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
 * [Stack](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Stack.md)
 * [Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Queue.md)
