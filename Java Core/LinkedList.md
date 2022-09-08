@@ -1,4 +1,4 @@
-## LinkedList
+# LinkedList
 
 - The **LinkedList** class is almost identical to the ArrayList
 - The **LinkedList** in Java is another important type of data structure.
@@ -10,27 +10,50 @@
 
 A Linked List is a collection of similar types of data elements, called nodes, which point to the next following nodes by means of pointers.
 
-Types of linked list:
+# Types of linked list:
 - Singly-linked list
 - Doubly linked list
 - Circular linked list
 
-### Singly linked list
+## Singly linked list
 
 A singly-linked list is a linked list that stores data and the reference to the next node or a null value. Singly-linked lists are also known as one-way lists as they contain a node with a single pointer pointing to the next node in the sequence.
 
 There is a START pointer that stores the very first address of the linked list. The next pointer of the last or end node stores NULL value, which points to the last node of the list which does not point to any other node.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/189209554-75a30c5e-c97c-4322-8d83-bcdf7a06961e.png">
+</p>
 
-### Doubly linked list
+
+## Doubly linked list
 
 It is the same as a singly-linked list with the difference that it has two pointers, one pointing to the previous node and one pointing to the next node in the sequence. Therefore, a doubly-linked list allows us to traverse in both the directions of the list.
 
-### Circular linked list
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/189210215-b7c273ed-0639-4989-9a9e-db0e504e18a3.png">
+</p>
+
+## Circular linked list
 
 In the Circular Linked List, all the nodes align to form a circle. In this linked list, there is no NULL node at the end. We can define any node as the first node. Circular linked lists are useful in implementing a circular queue.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/189210567-dd5112f6-285c-4226-94fa-3cb760f0bdff.png">
+</p>
 
+### Time complexities for linked-list operations:
+
+- Traversing elements: **O(n)**
+- Searching an element: **O(n)**
+- Insertion: **O(1)**
+- Deletion: **O(1)**
+
+We can also perform more operations like:
+
+- Concatenating two lists
+- Splitting list
+- Reversal of list
 
 Example
 
