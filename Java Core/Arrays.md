@@ -20,6 +20,15 @@
   - For **primitive data types**, the real values are stored in **contiguous memory locations**.
   - For **objects of a class**, the real objects are stored on the **heap**
 
+
+## Time complexities for array operations:
+- Accessing elements: ```O(1)```
+- Searching:
+  - For Sequential Search: ```O(n)```
+  - For Binary Search [If Array is sorted]: ```O(log n)```
+- Insertion: ```O(n)```
+- Deletion: ```O(n)```
+
 ## Arrays can be of 3 types:
 
 - Single Dimensional Arrays
