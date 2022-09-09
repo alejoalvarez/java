@@ -2,22 +2,24 @@
 
 A list is a set of nodes, each of which has two fields: an information field and a pointer to the next node in the list. In addition, an external pointer points to the first node in the list.
 
-Graphic representation of a node
+## Graphic representation of a node
 
-IMAGE
+<p align="center">
+<img width="350" src="https://user-images.githubusercontent.com/13514156/189397936-53605035-3eae-40fa-bb11-2ec5411b2b7f.png">
+</p>
 
 The information can be any simple data type, data structure, or even one or more objects.
 
 The address to the next node is a pointer.
 
-Graphic representation of a list
+## Graphic representation of a list
 
-IMAGE
+<p align="center">
+<img width="550" src="https://user-images.githubusercontent.com/13514156/189398524-4675ad28-a0f6-4abb-b93a-547f233b502d.png">
+</p>
 
-
-A list is a sequence of nodes
-
-The information of the nodes in this case is an integer and always contains a pointer that stores the address of the next root node is another external pointer to the list that contains the address of the first node.
+- A list is a sequence of nodes
+- The information of the nodes in this case is an integer and always contains a pointer that stores the address of the next root node is another external pointer to the list that contains the address of the first node.
 
 # Types of lists.
 
