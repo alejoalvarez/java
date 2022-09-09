@@ -4,6 +4,8 @@ A HashMap store items in "key/value" pairs, and you can access them by an index 
 
 One object is used as a key (index) to another object (value). It can store different types: String keys and Integer values, or the same type, like: String keys and String values.
 
+Keys and values in HashMap are actually objects. To use other types, such as int, you must specify an equivalent wrapper class **Integer**, for other primity types, use: Boolean for boolean, Character for char, Double for double, etc.
+
 Example:
 
 Create a HashMap object called capitalCities that will store String keys and String values:
@@ -57,3 +59,29 @@ Example
 ```java
 capitalCities.clear();
 ```
+
+## Size
+```java
+capitalCities.size();
+```
+
+## Loop Through a HashMap
+
+Use the ```keySet()``` method if you only want th keys, and use the ```values()``` method if you only want the values:
+
+```java
+
+for(String i : capitalCities.keySet()){
+  System.outprintln(i);
+}
+
+for(String i : capitalCities.value){
+  System.outprintln(i);
+}
+
+// Print keys and value
+for(String i : capitalCities.keySet()){
+  System.outprintln("key: " + i + " value: " + capitalCities.get(i));
+}
+```
+
