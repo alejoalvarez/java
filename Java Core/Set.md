@@ -2,3 +2,6 @@
 
 A Set is a special data structure in which we can not use the duplicate values. It is a very useful data structure mainly when we want to store unique elements, for example, unique IDs. There are many implementations of Set like HashSet, TreeSet, and LinkedHashSet provided by Java Collection API.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/189378917-e09bb5f6-3baf-49fb-9432-267ab7489829.png">
+</p>
