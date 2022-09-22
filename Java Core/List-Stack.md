@@ -8,17 +8,23 @@ A stack, being a list, can store any type of value in the information field (int
 
 Initially the **stack** is empty and we say that the root pointer points to null (if it points to null we say that it does not have a memory address):
 
-IMAGE
+<p align="center">
+<img width="150" src="https://user-images.githubusercontent.com/13514156/191837527-0506b0de-c2e3-417f-9ea4-4b2203b34932.png">
+</p>
 
 We push an integer value on the stack: insert(10)
 
-IMAGE
+<p align="center">
+<img width="180" src="https://user-images.githubusercontent.com/13514156/191837827-49d47c6d-3ebb-4930-890d-956fc45eb397.png">
+</p>
 
 After performing the insertion, the stack type list looks like this: a node with the value 10 and root points to that node. The node pointer points to null since there is no other node after it.
 
 We then insert the value 4: insert(4)
 
-image
+<p align="center">
+<img width="400" src="https://user-images.githubusercontent.com/13514156/191838081-b053e18c-46aa-4371-8811-848a0b86476a.png">
+</p>
 
 Now the first node in the stack is the one that stores the value four. root points to that node. Recall that root is the external pointer to the list that stores the address of the first node. The node we just inserted into the pointer field stores the address of the node that stores the value 10.
 
@@ -26,7 +32,9 @@ Now what happens if we pop a node from the stack. Which one is extracted? As we 
 
 Pulling from the stack we have: pull()
 
-IMAGE
+<p align="center">
+<img width="180" src="https://user-images.githubusercontent.com/13514156/191837827-49d47c6d-3ebb-4930-890d-956fc45eb397.png">
+</p>
 
 The stack is left with one node.
 
