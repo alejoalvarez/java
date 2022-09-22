@@ -42,7 +42,7 @@ public class Stack {
 	
     class Node {
         int info;
-        Node sig;
+        Node next;
     }
 	
     private Node root;
@@ -57,12 +57,12 @@ public class Stack {
         newNode.info = x;
         if (root == null)
         {
-            newNode.sig = null;
+            newNode.next = null;
             root = newNode;
         }
         else
         {
-            newNode.sig = root;
+            newNode.next = root;
             root = newNode;
         }
     }
@@ -72,7 +72,7 @@ public class Stack {
         if (root != null)
         {
             int information = root.info;
-            root = root.sig;
+            root = root.next;
             return information;
         }
         else
@@ -86,9 +86,27 @@ public class Stack {
         System.out.println("List of all elements in the stack.");
         while (pointer != null) {
             System.out.print(pointer.info + "-");
-            pointer = pointer.sig;
+            pointer = pointer.next;
         }
         System.out.println();
+    }
+
+    public boolean isEmpty() {
+        if (root == null) {
+            return true;
+        } else {
+    	    return false; 
+        }
+    }
+
+    public int total() {
+        int quantity = 0;
+        Node pointer = root;
+        while (pointer != null) {
+            quantity++;
+            pointer = pointer.next;
+        }
+        return quantity;
     }
     
     public static void main(String[] ar) {
