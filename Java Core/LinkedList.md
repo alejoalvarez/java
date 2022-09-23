@@ -477,10 +477,144 @@ public class GenericList {
 In the Circular Linked List, all the nodes align to form a circle. In this linked list, there is no NULL node at the end. We can define any node as the first node. Circular linked lists are useful in implementing a circular queue.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/13514156/189210567-dd5112f6-285c-4226-94fa-3cb760f0bdff.png">
+<img src="https://user-images.githubusercontent.com/13514156/192055338-266e3e14-2e40-46a8-bbae-36de29a69da6.png">
 </p>
 
-### Time complexities for linked-list operations:
+A circular list can also be doubly chained:
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/13514156/192055372-a6ce029b-dfed-4eb2-86c6-a0f32296e56a.png">
+</p>
+
+The ant pointer of the first node points to the last node in the list, and the sig pointer of the last node in the list points to the first.
+
+Example code:
+```java
+public class CircularList {
+
+    class Node {
+        int info;
+        Node before,next;
+    }
+
+    private Node root;
+
+    public CircularList() {
+        root = null;
+    }
+
+    public void insertFirst(int x) {
+        Node new1 = new Node();
+        new1.info = x;
+        if (root == null) {
+            new1.next = new1;
+            new1.before = new1;
+            root = new1;
+        } else {
+            Node last = root.before;
+            new1.next = root;
+            new1.before = last;
+            root.before = new1;
+            last.next = new1;
+            root = new1;
+        } 
+    }
+
+    public void insertLast(int x) {
+        Node new1 = new Node();
+        new1.info = x;
+        if (root == null) {
+            new1.next = new1;
+            new1.before = new1;
+            root = new1;
+        } else {
+            Node last = root.before;
+            new1.next = root;
+            new1.before = last;
+            root.before = new1;
+            last.next = new1;
+        }
+    }
+
+    public boolean empty(){
+        if (root == null)
+            return true;
+        else
+            return false;
+    }
+
+    public void print(){
+        if (!empty()) {
+            Node pointer = root;
+            do {
+                System.out.print (pointer.info + "-");
+                pointer = pointer.next;
+            } while (pointer != root);
+            System.out.println();
+        }
+    }
+
+    public int quantity(){
+        int cant = 0;
+        if (!empty()) {
+            Node pointer = root;
+            do {
+                cant++;
+                pointer = pointer.next;
+            } while (pointer != root);
+        }
+        return cant;
+    }
+
+    public void remove (int pos)
+    {
+        if (pos <= quantity())    {
+            if (pos == 1) {
+                if (quantity() == 1) {
+                    root = null;
+                } else {
+                    Node last = root.before;
+                    root = root.next;
+                    last.next = root;
+                    root.before = last;
+                }
+            } else {
+                Node pointer = root;
+                for (int f = 1 ; f <= pos - 1 ; f++)
+                    pointer = pointer.next;
+                Node before = pointer.before;
+                pointer = pointer.next;
+                before.next = pointer;
+                pointer.before = before;
+            }
+        }
+    }
+
+    public static void main(String[] ar) {
+        CircularList lc = new CircularList();
+        lc.insertFirst(100);
+        lc.insertFirst(45);
+        lc.insertFirst(12);
+        lc.insertFirst(4);
+        System.out.println("After inserting 4 Nodes at the beginning");
+        lc.print();
+        lc.insertLast(250);
+        lc.insertLast(7);
+        System.out.println("After inserting 2 Nodes at the end");
+        lc.print();
+        System.out.println("quantity of nodes: " + lc.quantity());
+        System.out.println("After remove the first position: ");
+        lc.remove(1);
+        lc.print();
+        System.out.println("After removing the fourth position: ");
+        lc.remove(4);
+        lc.print();
+    }
+}
+```
+
+
+## Time complexities for linked-list operations:
 
 - Traversing elements: **O(n)**
 - Searching an element: **O(n)**
