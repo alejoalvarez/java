@@ -29,6 +29,7 @@ Data Structures
 * [List](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/List.md)
 * [List-Stack](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/List-Stack.md)
 * [List-Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/List-Queue.md)
+* [List-Generic](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/List-Generic.md)
 * [LinkedList](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
 * [Stack](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Stack.md)
 * [Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Queue.md)
