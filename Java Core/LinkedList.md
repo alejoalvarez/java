@@ -34,6 +34,444 @@ It is the same as a singly-linked list with the difference that it has two point
 <img src="https://user-images.githubusercontent.com/13514156/189210215-b7c273ed-0639-4989-9a9e-db0e504e18a3.png">
 </p>
 
+Note that a doubly linked list has two pointers for each node, one points to the next node and one to the previous node. We still have a pointer (root) that has the address of the first node. The next pointer of the last node is the same as lists simply chained points to null, and the first node's ant pointer points to null.
+
+Stack, queue and generic lists with double link can be considered. Keep in mind that the memory requirement is greater in doubly linked lists since we have two pointers per node.
+
+The structure of the node is:
+```java
+class Node{
+  int info;
+  Node next, before;
+}
+```
+
+Example Code:
+
+```java
+public class GenericList {
+
+    class Node {
+        int info;
+        Nodo before,next;
+    }
+
+    private Node root;
+
+    public GenericList() {
+        root = null;
+    }
+
+    void push(int pos, int x){
+        if (pos <= quantity() + 1){
+            Node new1 = new Node();
+            new1.info = x;
+            if (pos == 1){
+                new1.next = root;
+                if (root != null)
+                    root.before = new1;
+                root = new1;
+            } else
+                if (pos == quantity() + 1)    {
+                    Node pointer = root;
+                    while (pointer.next != null) {
+                        pointer = pointer.next;
+                    }
+                    pointer.next = new1;
+                    new1.next = pointer;
+                    new1.next = null;
+                } else {
+                    Node pointer = root;
+                    for (int f = 1 ; f <= pos - 2 ; f++)
+                        pointer = pointer.next;
+                    Node next = pointer.next;
+                    pointer.next = new1;
+                    new1.before = pointer;
+                    new1.next = next;
+                    next.becfore = new1;
+                }
+        }
+    }
+
+    public int pull(int pos){
+        if (pos <= quantity()){
+            int information;
+            if (pos == 1) {
+                information = root.info;
+                root = root.next;
+                if (root != null)
+                    root.before = null;
+            } else {
+                Node pointer;
+                pointer = root;
+                for (int f = 1 ; f <= pos - 2 ; f++)
+                    pointer = pointer.next;
+                Node prox = pointer.next;
+                pointer.next = prox.sig;
+                Node next = prox.next;
+                if (next != null)
+                    next.before = pointer;
+                information = prox.info;
+            }
+            return informtcion;
+        }
+        else
+            return Integer.MAX_VALUE;
+    }
+
+    public void remove(int pos){
+        if (pos <= quantity()){
+            if (pos == 1) {
+                root = root.next;
+                if (root != null)
+                    root.before = null;
+            } else {
+                Node pointer;
+                pointer = root;
+                for (int f = 1 ; f <= pos - 2 ; f++)
+                    pointer = pointer.next;
+                Node prox = pointer.next;
+                prox = prox.next;
+                pointer.next = prox;
+                if (prox != null)
+                    prox.before = pointer;
+            }
+        }
+    }
+
+    public void exchange(int pos1, int pos2) {
+        if (pos1 <= quantity() && pos2 <= quantity()){
+            Node pointer1 = root;
+            for (int f = 1 ; f < pos1 ; f++)
+                pointer1 = pointer1.next;
+            Node pointer2 = root;
+            for (int f = 1 ; f < pos2 ; f++)
+                pointer2 = pointer2.next;
+            int aux = pointer1.info;
+            pointer1.info = pointer2.info;
+            pointer2.info = aux;
+        }
+    }
+
+    public int higher() {
+        if (!empty()) {
+            int may = root.info;
+            Node pointer = root.next;
+            while (pointer != null) {
+                if (pointer.info > may)
+                    may = pointer.info;
+                pointer = pointer.next;
+            }
+            return may;
+        }
+        else
+            return Integer.MAX_VALUE;
+    }
+
+    public int higherPosition() {
+        if (!empty())    {
+            int may = root.info;
+            int x = 1;
+            int pos = x;
+            Node pointer = root.next;
+            while (pointer != null){
+                if (pointer.info > may) {
+                    may = pointer.info;
+                    pos = x;
+                }
+                pointer = pointer.next;
+                x++;
+            }
+            return pos;
+        }
+        else
+            return Integer.MAX_VALUE;
+    }
+
+    public int quantity()
+    {
+        int cant = 0;
+        Node pointer = root;
+        while (pointer != null) {
+            pointer = pointer.next;
+            cant++;
+        }
+        return cant;
+    }
+
+    public boolean sorted() {
+        if (quantity()>1) {
+            Node pointer1 = root
+            Node pointer2 = root.next;
+            while (pointer2 != null) {
+                if (pointer2.info < pointer1.info) {
+                    return false;
+                }
+                pointer2 = pointer2.next;
+                pointer1 = pointer1.next;
+            }
+        }
+        return true;
+    }
+
+    public boolean exist(int x) {
+        Node pointer = root;
+        while (pointer != null) {
+            if (pointer.info == x)
+                return true;
+            pointer = pointer.next;
+        }
+        return false;
+    }
+
+    public boolean empty(){
+        if (root == null)
+            return true;
+        else
+            return false;
+    }
+
+    public void print()
+    {
+        Node pointer = root;
+        while (pointer != null) {
+            System.out.print (pointer.info + "-");
+            pointer = pointer.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] ar) {
+        GenericList lg = new GenericList();
+        lg.push(1, 10);
+        lg.push(2, 20);
+        lg.push(3, 30);
+        lg.push(2, 15);
+        lg.push(1, 115);
+        lg.print();
+        System.out.println ("After deleting the first");
+        lg.remove(1);
+        lg.print();
+        System.out.println ("After extracting the second");
+        lg.pull(2);
+        lg.print();
+        System.out.println ("After exchanging the first with the third");
+        lg.exchange(1, 3);
+        lg.print();
+        if (lg.exist(10))
+            System.out.println("20 is found on the list");
+        else
+            System.out.println("20 not found in the list");
+        System.out.println("The position of the elder is: " + lg.higherPosition());
+        if (lg.sorted())
+            System.out.println("The list is sorted from smallest to largest");
+        else
+            System.out.println("The list is not sorted from smallest to largest");
+    }
+}
+```
+
+# Proposed Problems
+
+1. Create a class to manage a generic doubly chained list by implementing the following methods:
+a) Insert a node at the beginning of the list.
+b) Insert a node at the end of the list.
+c) Insert a node in the second position. If the list is empty, the node is not inserted.
+d) Insert a node in the ante last position.
+e) Delete the first node.
+f) Delete the second node.
+g) Delete the last node.
+h) Delete the node with more information
+
+```java
+public class GenericList {
+
+    class Node {
+        int info;
+        Node before,next;
+    }
+
+    private Node root;
+
+    public GenericList () {
+        root = null;
+    }
+
+    void insertFirst(int x){
+        Node new1 = new Node();
+        new1.info = x;
+        new1.next = root;
+        if (root != null)
+            root.before = new1;
+        root=new1;
+    }
+
+    public void insertLast(int x) {
+        Node new1 = new Node();
+        new1.info = x;
+        if (root == null)
+            root = new1;
+        else {
+            Node pointer = root;
+            while (pointer.next != null) {
+                pointer = pointer.next;
+            }
+            pointer.next = new1;
+            new1.before = pointer;
+        }
+    }
+
+    public void insertSecond(int x){
+        if (root != null) {
+            Node new1 = new Node();
+            new1.info = x;
+            if (root.next == null) {
+                // Hay un solo Node.
+                root.next = new1;
+                new1.before = root;
+            } else {
+                Node third = root.next;
+                new1.next = third;
+                third.before = new1;
+                root.next = new1;
+                new1.before = root;
+            }
+        }
+    }
+
+    public void insertBeforeLast(int x) {
+        if (root != null) {
+            Node new1 = new Node();
+            new1.info = x;
+            if (root.next == null) {
+                // Hay un solo Node.
+                new1.next = root;
+                root = new1;
+            } else {
+                Node pointer = root;
+                while (pointer.next != null) {
+                    pointer = pointer.next;
+                }
+                Node beforer = pointer.before;
+                new1.next = pointer;
+                new1.before = beforer;
+                beforer.next = new1;
+                pointer.before = new1;
+            }
+        }
+    }
+
+    public void removeFirst() {
+        if (root! = null) {
+            root = root.next;
+            if (root != null) {
+                root.before = null;
+            }
+        }
+    }
+
+    public void removeSecond() {
+        if (root != null) {
+            if (root.next != null) {
+                Node third = root.next;
+                third = third.next;
+                root.next = third;
+                if (third != null)
+                    third.before = root;
+            }
+        }
+    }
+
+    public void removeLast() {
+        if (root != null) {
+            if (root.next == null) {
+                root = null;
+            } else {
+                Node pointer = root;
+                while(pointer.next != null) {
+                    pointer = pointer.next;
+                }
+                pointer = pointer.before;
+                pointer.next = null;
+            }
+        }
+
+    }
+    public void print() {
+        Node pointer = root;
+        while (pointer != null) {
+            System.out.print (pointer.info + "-");
+            pointer = pointer.next;
+        }
+        System.out.println();
+    }
+
+    public void removeHigher() {
+        if (root != null) {
+            Node pointer = root;
+            int may = root.info;
+            while (pointer != null) {
+                if (pointer.info > may) {
+                    may = pointer.info;
+                }
+                pointer = pointer.next;
+            }
+            pointer = root;
+            while (pointer != null) {
+                if (pointer.info == may) {
+                    if (pointer == root) {
+                        root = root.next;
+                        if (root != null)
+                            root.before = null;
+                        pointer = root;
+                    } else {
+                        Node before = pointer.before;
+                        before.next = pointer.next;
+                        pointer = pointer.next;
+                        if (pointer != null)
+                            pointer.before = before;
+                    }
+                } else {
+                    pointer = pointer.next;
+                }
+            }
+        }
+    }
+
+
+    public static void main(String[] ar) {
+        GenericList lg = new GenericList();
+        lg.insertFirst(10);
+        lg.insertFirst(45);
+        lg.insertFirst(23);
+        lg.insertFirst(89);
+        lg.print();
+        System.out.println("insert a Node at the end: ");
+        lg.insertLast(160);
+        lg.print();
+        System.out.println("insert a Node in the second position:");
+        lg.insertSecond(13);
+        lg.print();
+        System.out.println("insert a node in the before last position:");
+        lg.insertBeforeLast(600);
+        lg.print();
+        System.out.println("remove the first node in the list:");
+        lg.removeFirst();
+        lg.print();
+        System.out.println("Remove second node in the list:");
+        lg.removeSecond();
+        lg.print();
+        System.out.println("Remove last node in the list:");
+        lg.removeLast();
+        lg.print();
+        System.out.println("Remove the higger in the list:");
+        lg.removeHigher();
+        lg.print();
+    }
+}
+```
+
+
 ## Circular linked list
 
 In the Circular Linked List, all the nodes align to form a circle. In this linked list, there is no NULL node at the end. We can define any node as the first node. Circular linked lists are useful in implementing a circular queue.
