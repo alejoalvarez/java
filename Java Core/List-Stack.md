@@ -46,49 +46,40 @@ You have to be careful that if a new node is extracted, the stack will be empty 
 Program that manages a stack-like list (must be able to insert, extract and print the data from the stack)
 
 ```java
-public class Stack {
-	
-    class Node {
+public class ListStack {
+
+    static class Node {
         int info;
         Node next;
     }
-	
+
     private Node root;
-    
-    public Stack () {
+
+    public ListStack() {
         root = null;
     }
-    
+
     public void push(int x) {
-    	Node newNode;
-        newNode = new Node();
+        Node newNode = new Node();
         newNode.info = x;
-        if (root == null)
-        {
+        if(root == null){
             newNode.next = null;
-            root = newNode;
-        }
-        else
-        {
+        } else {
             newNode.next = root;
-            root = newNode;
         }
+        root = newNode;
     }
-    
-    public int pull ()
-    {
-        if (root != null)
-        {
+
+    public int pull(){
+        if (root != null){
             int information = root.info;
             root = root.next;
             return information;
-        }
-        else
-        {
+        } else{
             return Integer.MAX_VALUE;
         }
     }
-    
+
     public void print() {
         Node pointer = root;
         System.out.println("List of all elements in the stack.");
@@ -100,11 +91,7 @@ public class Stack {
     }
 
     public boolean isEmpty() {
-        if (root == null) {
-            return true;
-        } else {
-    	    return false; 
-        }
+        return (root == null);
     }
 
     public int total() {
@@ -116,15 +103,15 @@ public class Stack {
         }
         return quantity;
     }
-    
+
     public static void main(String[] ar) {
-        Stack stack1=new Stack();
-        stack1.push(10);
-        stack1.push(40);
-        stack1.push(3);
-        stack1.print();
-        System.out.println("Pull of stack: " + stack1.pull());
-        stack1.print();        
+        ListStack listStack = new ListStack();
+        listStack.push(10);
+        listStack.push(40);
+        listStack.push(3);
+        listStack.print();
+        System.out.println("Pull of stack: " + listStack.pull());
+        listStack.print();
     }
 }
 ```

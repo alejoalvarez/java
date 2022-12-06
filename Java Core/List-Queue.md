@@ -5,46 +5,38 @@ A list behaves like a **queue** if the inserts are done at the end and the extra
 Program that manages a queue like list (must be able to insert, extract and print the data from the stack)
 
 ```java
-public class Queue {
+public class ListQueue {
 
-    class Node {
+    static class Node {
         int info;
         Node next;
     }
 
     private Node root,bottom;
 
-    Queue() {
-        root=null;
-        bottom=null;
+    ListQueue(){
+        root = null;
+        bottom = null;
     }
 
     boolean empty (){
-        if (root == null)
-            return true;
-        else
-            return false;
+        return (root == null);
     }
 
-    void insert (int info)
-    {
-        Node new;
-        new = new Node ();
-        new.info = info;
-        new.next = null;
-        if (empty ()) {
-            root = new;
-            bottom = new;
+    void insert (int info){
+        Node newNode = new Node();
+        newNode.info = info;
+        newNode.next = null;
+        if (empty() ) {
+            root = newNode;
         } else {
-            bottom.next = new;
-            bottom = new;
+            bottom.next = newNode;
         }
+        bottom = newNode;
     }
 
-    int pull ()
-    {
-        if (!empty ())
-        {
+    int pull (){
+        if (!empty() ){
             int information = root.info;
             if (root == bottom){
                 root = null;
@@ -68,13 +60,13 @@ public class Queue {
     }
 
     public static void main(String[] ar) {
-        Queue queue1 = new Queue();
-        queue1.insert(5);
-        queue1.insert(10);
-        queue1.insert(50);
-        queue1.print();
-        System.out.println("extract one from the queue: " + cola1.pull());
-        queue1.print();
+        ListQueue listQueue = new ListQueue();
+        listQueue.insert(5);
+        listQueue.insert(10);
+        listQueue.insert(50);
+        listQueue.print();
+        System.out.println("extract one from the queue: " + listQueue.pull());
+        listQueue.print();
     }
 }
 ```

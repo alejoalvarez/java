@@ -1,5 +1,6 @@
 # Table of Contents
 * [JDK - JRE - JVM](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/JDK-JRE-JVM.md)
+* [Garbage Collector](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/GarbageCollector.md)
 * [Multiplatform](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Multiplatform.md)
 * [Versions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Versions.md)
 * [Why use java?](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/WhyUseJava.md)
@@ -18,7 +19,6 @@
 * [Dates](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Dates.md)
 * [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
 * [String](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/String.md)
-* [Garbage Collector](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/GarbageCollector.md)
 * [Regular Expressions](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/RegularExpressions.md)
 
 Data Structures
