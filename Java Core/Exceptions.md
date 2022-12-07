@@ -10,7 +10,7 @@ There are two types of exceptions :
 
 
 ## What is Java Exception?
-Exception, in general, refers to some contradiction or unexpected situation, or in short, an unexpected error that occurs during program execution. There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
+Exception, in general, refers to some unexpected situation, an unexpected error that occurs during program execution. There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
 
 The reason for this is that sometimes the resources are not available or sometimes the range of an array is invalid. These types of anomalous situations are called exceptions and the way to handle them is called exception handling.
 
@@ -32,10 +32,10 @@ Some common examples of Exceptions in Java are:
 - JVM has run out of memory.
 
 
-## Difference between Checked and Unchecked Exceptions**
+## Difference between Checked and Unchecked Exceptions
 
 **Checked Exception**
-The classes which directly inherit Throwable class except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.
+The classes which directly inherit Throwable class except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time. If the method contains the code that throws a checked exception, the programmer must provide a mechanism to catch it in the same method.
 
 **Unchecked Exception**
 The classes which inherit RuntimeException are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
@@ -182,9 +182,9 @@ rest of code
 
 ## throw 
 
-is used to explicitly throw an exception.
+Is used to explicitly throw an exception. allow you to create a custom error
 
-We can throw either checked or uncheked exception in java by throw keyword. The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.
+We can throw either checked or unchecked exception in java by throw keyword. The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.
 
 Example 
 
@@ -422,10 +422,10 @@ Runtime Exception
 | You cannot throw multiple exceptions.	| You can declare multiple exceptions e.g.
  public void method()throws  IOException,SQLException. 
 
-## ExceptionHandling with MethodOverriding
+## Exception Handling with Method Overriding
 
 
-There are many rules if we talk about methodoverriding with exception handling. The Rules are as follows:
+There are many rules if we talk about method overriding with exception handling. The Rules are as follows:
 
 - If the superclass method does not declare an exception
     - If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception but it can declare unchecked exception.

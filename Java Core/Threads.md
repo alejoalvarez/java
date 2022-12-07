@@ -1,5 +1,11 @@
 # Threads
 
+Threads allows a program to operate more efficiently by doing multiple things at the same time.
+
+Threads can be used to perform complicated tasks in the background without interrupting the main program.
+
+## What is a Java Thread?
+
 A thread is just a single lightweight and smallest part of a process. It is the smallest unit of a process that can run concurrently with the other parts (other threads) of the same process.
 
 There can be multiple processes in an Application. Each process can have a single thread or multiple threads. Multithreading is the process of concurrent execution of multiple threads.
@@ -8,6 +14,19 @@ There is a common memory area for all threads of a process but each of them is i
 
 - Threads allows a program to operate more efficiently by doing multiple things at the same time.
 - Threads can be used to perform complicated tasks in the background without interrupting the main program.
+
+
+
+
+The above figure shows that a thread executes inside the process. There is context-switching between the threads. There can be multiple processes inside the Operating System, and there can be multiple threads in one process.
+
+***Note:** At a time only a single thread can be executed.*
+
+#
+
+
+Multithreading is another important feature of Object-Oriented Programming. Multithreading in Java helps more than two programs simultaneously execute and we can utilize the capacity of CPU.
+
 
 ## Multitasking vs Multithreading vs Multiprocessing vs Multiprogramming
 
@@ -19,7 +38,23 @@ There is a common memory area for all threads of a process but each of them is i
 
 **Multiprogramming:** Multiprogramming is the ability to run more than one program at the same time within a single machine. For example, running Excel and Firefox simultaneously.
 
-## Java Thread Life-Cycle
+# Thread Priorities in Java
+
+With the creation of Java thread, the JVM assigns it some priority that helps the operating system determine the order of scheduling the threads. We can also set the priority of the thread in an explicit manner.
+
+The valid range of a priority of a thread is from 1 to 10. Threads that have higher priorities should be allocated before the threads with the lower priorities.
+
+## Constants of defining Thread Priorities
+
+There are 3 types of static variables or values for defining Thread priorities. The table shows these variables:
+
+| Variable | 	Description |
+|---|---|
+| public static int MIN_PRIORITY | The minimum priority of a thread with value = 1 |
+| public static int NORM_PRIORITY | The default priority of a thread with value = 5 |
+| public static int MAX_PRIORITY | The maximum priority of a thread with value = 10 |
+
+## Java Thread Life-Cycle
 
 Threads exist in several states. The above figure shows the various stages of the thread which are:
 
@@ -45,6 +80,16 @@ There is a need for synchronization between threads as multiple threads are runn
 When the thread is terminated, the thread goes into the dead state.
 
 
+# Advantages of the single thread
+
+The benefits of using threads are:
+
+- A thread reduces the overhead in the application as a single thread runs in the system
+- A single thread reduces the maintenance cost of the application.
+- Threads have a shared memory area so they help to save memory.
+- Context-switching between the threads takes less time than the process.
+
+
 ## Methods of Thread Class in Java
 
 The following list shows some important methods available in the Thread class.
@@ -61,6 +106,111 @@ The following list shows some important methods available in the Thread class.
 |public static void yield()	| It causes the currently running thread to yield to any other threads of the same priority that are waiting for being scheduled.|
 |public static void sleep(long millisec) |	It halts the currently running thread for at least the specified number of milliseconds.|
 |public static Thread currentThread()	| It returns a reference to the currently running thread, i.e the thread that invokes this method |
+
+# How to Achieve Multithreading in Java?
+
+We can achieve multithreading in Java in two ways:
+
+- By Implementing the **Runnable** Interface
+- By extending **Thread** class
+
+## Implementing the Runnable Interface in Java
+
+Creating a class by **Implementing the Runnable interface** is the simplest way to create a thread. To do this we need a class that implements a single method called **run( ).** To create a thread using a Runnable interface, you will need to follow three basic steps:
+
+**Step 1**
+
+In the first step, you need to implement the run() method of the Runnable interface. This method acts as an entry point for the thread and your complete business logic will be present inside this method. The syntax of the run() method is as follows:
+
+```java
+public void run( )
+```
+**Step 2**
+
+In the second step, you will instantiate a Thread object using the following constructor:
+
+```java
+Thread(Runnable threadObject, String threadName);
+```
+
+Where threadObject is an instance of a class that implements the Runnable interface and threadName is the name of the new thread.
+
+**Step 3**
+
+Once you create a Thread object, you can start it by calling the start() method, which makes a call to the run( ) method. Following is a simple syntax of the start() method:
+
+```java
+void start();
+```
+
+```java
+class MultithreadingDemo implements Runnable{
+  public void run(){
+    try{
+      System.out.println ("Thread " +Thread.currentThread().getId() +" is running");
+    } catch (Exception e){
+      System.out.println("Exception caught");
+    }
+  }
+}
+
+public class ImplementingRunnableInterface{
+  public static void main(String args[]){
+    for (int count=0; count<5; count++){
+      Thread object = new Thread(new MultithreadingDemo());
+      object.start();
+    }
+  }
+}
+```
+
+## Extending the Thread class
+
+We can also create a thread by creating a new class that extends the Thread class. Then, this class overrides the run() method and then we create an instance of this class. When you call the start() method, the run() method executes.
+
+Creating thread using Thread class is more flexible than creating it through the Runnable interface Because it is easy to handle multiple created threads using available methods in Thread class.
+
+Here is a simple step-by-step process of creating a Java Thread subclass:
+
+**Step 1**
+
+As the first step, you need to override the run( ) method of the Thread class. This method is an entry point for the thread and all the business logic is present inside this method.
+
+The syntax of the run() method is as follows:
+
+
+```java
+public void run( );
+```
+
+**Step 2**
+
+Once you create an object of the Thread subclass, you can start it by calling the start() method, which makes a call to the run( ) method. Following is a simple syntax of the start() method:
+
+```java
+void start( );
+```
+
+```java
+class MultithreadingDemo extends Thread{
+  public void run(){
+    try{
+      System.out.println("Thread " +Thread.currentThread().getId() +" is running");
+    }catch (Exception e){
+      System.out.println("Exception caught");
+    }
+  }
+}
+
+public class ExtendingThreadClass{
+  public static void main(String[] args){
+    for (int count=0; count<5; count++){
+      MultithreadingDemo object = new MultithreadingDemo();
+      object.start();
+    }
+  }
+}
+```
 
 
 ## Creating a Thread
@@ -122,7 +272,8 @@ public class Main implements Runnable {
 }
 ```
 
-### Differences between "extending" and "implementing" Threads
+## Differences between "extending" and "implementing" Threads
+
 The major difference is that when a class extends the Thread class, you cannot extend any other class, but by implementing the Runnable interface, it is possible to extend from another class as well, like: class MyClass extends OtherClass implements Runnable.
 	
 ## Concurrency Problems
