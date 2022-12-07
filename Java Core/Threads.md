@@ -15,28 +15,41 @@ There is a common memory area for all threads of a process but each of them is i
 - Threads allows a program to operate more efficiently by doing multiple things at the same time.
 - Threads can be used to perform complicated tasks in the background without interrupting the main program.
 
-
-
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206207361-f941fe91-83b7-45c1-af89-388469c7bfdd.png">
+</p>
 
 The above figure shows that a thread executes inside the process. There is context-switching between the threads. There can be multiple processes inside the Operating System, and there can be multiple threads in one process.
 
 ***Note:** At a time only a single thread can be executed.*
 
-#
-
-
 Multithreading is another important feature of Object-Oriented Programming. Multithreading in Java helps more than two programs simultaneously execute and we can utilize the capacity of CPU.
-
 
 ## Multitasking vs Multithreading vs Multiprocessing vs Multiprogramming
 
 **Multitasking:** Multitasking is the capability of an Operating System to execute more the one task or job simultaneously on a shared resource.
 
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206207691-327fdc27-4f84-4823-907f-f78b133cd95e.png">
+</p>
+
 **Multithreading:** Multithreading is the ability of an Operating System to execute more than one thread at the same time. Here, a single process is divided into multiple threads.
+
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206207859-243b59fc-cdf3-4d51-99d0-dfefaa90bf19.png">
+</p>
 
 **Multiprocessing:** It is similar to multitasking but here there is more than one processor or CPU. Therefore, multiple processes can execute with the multiple processors at the same time.
 
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206207999-4b9f00fa-33b8-448c-9744-3e8b65b36746.png">
+</p>
+
 **Multiprogramming:** Multiprogramming is the ability to run more than one program at the same time within a single machine. For example, running Excel and Firefox simultaneously.
+
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206208196-e317de0a-c72b-482c-90fa-067075e68793.png">
+</p>
 
 # Thread Priorities in Java
 
@@ -55,6 +68,10 @@ There are 3 types of static variables or values for defining Thread priorities. 
 | public static int MAX_PRIORITY | The maximum priority of a thread with value = 10 |
 
 ## Java Thread Life-Cycle
+
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206208475-a96e7aee-e6a1-4308-8a9a-99aa78f2cf4f.png">
+</p>
 
 Threads exist in several states. The above figure shows the various stages of the thread which are:
 
