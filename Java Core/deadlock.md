@@ -12,7 +12,9 @@ So, the deadlock condition arises when there are more than two threads and two o
 
 Eventually, they get stuck for an infinite period of time and cause a deadlock.
 
-
+<p align="center">
+<img width="471" src="https://user-images.githubusercontent.com/13514156/206246359-a9fe2415-ccc6-4032-932b-7a269cf6e3c1.png">
+</p>
 
 ## Deadlock Example in Java
 
