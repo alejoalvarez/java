@@ -3,6 +3,70 @@
 An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an "iterator" because "iterating" is the technical term for looping.
 To use an Iterator, you must import it from the java.util package.
 
+Java Iterator interface replaces the enumerator that was used earlier to step through some simple collections like vectors.
+
+**The major differences between Java Iterator and Enumerator are:**
+
+- Considerable improvement in method names.
+- You can remove method elements from the collection that is being traversed using an iterator.
+
+**Iterator Types**
+
+- Enumerator (seldom used now)
+- Iterator
+- ListIterator
+
+## Iterator Interface In Java
+
+The Iterator interface in Java is a part of the Collections framework in ‘java.util’ package and is a cursor that can be used to step through the collection of objects.
+
+**The Iterator interface has the following major characteristics:**
+
+- The Iterator interface is available from the Java 1.2 collection framework onwards.
+- It traverses the collection of objects one by one.
+- Popularly known as “Universal Java Cursor” as it works with all collections.
+- This interface supports ‘read’ and ‘remove’ operations i.e. you can remove an element during an iteration using the iterator.
+
+
+## Iterator Methods: 
+
+### next()
+
+* **Prototype:** E next ()
+* **Parameters:** no parameters
+* **Return type:** E -> element
+* **Description:** Returns the next element in the collection.
+
+If the iteration (collection) has no more elements, then it throws **NoSuchElementException**.
+
+
+### hasNext()
+
+* **Prototype:** boolean hasNext()
+* **Parameters:** NIL
+* **Return type:** true => there are elements in the collection. False => no more elements
+* **Description:** The function hasNext() checks if there are more elements in the collection that is being accessed using an iterator. If there are no more elements, then you don’t call the next() method. In other words, this function can be used to decide if the next() method is to be called.
+
+### remove()
+
+* **Prototype:** void remove()
+* **Parameters:** NIL*
+* **Return type:** NIL
+* **Description:** Removes the last element returned by the iterator iterating over the underlying collection. The remove () method can be called only once per next () call.
+
+If the iterator does not support remove operation, then it throws **UnSupportedOperationException**. It throws **IllegalStateException** if the next method is not yet called.
+
+### forEachRemaining()
+
+* **Prototype:** void forEachRemaining(consumer <? super [E]> action)
+* **Parameters:** action => action to be performed
+* **Return type:** void
+* **Description:** Performs the specified action on each of the remaining elements of the collection until all the elements are exhausted or the action throws an exception. Exceptions thrown by action are propagated to the caller.
+
+If the action is null, then it raises **nullPointerException**. This function is a new addition to the Iterator interface in Java 8.
+
+
+
 The ```iterator()``` method can be used to get an Iterator for any collection:
 
 Example
