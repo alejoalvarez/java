@@ -56,6 +56,8 @@ Threads
 * [Threads example](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Threads1.md)
 * [Executors](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/ThreadsExecutors.md)
 * [Synchronized](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Synchronized.md)
+* [DeadLock](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/deadlock.md)
+
 
 Generics
 * [Generics - wildcard](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Generics.md)
