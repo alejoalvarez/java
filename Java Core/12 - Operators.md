@@ -1,7 +1,7 @@
-## Operators
+# Operators
 Operators are used to perform operations on variables and values.
 
-**Arithmetic**
+## Arithmetic
 Arithmetic operators are used to perform common mathematical operations.
 
 |Operator|Name|Description|Example|
@@ -16,7 +16,7 @@ Arithmetic operators are used to perform common mathematical operations.
 |++|Increment|Increases the value of a variable by 1|x++|
 |--|Decrement|Decreases the value of a variable by 1|x--|
 
-**Assignment**
+## Assignment
 Assignment operators are used to assign values to variables.
 
 |Operator|Example|Equals|
@@ -29,7 +29,7 @@ Assignment operators are used to assign values to variables.
 |%=|x%=5|x= x % 5|
 |&=|x&=5|x= x & 5|
 
-**Relationals / Comparison**
+## Relationals / Comparison
 Comparison operators are used to compare two values:
 
 |Operator|Name|Example|
@@ -41,20 +41,18 @@ Comparison operators are used to compare two values:
 |>=|Greater than or equal to| x >= y|
 |<=|Less than or equal to| x <= y|
 
-**instanceOf**
-<object> instanceof <class> determines if an object belongs to a class
+## instanceOf
+<object> instanceOf <class> determines if an object belongs to a class
 
-example
 ```java
     if (professor instanceOff InternalProfessor){
         // code block
-    }else
-    {
-        code block
-}
+    }else{
+        // code block
+    }
 ```
 
-**Logicals**
+## Logicals
 Logical operators are used to determine the logic between variables or values:
 
 |Operator|Name|Description|Example|
@@ -74,8 +72,10 @@ example
     (x > y) ?  x : y  /// x is IF, y is ELSE
 ```
 
-**Bit level**
+## Bit level
+```
 >>, <<, >>>, &, |, ^, ~
+```
 
 
 ## Examples
@@ -86,37 +86,37 @@ Unary operator (++, --)
 class Example{  
     public static void main(String args[]){  
         int x=15;  
-        System.out.println(x++);//15 (16)  
-        System.out.println(++x);//17  
-        System.out.println(x--);//17 (16)  
-        System.out.println(--x);//15
+        System.out.println(x++); //15 (16)  
+        System.out.println(++x); //17  
+        System.out.println(x--); //17 (16)  
+        System.out.println(--x); //15
 
-        int a=10;  
-        int b=10;  
-        System.out.println(a++ + ++a);//10+12=22  
-        System.out.println(b++ + b++);//10+11=21    
+        int a = 10;  
+        int b = 10;  
+        System.out.println(a++ + ++a); //10+12=22  
+        System.out.println(b++ + b++); //10+11=21    
     }
 }
 ```
 
-Unary operator (~, !)
+### Unary operator (~, !)
 
 ```java
 class Example{  
     public static void main(String args[]){  
-        int a=10;  
-        int b=-10;  
-        boolean c=true;  
-        boolean d=false;  
-        System.out.println(~a);//-11 (minus of total positive value which starts from 0)  
-        System.out.println(~b);//9 (positive of total minus, positive starts from 0)  
+        int a = 10;  
+        int b = -10;  
+        boolean c = true;  
+        boolean d = false;  
+        System.out.println(~a); //-11 (minus of total positive value which starts from 0)  
+        System.out.println(~b); //9 (positive of total minus, positive starts from 0)  
         System.out.println(!c);//false (opposite of boolean value)  
         System.out.println(!d);//true  
     }
 }  
 ```
 
-Left shift operator
+### Left shift operator
 The Java left shift operator << is used to shift all of the bits in a value to the left side of a specified number of times.
 
 ```java
@@ -130,7 +130,7 @@ class Example{
 }  
 ```
 
-Right shift operator
+### Right shift operator
 The Java right shift operator >> is used to move left operands value to right by the number of bits specified by the right operand.
 
 ```java
@@ -143,7 +143,7 @@ class Example{
 }
 ```
 
-Comparison left and rigth shift
+### Comparison left and rigth shift
 
 ```java
 class Example{  
@@ -158,7 +158,7 @@ public static void main(String args[]){
 }
 ```
 
-AND Operator (Logical && and Bitwise &)
+### AND Operator (Logical && and Bitwise &)
 
 The logical && operator doesn't check second condition if first condition is false. It checks second condition only if first one is true.
 
@@ -176,7 +176,7 @@ class Example{
 }  
 ```
 
-AND Operator (Logical && vs Bitwise & )
+### AND Operator (Logical && vs Bitwise & )
 
 ```java
 class OperatorExample{  
@@ -192,7 +192,7 @@ class OperatorExample{
 } 
 ```
 
-OR Operator (Logical || and Bitwise | )
+### OR Operator (Logical || and Bitwise | )
 The logical || operator doesn't check second condition if first condition is true. It checks second condition only if first one is false.
 
 The bitwise | operator always checks both conditions whether first condition is true or false.
@@ -213,5 +213,3 @@ class OperatorExample{
     }
 }  
 ```
-
-
