@@ -1,4 +1,5 @@
-## Methods
+# Methods
+
 - A method is a block of code which only runs when it is called.
 - Methods are used to perform certain actions, and they are also known as functions.
 - A method must be declared within a class
@@ -12,15 +13,14 @@ public class Main {
 }
 ```
 
-**exampleethod()** is the name of the method
-**static** means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.
-**void** means that this method does not have a return value. You will learn more about return values later in this chapter
+- ```exampleMethod()``` is the name of the method
+- ```static``` means that the method belongs to the Main class and not an object of the Main class.
+- ```void``` means that this method does not have a return value.
 
-### Parameters and arguments
+## Parameters and arguments
 
 Information can be passed to methods as parameter. Parameters act as variables inside the method.
 
-Example: 
 ```java
 public class Main {
   static void printName(String name) {
@@ -34,7 +34,7 @@ public class Main {
 }
 ```
 
-### Method overloading 
+## Method overloading 
 
 Multiple methods can have the same name with different parameters:
 
@@ -42,13 +42,11 @@ Multiple methods can have the same name with different parameters:
 - float printNumbers(float x)
 - double printNumbers(double x, double y)
 
-### Static vs Non-static
+## Static vs Non-static
 
 You will often see Java programs that have either static or public attributes and methods.
 
 Static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects:
-
-example
 
 ```java
 public class Main {
@@ -78,7 +76,7 @@ public class Main {
 
 A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
 
-- Note that the constructor name must **match the class name**, and it cannot have a **return type** (like ```void```).
+- Note that the constructor name must ```match the class name```, and it cannot have a **return type** (like ```void```).
 
 Example:
 
@@ -119,21 +117,20 @@ public class Main {
   }
 }
 
-// Outputs 1969 Mustang
+// Outputs 1980 Audi
 ```
 
 ## Main method
-It is where our application starts
-• It is a standard used by the JVM to initialize the execution of any Java program
-• For managed containers such as Sevlets, EJB among others, these have their own life cycle methods
-• They must always contain the qualifiers public and static
-• They should never return a value as a result, you must indicate the void method as a return
-• It must have as a parameter the value String []
-It can be written in 3 ways:
+- It is where our application starts
+- For managed containers such as Sevlets, EJB among others, these have their own life cycle methods
+- They must always contain the qualifiers public and static
+- They should never return a value as a result, you must indicate the void method as a return
+- It must have as a parameter the value String []
+- It can be written in 3 ways:
 
-- public static void main(String args[]){}
-- public static void main(String [] args){}
-- public static void main(String… args){} 
+  - public static void main(String args[]){}
+  - public static void main(String [] args){}
+  - public static void main(String… args){} 
 
 ## Modifiers
 
@@ -141,10 +138,10 @@ It can be written in 3 ways:
 
  We divide modifiers into two groups:
 
-- Access Modifiers - controls the access level
-- Non-Access Modifiers - do not control access level, but provides other functionality
+- ```Access Modifiers``` - controls the access level
+- ```Non-Access Modifiers``` - do not control access level, but provides other functionality
 
-### Access Modifiers
+## Access Modifiers
 
 For classes, you can use either public or default:
 - ```public``` => The class is accessible by any other class
@@ -162,7 +159,7 @@ For attributes, methods and constructors, you can use the one of the following:
 <img height="270" src="https://user-images.githubusercontent.com/13514156/120519706-893f3b80-c398-11eb-89b9-5368149984a5.jpeg">
 </p>
 
-### Non-Access Modifiers 
+## Non-Access Modifiers 
 
 For classes, you can use either final or abstract:
 - ```final``` => The class cannot be inherited by other classes
@@ -221,7 +218,7 @@ public class Main {
 }
 ```
 
-**Instance method:**
+## Instance method:
 
 It is the one that is invoked on an instance
 
@@ -230,7 +227,7 @@ Person p1 = new Person();
 p1.getName(); // to invoke it you need to create an object of the class
 ```
 
-**Class method (static)**
+## Class method (static)
 
 It is the one that can be invoked without existing an instance
 
