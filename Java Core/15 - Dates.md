@@ -17,11 +17,13 @@ To display the current date, import the ```java.time.LocalDate``` class, and use
 Example:
 
 ```java
-import java.time.LocalDate; // import the LocalDate class
+import java.time.LocalDate;
+
 public class Main {
+  
   public static void main(String[] args) {
-    LocalDate myObj = LocalDate.now(); // Create a date object
-    System.out.println(myObj); // Display the current date
+    LocalDate myObj = LocalDate.now();
+    System.out.println(myObj);
   }
 }
 ```
@@ -37,8 +39,10 @@ To display the current time (hour, minute, second, and nanoseconds), import the 
 Example:
 
 ```java
-import java.time.LocalTime; // import the LocalTime class
+import java.time.LocalTime;
+
 public class Main {
+  
   public static void main(String[] args) {
     LocalTime myObj = LocalTime.now();
     System.out.println(myObj);
@@ -55,8 +59,10 @@ To display the current date and time, import the java.time.LocalDateTime class, 
 
 Example:
 ```java
-import java.time.LocalDateTime; // import the LocalDateTime class
+import java.time.LocalDateTime;
+
 public class Main {
+  
   public static void main(String[] args) {
     LocalDateTime myObj = LocalDateTime.now();
     System.out.println(myObj);
@@ -74,9 +80,11 @@ The "T" in the example above is used to separate the date from the time. You can
 
 Example:
 ```java
-import java.time.LocalDateTime; // Import the LocalDateTime class
-import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Main {
+  
   public static void main(String[] args) {
     LocalDateTime myDateObj = LocalDateTime.now();
     System.out.println("Before formatting: " + myDateObj);
@@ -88,6 +96,7 @@ String formattedDate = myDateObj.format(myFormatObj);
 ```
 
 The output will be:
-```Before Formatting: 2021-03-18T18:47:32.682694 
+```
+Before Formatting: 2021-03-18T18:47:32.682694 
 After Formatting: 18-03-2021 18:47:32
 ````
