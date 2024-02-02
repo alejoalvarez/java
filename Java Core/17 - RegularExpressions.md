@@ -1,11 +1,10 @@
 # Regular Expressions
 
-A regular expression is a group of characters that helps in matching the patterns in a String or a set of Strings, using a particular syntax of a pattern. Java provides Regular Expressions that are useful for defining patterns in a String which can ultimately be helpful in performing various operations on String/text like searching, processing, editing, pattern matching, manipulating, email and password validation, etc.
+- A regular expression is a group of characters that helps in matching the patterns in a String or a set of Strings, using a particular syntax of a pattern.
 
-A regular expression is not language-specific but they slightly differ for each language. The regular expression in Java and Perl language are almost similar to each other and are very easy to learn.
+- A regular expression is not language-specific but they slightly differ for each language.
 
-A regular expression is also known as Regex in short. In Java, Regular Expressions are provided under the package java.util.regex, which is the part of standard Java (Java SE) since Java 1.4. The Java Regex is an API (Application Programming Interface) used to define a pattern for manipulating or searching Strings.
-
+- A regular expression is also known as Regex in short. 
 
 ## Metacharacters of Java Regular Expressions
 
@@ -23,7 +22,7 @@ The Meta characters used in the regular expressions are:
 |\b	| A word boundary|
 |\B | A non-word boundary|
 
-**Classes in Java Regex:**
+## Classes in Java Regex:
 
 | Class	| Description |
 |---|---|
@@ -31,18 +30,16 @@ The Meta characters used in the regular expressions are:
 | util.regex.Matcher | Used to interpret the pattern and performs match operations against an input string|
 | util.regex.PatternSyntaxException | Used to throw an exception if the syntax of a regular expression is incorrect|
 
-**interface:**
+## interface:
 
 | Interface	| Description |
 |---|---|
 | MatchResult | Used to find the result of a match operation for a regular expression |
 
-## Classes in Java Regular Expressions
 
 ### java.util.Pattern class
 
-
-The Pattern class is used to define or create regular expressions or patterns. This class is a compiled representation of regular expressions that can be used to define various types of patterns. There is no public constructor in Pattern class. We can use the public static method compile() of this class by passing regular expression as an argument which will create the pattern object after execution.
+The Pattern class is used to define or create regular expressions or patterns.
 
 **Methods**
 
@@ -114,8 +111,6 @@ The object of Matcher class is an engine which is used to perform match operatio
 Example
 
 ```java
-package regularexpressions;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
