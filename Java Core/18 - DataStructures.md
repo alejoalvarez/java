@@ -26,15 +26,3 @@ As the amount of data grows rapidly, applications get more complex, and there ma
 
 - ```Linear Data Structures:``` In a linear data structure all the elements are arranged in the linear or sequential order. The linear data structure is a single level data structure.
 - ```Non-Linear Data Structures:``` The non-linear data structure does not arrange the data in a sequential manner as in linear data structures. Non-linear data structures are the multilevel data structure.
-
-# Types of Data Structure in Java
-
-There are some common types of data structure in Java they are as follows –
-
-1. [Arrays](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Arrays.md)
-2. [Linked Lists](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/LinkedList.md)
-3. [Stack](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Stack.md)
-4. [Queue](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Queue.md)
-5. [Graph](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Graph.md)
-6. [Set](https://github.com/alejoalvarez/Java/blob/main/Java%20Core/Set.md)
-
