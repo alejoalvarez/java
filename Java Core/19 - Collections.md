@@ -1,19 +1,17 @@
 # Collections
 
-Collection Framework in Java is one of the fundamental parts of the Java programming language. Most of the programming languages majorly use the Collections. Most of them support various types of Collections such as List, Set, Queue, Stack, etc. Today in this article we will learn about the Collections in Java and how to use Collection Frameworks in Java.
+- Collection Framework in Java is one of the fundamental parts of the Java programming language.
 
-**What is a Collection in Java?**
+## What is a Collection in Java?
 
-Java Collection is a group of individual items in a single unit. Collections are like containers that merge multiple items into a single unit. For example, a bundle of sticks, a list of employee names, etc. The two principal root interfaces of Java collection classes are Collection interface (java.util.Collection) and Map interface (java.util.Map).
-
-**Collection Framework in Java**
-
-A Collection Framework in Java is a unified architecture that represents a collection of interfaces and classes. It helps in storing and processing the data efficiently. This framework has several useful classes that have a number of useful functions that make a programmer’s task easy. The Collection Frameworks represent and manipulate Collections in Java in a standard way.
+- Java Collection is a group of individual items in a single unit.
+- Collections are like containers that merge multiple items into a single unit. - For example, a bundle of sticks, a list of employee names, etc.
+- The two principal root interfaces of Java collection classes are `Collection` interface (`java.util.Collection`) and `Map` interface (`java.util.Map`).
+- It helps in storing and processing the data efficiently
 
 **The collection framework met several goals like:**
 
 - It increases the efficiency of the fundamental collections like dynamic arrays, trees, linked lists, and hashtables, etc.
-- Let the different types of collections work in an identical manner along with a higher degree of compatibility.
 - Easily extend and/or adapt a collection.
 - Remove the need for writing the code to implement the data structures and algorithms manually.
 - Make our code much more efficient as the Collections Framework is highly optimized.
@@ -28,13 +26,11 @@ All collections frameworks in Java include the following:
 - Implementation or Classes
 - Algorithms
 
-**Interfaces**
+### Interfaces
 
-Java Collection Framework consists of interfaces which are abstract data types that represent collections. With Interfaces, we can manipulate the collections irrespective of the details of their representation. All the interfaces of the collections framework reside in java.util package.
-
-In object-oriented languages, interfaces normally represent a hierarchy. The root or top-level interface of the Collection Framework is java.util.Collection. It contains some important methods such as add(), size(), remove(), clear(), iterator() that every Collection class must implement.
-
-Some other important interfaces are java.util.List, java.util.Queue ,java.util.Set, and java.util.Map. The only interface that does not inherit the Collection interface is the Map interface but it is the part of the Collections framework.
+- All the interfaces of the collections framework reside in java.util package.
+- Some other important interfaces are java.util.List, java.util.Queue ,java.util.Set, and java.util.Map.
+- The only interface that does not inherit the Collection interface is the Map interface but it is the part of the Collections framework.
 
 | Interface 	| Description |
 |---|---|
@@ -80,9 +76,7 @@ An algorithm refers to the methods that perform useful computing operations, suc
 <img  src="https://user-images.githubusercontent.com/13514156/120520142-11254580-c399-11eb-961a-2d0bacdf89c2.jpeg">
 </p>
 
-
-
-As we can see, the highest element is the Collection interface, for which, based on its natural interface, we understand that it has a series of "basic" methods where its behavior will be defined as it is implemented in more elements. The Set and List interfaces are mainly derived from it.
+The Set and List interfaces are mainly derived from it.
 
 ## Set
 The Set interface will have the following characteristics:
@@ -111,7 +105,7 @@ Being a doubly linked data structure we can add data above the stack or below
 
 The Map interface does not inherit from the Collection interface because it represents a Mapping data structure and not a simple collection of objects. This structure is more complex, so each element must come together with another piece of information that will function as the element's key.
 
-Map<K,V>
+`Map<K,V>`
 
 K - Is the key
 V - Is the value
@@ -139,7 +133,10 @@ Map<Integer, String> treeMap = new TreeMap<Integer, String>();
 Map<Integer, String> linkedHashMap = new LinkedHashMap<Integer, String>();
 ```
 
-As you can see, the object can only be built with three elements that implement it: HashMap, TreeMap, LinkedHashMap leaving out HashTable (Deprecada, it has redundant methods) and SortedMap (for being interface)
+As you can see, the object can only be built with three elements that implement it: 
+- HashMap
+- TreeMap
+- LinkedHashMap leaving out HashTable (Deprecada, it has redundant methods) and SortedMap (for being interface)
 
 
 ## HashMap
@@ -167,7 +164,6 @@ while(it.hasNext()){
     System.out.println("Key " + key + " -> Valor: " + map.get(key));
 }
 ```
-
 
 ## LinkedHashMap
 Order the elements as they are inserted; causing the searches to be slower
@@ -203,7 +199,6 @@ treeMap.put(3, "Player3");
 treeMap.put(9, "Player9");
 treeMap.put(2, "Player2");
 
-
 Iterator itetator = treeMap.keySet().iterator();
 while(it.hasNext()){
     Integer key = it.next();
@@ -219,5 +214,4 @@ for(Entry<Integer, String> players : linkedHashMap.entrSet()){
     String value = players.getValue();
     System.out.println( key + "-> " + value );
 }
-
 ```
