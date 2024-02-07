@@ -45,10 +45,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.LinkedBlockingQueue;
+
 ExecutorService exService = new ThreadPoolExecutor(10, 100, 5L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue < Runnable > ());
 ```
 
-ExecutorService Implementations
+**ExecutorService Implementations**
+
 ExecutorService is very similar to the thread pool. The implementation of the ExecutorService in the java.util.concurrent package is a thread pool implementation. There are following implementations of ExecutorService in the java.util.concurrent package:
 
 ## ThreadPoolExecutor
@@ -61,27 +63,27 @@ The ThreadPoolExecutor executes the specified tasks using one of its internally 
 **Creating a threadPoolExecutor**
 
 ```java
-int corethreadPoolSize = 10;
+int coreThreadPoolSize = 10;
 int maxPoolSize = 15;
 long keepAliveTime = 6000;
-ExecutorService es = new threadPoolExecutor(corethreadPoolSize, maxPoolSize, keepAliveTime, TimeUnit.MILLISECONDS, new LinkedBlockingQueue < Runnable > ());
+
+ExecutorService es = new threadPoolExecutor(coreThreadPoolSize, maxPoolSize, keepAliveTime, TimeUnit.MILLISECONDS, new LinkedBlockingQueue < Runnable > ());
 ```
 
 ## ScheduledThreadPoolExecutor
 
 The ScheduledThreadPoolExecutor is an ExecutorService that can schedule tasks to run after a delay or to execute repeatedly with a fixed interval of time in between each execution.
 
-**Creating a ScheduledthreadPoolExecutor**
+**Creating a ScheduledThreadPoolExecutor**
 
 ```java
-ScheduledExecutorService scheduledexecutorservice = Executors.newScheduledThreadPool(5);
-ScheduledFuture scheduledfuture = scheduledExecutorService.schedule(new Callable() {
+ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
+ScheduledFuture scheduledFuture = scheduledExecutorService.schedule(new Callable() {
   public Object call() throws Exception {
     System.out.println("executed");
     return "called";
   }
-},
-5, TimeUnit.SECONDS);
+}, 5, TimeUnit.SECONDS);
 ```
 
 ## ExecutorService Usage in Java
@@ -142,25 +144,30 @@ The **invokeAny()** method takes a collection or subinterfaces of Callable objec
 
 ```java
 public class Main {
-  public static void main(String[] args) throws ExecutionException,
-  InterruptedException {
+
+  public static void main(String[] args) throws ExecutionException, InterruptedException {
+    
     ExecutorService es = Executors.newSingleThreadExecutor();
+
     Set < Callable < String >> callable = new HashSet < Callable < String >> ();
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 1";
       }
     });
+
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 2";
       }
     });
+
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 3";
       }
     });
+
     String result = es.invokeAny(callable);
     System.out.println("result = " + result);
     executorService.shutdown();
@@ -174,25 +181,29 @@ The **invokeAll()** method invokes all of the objects of Callable that we pass t
 
 ```java
 public class Main {
-  public static void main(String[] args) throws InterruptedException,
-  ExecutionException {
+  public static void main(String[] args) throws InterruptedException, ExecutionException {
+    
     ExecutorService executorService = Executors.newSingleThreadExecutor();
     Set < Callable < String >> callable = new HashSet < Callable < String >> ();
+    
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 1";
       }
     });
+
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 2";
       }
     });
+
     callable.add(new Callable < String > () {
       public String call() throws Exception {
         return "Task 3";
       }
     });
+    
     java.util.List < Future < String >> futures = executorService.invokeAll(callable);
     for (Future < String > future: futures) {
       System.out.println("future.get = " + future.get());
@@ -256,8 +267,10 @@ Cancelling Task in Java
 We can also cancel a Runnable or Callable task submitted to the ExecutorService of Java. We can cancel the task by calling the cancel() method on the Future. It is possible to cancel the task only if the task has not yet started executing.
 
 For example:
-
+```java
 Future.cancel();
+```
+
 
 Example:
 
