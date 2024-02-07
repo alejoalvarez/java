@@ -1,20 +1,16 @@
-# Exeptions
+# Exceptions
 
 The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that normal flow of the application can be maintained.
 
 In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
 
 There are two types of exceptions :
-- **checked exception**
-- **unchecked exception** 
-
+- `checked exception`
+- `unchecked exception`
 
 ## What is Java Exception?
-Exception, in general, refers to some unexpected situation, an unexpected error that occurs during program execution. There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
-
-The reason for this is that sometimes the resources are not available or sometimes the range of an array is invalid. These types of anomalous situations are called exceptions and the way to handle them is called exception handling.
-
-The unexpected errors or bugs during the runtime or normal execution of a program is a Java Exception.
+- Exception, in general, refers to some unexpected situation, an unexpected error that occurs during program execution.
+- There may be some cases during program development, where the programmer is not sure that this code-fragment is going to work correctly or not.
 
 This exception causes disruption in the execution of the program.
 
@@ -34,18 +30,18 @@ Some common examples of Exceptions in Java are:
 
 ## Difference between Checked and Unchecked Exceptions
 
-**Checked Exception**
-The classes which directly inherit Throwable class except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time. If the method contains the code that throws a checked exception, the programmer must provide a mechanism to catch it in the same method.
+`Checked Exception`
 
-**Unchecked Exception**
-The classes which inherit RuntimeException are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+ - The classes which directly inherit `Throwable` class except `RuntimeException` and `Error` are known as **checked exceptions** e.g. IOException, SQLException etc.
+ - Checked exceptions are checked at `compile-time`. If the method contains the code that throws a checked exception, the programmer must provide a mechanism to catch it in the same method.
+ - Extends `java.lang.Exception`.
+ - try-catch explicitly
 
-**Error**
-Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
-
-**Checked** – Extends ```java.lang.Exception```, for recoverable condition, try-catch the exception explicitly, compile error.
-**Unchecked** – Extends ```java.lang.RuntimeException```, for unrecoverable condition, like programming errors, no need try-catch, runtime error.
-
+`Unchecked Exception`
+- The classes which inherit `RuntimeException` are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc.
+- Unchecked exceptions are checked at `runtime`.
+- Extends `java.lang.RuntimeException`
+- No need try-catch
 
 ## Java Exception Methods
 
@@ -79,82 +75,69 @@ Java allows us to control exceptions so that our program does not stop unexpecte
 
 ## Try block
 
-is used to enclose the code that might throw an exception. It must be used within the method.
-
-If an exception occurs at the particular statement of try block, the rest of the block code will not execute. So, it is recommended not to keeping the code in try block that will not throw an exception.
-
-Java try block must be followed by either catch or finally block.
+- Is used to enclose the code that might throw an exception. It must be used within the method.
+- If an exception occurs at the particular statement of try block, the rest of the block code will not execute. So, it is recommended not to keeping the code in try block that will not throw an exception.
+- Java try block must be followed by either catch or finally block.
 
 Examples
 
 ```java
 try{    
-//code that may throw an exception    
+  //code that may throw an exception    
 }catch(Exception_class_Name ref){
-    // code here
+  // code here
 }  
 ```
 
 ```java
 try{    
-//code that may throw an exception    
+  //code that may throw an exception    
 }finally{
-    // code here
+  // code here
 }  
 ```
 
 ## catch block
 
-is used to handle the Exception by declaring the type of exception within the parameter. The declared exception must be the parent class exception ( i.e., Exception) or the generated exception type. However, the good approach is to declare the generated type of exception.
-
-The catch block must be used after the try block only. You can use multiple catch block with a single try block.
+- Is used to handle the Exception by declaring the type of exception within the parameter.
+- The declared exception must be the parent class exception ( i.e., Exception) or the generated exception type. However, the good approach is to declare the generated type of exception.
+- The catch block must be used after the try block only. You can use multiple catch block with a single try block.
 
 **Multi-catch block**
 
-A try block can be followed by one or more catch blocks. Each catch block must contain a different exception handler. So, if you have to perform different tasks at the occurrence of different exceptions, use java multi-catch block.
+- A try block can be followed by one or more catch blocks. 
+- Each catch block must contain a different exception handler.
 
-All catch blocks must be ordered from most specific to most general, i.e. catch for ArithmeticException must come before catch for Exception.
+Example
 
-```All catch blocks must be ordered from most specific to most general, i.e. catch for ArithmeticException must come before catch for Exception.```
-
-example
 ```java
 public class Main {  
   
-    public static void main(String[] args) {  
+  public static void main(String[] args) {  
           
-           try{    
-                int a[]=new int[5];    
-                a[5]=30/0;    
-               }    
-               catch(ArithmeticException e)  
-                  {  
-                   System.out.println("Arithmetic Exception occurs");  
-                  }    
-               catch(ArrayIndexOutOfBoundsException e)  
-                  {  
-                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  
-                  }    
-               catch(Exception e)  
-                  {  
-                   System.out.println("Parent Exception occurs");  
-                  }             
-               System.out.println("rest of the code");    
-    }  
+    try{    
+        int a[]=new int[5];    
+        a[5]=30/0;
+    } catch(ArithmeticException e){  
+        System.out.println("Arithmetic Exception occurs");
+    } catch(ArrayIndexOutOfBoundsException e){  
+        System.out.println("ArrayIndexOutOfBounds Exception occurs");
+    } catch(Exception e){  
+        System.out.println("Parent Exception occurs");
+    }             
+    System.out.println("rest of the code");
+  }  
 }  
 ```
 
 ## finally block
 
-is a block that is used to execute important code such as closing connection, stream etc.
+- Is a block that is used to execute important code such as closing connection, stream etc.
+- Java finally block is always executed whether exception is handled or not.
+- Java finally block follows try or catch block
+- If you don't handle exception, before terminating the program, JVM executes finally block(if any).
 
-Java finally block is always executed whether exception is handled or not.
-
-Java finally block follows try or catch block
-
-```If you don't handle exception, before terminating the program, JVM executes finally block(if any).```
-
-***Why use java finally**
+**Why use java finally**
 
 Finally block in java can be used to put "cleanup" code such as closing a file, closing connection etc.
 
@@ -182,9 +165,9 @@ rest of code
 
 ## throw 
 
-Is used to explicitly throw an exception. allow you to create a custom error
+- Is used to explicitly throw an exception. allow you to create a custom error
 
-We can throw either checked or unchecked exception in java by throw keyword. The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.
+- We can throw either checked or unchecked exception in java by throw keyword. The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.
 
 Example 
 
@@ -278,11 +261,12 @@ Compile Time Error
 
 ## throws
 
-is used to declare an exception. It gives an information to the programmer that there may occur an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
-
-Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException, it is programmers fault that he is not performing check up before the code being used.
+- Is used to declare an exception.
+- It gives an information to the programmer that there may occur an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
+- Exception Handling is mainly used to handle the checked exceptions.
 
 **Which exception should be declared**
+
 Answer => checked exception only, because:
 
 - unchecked Exception: under your control so correct your code.
@@ -363,7 +347,7 @@ continue flow
 ### declare the exception
 
 - In case you declare the exception, if exception does not occur, the code will be executed fine.
-- In case you declare the exception if exception occures, an exception will be thrown at runtime because throws does not handle the exception.
+- In case you declare the exception if exception occur, an exception will be thrown at runtime because throws does not handle the exception.
 
 **Program if exception does not occur**
 
