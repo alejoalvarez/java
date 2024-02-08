@@ -2,25 +2,25 @@
 
 * Beginning with Java 5, generics have been added to provide compile-time type checking and eliminate the risk of **ClassCastException** that was common when working with collection classes.
 
-* Diamonds are used <>
+* Diamonds are used `< >`
 
 It has mainly two functionalities
 
-* Provides type safety (When I put generics I am doing type safety ie u)
-* Avoid casting
+- Provides type safety (When I put generics I am doing type safety ie u)
+- Avoid casting
 
-T is a letter of a stereotype
+`T` is a letter of a stereotype
 ```java
 Person <T> public class example
 ```
 
 The most common type parameter names are:
-* E -> Element (widely used by the Java collections framework)
-* K -> key
-* N -> Number
-* T -> Type
-* V -> Value
-* S, U, V, etc. –2nd, 3rd, 4th types
+* `E` -> Element (widely used by the Java collections framework)
+* `K` -> key
+* `N` -> Number
+* `T` -> Type
+* `V` -> Value
+* `S`, `U`, `V`, etc. –2nd, 3rd, 4th types
 
 If before it was declared in a GenericsMethodClass class
 
@@ -89,11 +89,12 @@ public class GenericClass <U>{
 
 ## What is Wildcard in Java?
 
-Wildcards in Java are basically the question marks which we use in generic programming, it basically represents the unknown type. We use Java Wildcard  widely in situations such as in a type of parameter, local variable, or field and also as a return type.
+- Wildcards in Java are basically the question marks which we use in generic programming, it basically represents the unknown type.
+- We use Java Wildcard  widely in situations such as in a type of parameter, local variable, or field and also as a return type.
+- Unlike arrays, different instantiations of a generic type are not compatible with each other, not even explicitly
+- We can remove this incompatibility by using wildcard ‘?’ as an actual type parameter.
 
-Unlike arrays, different instantiations of a generic type are not compatible with each other, not even explicitly. We can remove this incompatibility by using wildcard ‘?’ as an actual type parameter.
-
-## Generics <?> (Generics wildcard or comodin card)
+## Generics <?> (Generics wildcard)
 
 It allows executing the generics without specifying the data type, that is, this data will be specified in runtime (runtime)
 
