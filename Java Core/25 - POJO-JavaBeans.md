@@ -1,8 +1,6 @@
 # Java POJO
 Java POJO class – Plain Old Java Object
 
-Till now, we have discussed and used the normal objects in Java. In this article, we will learn a special type of object POJO. POJO stands for Plain Old Java Object, which is used to increase the reusability and readability of the Java program. We will discuss how to use Java POJO Class and why it is important to learn it.
-
 ## What is POJO class in Java?
 
 **POJO** stands for Plain Old Java Object which is a normal object that is not bound with special restrictions. They are only bound with some restrictions on Java Language Specifications. Simply, POJO acts as a pure data structure that has getter and setter methods. POJO objects do not require any classpath. POJO is the most widely used class in Java because it is very easy to write and understand. Sun Microsystems introduced the POJO class in Java in EJB 3.0.
