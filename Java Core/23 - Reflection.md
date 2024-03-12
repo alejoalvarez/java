@@ -5,6 +5,13 @@
 - With the help of this reflection API, you can inspect classes, constructors, modifiers, fields, methods, and interfaces at runtime. For Example, you can get the name of the class or you can get details of the private members of the class.
 - whenever possible it is better to dispense with the use of reflection as it affects the performance of the program.
 
+**Using Reflection API, we can implement the reflection on the following entities:**
+
+- **Field**: The Field class has information that we use to declare a variable or a field like a datatype (int, double, String, etc.), access modifier (private, public, protected, etc.), name (identifier) and value.
+- **Method**: The Method class can help us to extract information like access modifier of the method, method return type, method name, method parameter types, and exception types raised by the method.
+- **Constructor**: Constructor class gives information about class constructor that includes constructor access modifier, constructor name, and parameter types.
+- **Modifier**: Modifier class gives us information about a specific access modifier.
+
 ## The Reflection API is mainly used in:
 
 - Reflection is mainly used in debugging tools, JUnit, and frameworks to inspect and change the behavior at runtime.
