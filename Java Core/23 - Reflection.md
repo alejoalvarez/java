@@ -1,18 +1,21 @@
 # Reflection
 
-**Use of reflection:** whenever possible it is better to dispense with the use of reflection as it affects the performance of the program. It is always recommended to facilitate development that if not applied would be more complicated or require much more code. In addition, security must be taken into account, since accepted classes must be guaranteed, since it could be susceptible to code execution (something similar to the security holes of the eval () function, although if Reflection is used correctly it will not open any security problem
+**Use of reflection:**
+- Reflection in Java is to inspect and change the behavior of a program at runtime.
+- With the help of this reflection API, you can inspect classes, constructors, modifiers, fields, methods, and interfaces at runtime. For Example, you can get the name of the class or you can get details of the private members of the class.
+- whenever possible it is better to dispense with the use of reflection as it affects the performance of the program.
 
-Ability to inspect and manipulate classes and interfaces (as well as their methods and variables) at runtime for applications that run on the JVM
+## The Reflection API is mainly used in:
 
+- Reflection is mainly used in debugging tools, JUnit, and frameworks to inspect and change the behavior at runtime.
+- Test Tools etc.
+- It is used, when your application has third-party libraries and when you want to know about the classes and methods available.
 
-What is Reflection for in Java? I'm going to answer you with questions. Are you able to sit there and write a program that tells me what type a variable of a class is: int, String, float, boolean, etc? You may come up with a slightly convoluted way; let's go to another one. Could you tell me if a variable of a class is public, private, final or static? At first glance it seems that it is not very useful, we will see that sometimes it is very necessary; another question How many parameters get to a function of a class? Or also, Can you make me a program that only shows on the screen the name of every class, function and variable that it has inside? Or even more difficult. Could you use a private function of an object of one class from the outside, or directly access a private variable of another class?
-
-I'm sure you've been left in check, especially with access to private functions when you should never. Never? It should tend to zero, although sometimes to perform unit tests of a private function of a class we will have no choice but to use Reflection
+What is Reflection for in Java?
 
 The concept of Reflection simply means that the program has the ability to dynamically observe and modify its structure. Hence, its same code is reflected: we can choose a class that we have previously written in an IDE and after compiling, while the program is running, we can modify it.
 
 Suppose we have this class:
-
 
 ```java
 public class BaseClass {
@@ -46,7 +49,7 @@ Examples to encompass a class
 //Get the Class directly from an object
 Class classOfText = "text".getClass();
 
-Integer numeber = 5;
+Integer number = 5;
 Class classOfNumber = number.getClass();
 
 //For primitive types we have to use ".class" or with ".TYPE" (preferably use ".class")
