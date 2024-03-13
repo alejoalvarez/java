@@ -4,7 +4,7 @@
 
 # Table of Contents
 * [Default Methods](https://github.com/alejoalvarez/java/blob/main/Java%208/Default%20method.md)
-* [Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java%208/Lambda)
+* [Lambda expressions](https://github.com/alejoalvarez/Java/tree/main/Java%208/Lambda.md)
 * [Functional Interfaces](https://github.com/alejoalvarez/Java/blob/main/Java%208/Functional%20Interfaces/Functional%20Interface.md)
   *  [Predicate](https://github.com/alejoalvarez/Java/blob/main/Java%208/Functional%20Interfaces/Predicate.md)
   *  [Function](https://github.com/alejoalvarez/Java/blob/main/Java%208/Functional%20Interfaces/Function.md)
