@@ -347,3 +347,25 @@ Developer [name=maria, salary=80000, age=20]
 Developer [name=alejo, salary=70000, age=33]
 Developer [name=laura, salary=170000, age=55]
 ```
+
+## Examples Lambda Expressions
+
+| Expressions | Descriptions |
+|---|---|
+| () -> {}  | No parameters; void result |
+| () -> 91 | No parameters, expression body|
+| () -> null | No parameters, expression body |
+| () -> { return 91; } | No parameters, block body with return |
+| () -> { System.gc(); } | No parameters, void block body |
+| (int x) -> x+1 | Single declared-type argument|
+| (int x) -> { return x+1; } | same as above|
+| (x) -> x+1 | Single inferred-type argument, same as below|
+| x -> x+1 | Parentheses optional for single inferred-type case|
+| (String s) -> s.length() | Single declared-type argument|
+| (Thread t) -> { t.start(); } | Single declared-type argument|
+| s -> s.length() | Single inferred-type argument|
+| t -> { t.start(); } | Single inferred-type argument|
+| (int x, int y) -> x+y | Multiple declared-type parameters|
+| (x,y) -> x+y | Multiple inferred-type parameters|
+| (x, final y) -> x+y | Illegal: can’t modify inferred-type parameters|
+| (x, int y) -> x+y | Illegal: can’t mix inferred and declared types|
