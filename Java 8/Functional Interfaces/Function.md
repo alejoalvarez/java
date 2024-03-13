@@ -1,33 +1,26 @@
 # Java 8 Function #
 
-In Java 8, **Function** is a functional interface; it takes an argument (Object of type T) and returns an object (object of type R). The argument and output can be a different type.
+**Function** is a functional interface; it takes an argument (Object of type T) and returns an object (object of type R). The argument and output can be a different type.
 
 The Java Function interface or java.util.function.Function interface is one of the most important functional interfaces
 
 Default methods can be used to chain multiple functions together (compose, andThen).
 
-```cs
-Function.java
-
+```java
 @FunctionalInterface
 public interface Function<T, R> {
-
       R apply(T t);
-
 }
 ```
-
 
 * T - Type of the input to the function.
 * R - Type of the result of the function.
 
 ## 1. Function <T,R>
 
-This example takes a  ```<T>``` **String** and returns the length of the string as ```<R>``` **Integer**
+This example takes a  `<T>` **String** and returns the length of the string as `<R>` **Integer**
 
-```cs
-FunctionExample.java
-
+```java
 package com.alejo.functions1;
 
 import java.util.function.Function;
@@ -48,9 +41,7 @@ public class FunctionExample {
 
 This example chains the **Function** with **andThen()**.
 
-```cs
-FunctionsExample.java
-
+```java
 package com.alejo.functions1;
 
 import java.util.function.Function;
@@ -71,9 +62,7 @@ public class FunctionsExample {
 
 This example accepts **Function** as an argument, convert a **List** into a ** Map**
 
-```cs
-Functions1.java
-
+```java
 package com.alejo.functions1;
 
 import java.util.Arrays;
@@ -102,6 +91,7 @@ public class Functions1 {
         }
         return result;
     }
+
     public Integer getLength(String str){
         return str.length();
     }
@@ -112,9 +102,7 @@ public class Functions1 {
 
 This example accepts **Function** as an argument, convert a **List** of String into another **List** of String, which was hashed with SHA256.
 
-```cs
-Functions1.java
-
+```java
 package com.alejo.functions1;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -159,5 +147,4 @@ public class Functions1 {
 
 }
 ```
-
 You need add the dependency **commons-codec** for DigestUtils.sha256Hex
