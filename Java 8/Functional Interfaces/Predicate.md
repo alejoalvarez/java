@@ -1,10 +1,10 @@
-# Java 8 Predicate #
+# Predicate
 
-In Java 8, **Predicate** is a functional interface; which accepts an argument and returns a boolean. Usually, it used to apply in a filter for a collection of objects.
+**Predicate** is a functional interface; which accepts an argument and returns a boolean. Usually, it used to apply in a filter for a collection of objects.
 
-The interface contains varios default methods for composing predicates to complex logical terms (and, or, negate)
+The interface contains several default methods for composing predicates to complex logical terms (and, or, negate)
 
-```cs
+```java
 @FunctionalInterface
 public interface Predicate<T> {
 
@@ -18,9 +18,7 @@ public interface Predicate<T> {
 **filter()** accepts predicate as argument.
 
 
-```cs
-PredicateExample1.java
-
+```java
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -41,7 +39,6 @@ public class PredicateExample1 {
 ```
 
 ```java
-FunctionsExample.java
 
 package com.alejo.functions1;
 
@@ -68,9 +65,7 @@ public class FunctionsExample {
 
 Multiple filters.
 
-```cs
-PredicateExample2.java
-
+```java
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -95,9 +90,7 @@ public class PredicateExample2 {
 ```
 
 
-```cs
-PredicateExample2.java
-
+```java
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -128,9 +121,7 @@ public class PredicateExample2 {
 ## 3. Predicate.or()
 
 
-```cs
-PredicateExample3.java
-
+```java
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -152,9 +143,7 @@ public class PredicateExample3 {
                 .collect(Collectors.toList());
 
         System.out.println(collect); // [A, AA, AAA, BBB]
-
     }
-
 }
 ```
 
@@ -163,9 +152,6 @@ public class PredicateExample3 {
 Find all elements not start with 'A'
 
 ```java
-
-PredicateExample4.java
-
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -196,9 +182,6 @@ public class PredicateExample4 {
 Predicate in function
 
 ```java
-
-PredicateExample5.java
-
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -234,9 +217,6 @@ class StringProcessor {
 We can chain predicates together.
 
 ```java
-
-PredicateExample6.java
-
 package com.alejo.predicate1;
 
 import java.util.function.Predicate;
@@ -264,9 +244,6 @@ public class PredicateExample6 {
 
 
 ```java
-
-Hosting.java
-
 package com.alejo.predicate1;
 
 public class Hosting {
@@ -286,15 +263,13 @@ public class Hosting {
 ```
 
 ```java
-HostingRepository.java
-
 package com.alejo.predicate1;
 
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class HostingRespository {
+public class HostingRepository {
 
     public static List<Hosting> filterHosting(List<Hosting> hosting,
                                               Predicate<Hosting> predicate) {
@@ -306,8 +281,6 @@ public class HostingRespository {
 }
 ```
 ```java
-PredicateExample7.java
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
@@ -317,28 +290,29 @@ public class PredicateExample7 {
     public static void main(String[] args) {
 
         Hosting h1 = new Hosting(1, "amazon", "aws.amazon.com");
-        Hosting h2 = new Hosting(2, "linode", "linode.com");
-        Hosting h3 = new Hosting(3, "liquidweb", "liquidweb.com");
+        Hosting h2 = new Hosting(2, "netflix", "netflix.com");
+        Hosting h3 = new Hosting(3, "any", "any.com");
         Hosting h4 = new Hosting(4, "google", "google.com");
 
         List<Hosting> list = Arrays.asList(new Hosting[]{h1, h2, h3, h4});
 
-        List<Hosting> result = HostingRespository.filterHosting(list, x -> x.getName().startsWith("g"));
+        List<Hosting> result = HostingRepository.filterHosting(list, x -> x.getName().startsWith("g"));
         System.out.println("result : " + result);  // google
 
-        List<Hosting> result2 = HostingRespository.filterHosting(list, isDeveloperFriendly());
-        System.out.println("result2 : " + result2); // linode
+        List<Hosting> result2 = HostingRepository.filterHosting(list, isDeveloperFriendly());
+        System.out.println("result2 : " + result2); // netflix
 
     }
 
     public static Predicate<Hosting> isDeveloperFriendly() {
-        return n -> n.getName().equals("linode");
+        return n -> n.getName().equals("netflix");
     }
 }
 ```
+
 ```
-Output >>>>>>>
+Output:
 result : [Hosting{Id=4, name='google', url='google.com'}]
-result2 : [Hosting{Id=2, name='linode', url='linode.com'}]
+result2 : [Hosting{Id=2, name='netflix', url='netflix.com'}]
 
 ```
