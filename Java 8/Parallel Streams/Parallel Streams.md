@@ -1,6 +1,7 @@
 # Parallel Streams
 
-As mentioned above streams can be either sequential or parallel. Operations on sequential streams are performed on a single thread while operations on parallel streams are performed concurrent on multiple threads.
+- Streams can be either sequential or parallel.
+- Operations on sequential streams are performed on a single thread while operations on parallel streams are performed concurrent on multiple threads.
 
 The following example demonstrates how easy it is to increase the performance by using parallel streams.
 
@@ -89,18 +90,18 @@ Arrays.asList("a1", "a2", "b1", "c2", "c1")
 By investigating the debug output we should get a better understanding which threads are actually used to execute the stream operations:
 
 ```java
-filter:  b1 [main]
-filter:  a2 [ForkJoinPool.commonPool-worker-1]
+filter:   b1 [main]
+filter:   a2 [ForkJoinPool.commonPool-worker-1]
 map:     a2 [ForkJoinPool.commonPool-worker-1]
-filter:  c2 [ForkJoinPool.commonPool-worker-3]
+filter:   c2 [ForkJoinPool.commonPool-worker-3]
 map:     c2 [ForkJoinPool.commonPool-worker-3]
-filter:  c1 [ForkJoinPool.commonPool-worker-2]
+filter:   c1 [ForkJoinPool.commonPool-worker-2]
 map:     c1 [ForkJoinPool.commonPool-worker-2]
 forEach: C2 [ForkJoinPool.commonPool-worker-3]
 forEach: A2 [ForkJoinPool.commonPool-worker-1]
 map:     b1 [main]
 forEach: B1 [main]
-filter:  a1 [ForkJoinPool.commonPool-worker-3]
+filter:   a1 [ForkJoinPool.commonPool-worker-3]
 map:     a1 [ForkJoinPool.commonPool-worker-3]
 forEach: A1 [ForkJoinPool.commonPool-worker-3]
 forEach: C1 [ForkJoinPool.commonPool-worker-2]
