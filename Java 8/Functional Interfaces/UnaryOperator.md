@@ -1,12 +1,10 @@
 # Java 8 UnaryOperator #
 
-In Java 8, **UnaryOperator** is a functional interface and it extends **Function**.
+**UnaryOperator** is a functional interface and it extends **Function**.
 
 The **UnaryOperator** takes one argument, and returns a result of the same type of its arguments
 
-```cs
-UnaryOperator.java
-
+```java
 @FunctionalInterface
 public interface UnaryOperator<T> extends Function<T,T> {
 
@@ -15,9 +13,7 @@ public interface UnaryOperator<T> extends Function<T,T> {
 
 The **Function** takes one argument of any type and returns a result of any type.
 
-```cs
-Function,java
-
+```java
 @FunctionalInterface
 public interface Function<T, R>{
     R apply(T t);
@@ -28,9 +24,7 @@ public interface Function<T, R>{
 
 In this example, the **Function<Integer,Integer>** which accepts and returns the same type, can be replaced with UnaryOperator `<Integer>`. 
 
-```cs
-UnaryOperator1.java
-
+```java
 package com.alejo.unaryOperator1;
 
 import java.util.function.Function;
@@ -41,27 +35,18 @@ public class UnaryOperator1 {
     public static void main(String[] args) {
 
         Function<Integer, Integer> func = x -> x * 2;
-
         Integer result = func.apply(2);
-
         System.out.println(result);         // 4
-
         UnaryOperator<Integer> func2 = x -> x * 2;
-
         Integer result2 = func2.apply(2);
-
         System.out.println(result2);        // 4
-
     }
 }
-
 ```
 
 ## 2. UnaryOperator as argument
 
-```cs
-UnaryOperator2.java
-
+```java
 package com.alejo.unaryOperator1;
 
 import java.util.ArrayList;
@@ -72,13 +57,9 @@ import java.util.function.UnaryOperator;
 public class UnaryOperator2 {
 
     public static void main(String[] args) {
-
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
         List<Integer> result = math(list, x -> x * 2);
-
         System.out.println(result); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-
     }
 
     public static <T> List<T> math(List<T> list, UnaryOperator<T> uo) {
@@ -88,16 +69,12 @@ public class UnaryOperator2 {
         }
         return result;
     }
-
 }
-
 ```
 
 ## 3. Chain UnaryOperator
 
-```cs
-unaryOperator3.java
-
+```java
 package com.alejo.unaryOperator1;
 
 import java.util.ArrayList;
@@ -110,13 +87,11 @@ public class unaryOperator3 {
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
         List<Integer> result = math(list,
                 x -> x * 2,
                 x -> x + 1);
 
         System.out.println(result); // [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
-
     }
 
     public static <T> List<T> math(List<T> list,
