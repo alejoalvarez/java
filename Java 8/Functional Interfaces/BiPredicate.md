@@ -1,14 +1,11 @@
-# Java 8 BiPredicate #
+# Java 8 BiPredicate
 
-In Java 8, **BiPredicate** is a functional interface; which accepts two arguments and returns a boolena, basically this **BiPredicate** is same with the **Predicate**, instead, it takes 2 arguments for the test.
+**BiPredicate** is a functional interface; which accepts two arguments and returns a boolean, basically this **BiPredicate** is same with the **Predicate**, instead, it takes 2 arguments for the test.
 
-
-```cs
+```java
 @FunctionalInterface
 public interface BiPredicate<T, U> {
-
       boolean test(T t, U u);
-
 }
 ```
 
@@ -16,10 +13,7 @@ public interface BiPredicate<T, U> {
 
 If the String length matches the provided length?.
 
-
-```cs
-BiPredicateExample1.java
-
+```java
 package com.alejo.bipredicate1;
 
 import java.util.function.BiPredicate;
@@ -46,9 +40,7 @@ public class BiPredicateExample1 {
 
 This example uses **BiPredicate**  to filter bad domains by the domain name or threat score.
 
-```cs
-BiPredicateExample2.java
-
+```java
 package com.alejo.predicate1;
 
 import java.util.Arrays;
@@ -86,8 +78,6 @@ public class BiPredicateExample2 {
                 (domain, x) -> domain.equalsIgnoreCase("microsoft.com"))
         );
         System.out.println(result4); // google.com, alejo.com, microsoft.com
-
-
     }
 
     public static <T extends Domain> List<T> filterBadDomain(
@@ -114,7 +104,7 @@ class Domain {
 ```
 
 ```
-Output >>>>>>>>
+Output:
 
 [Domain{name='google.com', score=1}, Domain{name='alejo.com', score=0}]
 [Domain{name='alejo.com', score=0}]
