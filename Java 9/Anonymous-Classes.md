@@ -26,10 +26,12 @@ public class TypeInferExample {
         System.out.println(result);  
     }  
 }  
+```
 
-RESULT
+```
+Output: 
+
 Java9
 ```
 
 Although we can specifying type in diamond operator explicitly and compiler does not produce any error message. See, the following example, type is specified explicitly.
-

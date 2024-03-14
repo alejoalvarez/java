@@ -27,7 +27,6 @@ public class Main {
 
 In the above code, add method is called repeatedly for each list element, while in Java 9 we can do it in single line of code using factory methods.
 
-
 ## Factory Methods for Collection
 
 Factory methods are special type of static methods that are used to create unmodifiable instances of collections. It means we can use these methods to create list, set and map of small number of elements.
@@ -69,8 +68,10 @@ public class Main {
         }  
     }  
 }  
+```
 
-RESULT
+```
+Output:
 
 Java
 Spring
@@ -80,7 +81,7 @@ JDBC
 ```
 
 ## Set Interface
-Java Set interface provides a Set.of() static factory method which is used to create immutable set. The set instance created by this method has the following characteristcis.
+Java Set interface provides a Set.of() static factory method which is used to create immutable set. The set instance created by this method has the following characteristics.
 
 - It is immutable
 - No null elements
@@ -120,7 +121,10 @@ public class FactoryMethodsExample {
         }  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
 
 SpringBoot
 Spring
@@ -131,7 +135,7 @@ Hibernate
 
 ## Map Interface Factory Methods
 
-In Java 9, Map includes Map.of() and Map.ofEntries() static factory methods that provide a convenient way to creae immutable maps.
+In Java 9, Map includes Map.of() and Map.ofEntries() static factory methods that provide a convenient way to create immutable maps.
 
 Map created by these methods has the following characteristics.
 
@@ -198,7 +202,10 @@ public class FactoryMethodsExample {
         }  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
 
 102 Spring
 101 Java

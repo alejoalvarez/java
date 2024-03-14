@@ -29,7 +29,11 @@ public class StreamExample {
     System.out.println(list);  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
+
 []
 ```
 
@@ -49,7 +53,10 @@ public class StreamExample {
     System.out.println(list);  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
 
 [2,2]
 ```
@@ -76,7 +83,10 @@ public class StreamExample {
     System.out.println(list);  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
 
 [3, 4, 5, 6, 7, 8, 9, 10]
 ```
@@ -101,14 +111,18 @@ public class StreamExample {
     System.out.println(list);  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
+
 25
 Stream can have null values also.
 ```
 
 Java 9 Stream ofNullable Method Example 2
 
-```JAVA
+```java
 import java.util.stream.Stream;  
   
 public class StreamExample {  
@@ -121,8 +135,6 @@ public class StreamExample {
 ```
 
 This program will not produce any output.
-
-
 
 ## Stream Iterate Method
 
@@ -141,7 +153,10 @@ public class StreamExample {
         .forEach(System.out::println);  
     }  
 }  
-RESULT:
+```
+
+```
+Output:
 
 1
 3

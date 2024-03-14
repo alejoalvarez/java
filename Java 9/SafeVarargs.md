@@ -77,8 +77,9 @@ public class SafeVar{
 Now, compiler does not produce warning message, code compiles and runs successfully.
 
 ```
-RESULT
+Output:
+
 [Laptop, Tablet]
 ```
 
-```To apply @SaveVarargs annotation on private instance methods, compile code using Java 9 or higher versions only.```
+To apply @SaveVarargs annotation on private instance methods, compile code using Java 9 or higher versions only.
