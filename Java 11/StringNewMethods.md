@@ -1,4 +1,6 @@
-# Java 11 added new methods to the String class for better string handling. These methods are:
+# String new methods
+
+Java 11 added new methods to the String class for better string handling. These methods are:
 
 - isBlank()
 - lines()
@@ -11,7 +13,7 @@ We will discuss each method with the help of examples.
 
 ## Java String isBlank() Method
 
-This method is used to check whether the string is blank or not. It returns true if the string is empty or contains only white space codepoints, otherwise false. The syntax of the method is given below:
+This method is used to check whether the string is blank or not. It returns true if the string is empty or contains only white space code points, otherwise false. The syntax of the method is given below:
 
 ```java
 public boolean isBlank()
@@ -32,7 +34,11 @@ public class Main {
 		System.out.println(r);	
 	}        
 }
-RESULT:
+```
+
+```
+Output:
+
 false
 true
 ```
@@ -61,7 +67,11 @@ public class Main {
         lines.forEach(System.out::println);	
 	}        
 }
-RESULT:
+```
+
+```
+Output:
+
 Example
 String 
 line
@@ -91,7 +101,11 @@ public class Main {
 		
 	}        
 }
-RESULT:
+```
+
+```
+Output:
+
 Example strip
 Example strip
 ```
@@ -108,7 +122,11 @@ public class Main {
 		
 	}        
 }
-RESULT:
+```
+
+```
+Output:
+
 Example stripLeading
 Example stripLeading
 ```
@@ -127,7 +145,11 @@ public class Main {
 		
 	}        
 }
-RESULT:
+```
+
+```
+Output:
+
 Example stripTrailing
 28
 Example stripTrailing
@@ -160,8 +182,11 @@ public class Main {
 	}        
 }
 
-#
-###
+```
+
+```
+Output:
+
 test
 testtesttesttesttest
 ```

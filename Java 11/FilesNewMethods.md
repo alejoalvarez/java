@@ -36,6 +36,10 @@ public class Main {
 		}
 	}        
 }
+```
+
+```
+Output:
 
 Hello World.
 java.lang.String
@@ -47,6 +51,7 @@ This method is used to write a string to a file. Characters are encoded into byt
 
 ```java
 public static Path writeString?(Path path, CharSequence csq, OpenOption... options) throws IOException
+
 public static Path writeString?(Path path, CharSequence csq, Charset cs, OpenOption... options) throws IOException
 ```
 
@@ -72,10 +77,13 @@ public class Main {
 		}
 	}        
 }
+```
+
+```
+Output:
 
 Welcome to Java!!
 ```
-
 
 ## Another Example: Specify Charset
 
@@ -100,6 +108,10 @@ public class Main {
 		}
 	}        
 }
+```
+
+```
+Output:
 
 Welcome to Java!!
 ```
