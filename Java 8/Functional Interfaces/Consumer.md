@@ -1,12 +1,11 @@
 # Java 8 Consumer #
 
-In Java 8, **Consumer** is a functional interface, it takes an argument and returns nothing, represents operations to be performed on a single input argument.
+**Consumer** is a functional interface, it takes an argument and returns nothing, represents operations to be performed on a single input argument.
 
 
-```cs
+```java
 @FunctionalInterface
 public interface Consumer<T> {
-
       void accept(T t);
 }
 ```
@@ -14,8 +13,6 @@ public interface Consumer<T> {
 ## 1. Consumer
 
 ```java
-ConsumerExample1.java
-
 package com.alejo.consumer1;
 
 import java.util.function.Consumer;
@@ -36,8 +33,6 @@ public class ConsumerExample1 {
 This example accepts **Consumer** as an argument, simulates a **forEach** to print each item from a list.
 
 ```java
-ConsumerExample2.java
-
 package com.alejo.consumer1;
 
 import java.util.Arrays;
@@ -69,7 +64,7 @@ public class ConsumerExample2 {
 ```
 
 ```
-Output >>>>>>>>
+Output:
 
 1
 2
@@ -86,8 +81,6 @@ Output >>>>>>>>
 Same **forEach** method to accept **Consumer** as an argument; this time, we will print the length of the string.
 
 ```java
-ConsumerExample2.java
-
 package com.alejo.consumer1;
 
 import java.util.Arrays;
@@ -112,7 +105,7 @@ public class ConsumerExample2 {
 ```
 
 ```
-Output >>>>
+Output:
 
 1
 2
