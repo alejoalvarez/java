@@ -45,11 +45,11 @@ public class PrivateInterface implements Sayable {
         s.say();  
     }  
 }
+```
 
-RESULT
+```
+Output:
+
 Hello... I'm private method
 I'm private static method
 ```
-
-
-
