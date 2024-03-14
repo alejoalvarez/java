@@ -29,7 +29,7 @@
   * [flatMap](https://github.com/alejoalvarez/Java/blob/main/Java%208/Streams/Streams-flatMap.md)
 * [Parallel Streams](https://github.com/alejoalvarez/Java/blob/main/Java%208/Parallel%20Streams.md)
 * [Map](https://github.com/alejoalvarez/Java/tree/main/Java%208/Map/Map.md)
-* [Date API](https://github.com/alejoalvarez/Java/tree/main/Java%208/Date%20API/Date%20API.md)
+* [Date API](https://github.com/alejoalvarez/Java/tree/main/Java%208/Date%20API.md)
 * [forEach](https://github.com/alejoalvarez/Java/tree/main/Java%208/forEach/forEach.md)
 
 
