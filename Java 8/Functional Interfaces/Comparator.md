@@ -1,6 +1,6 @@
 # Comparators
 
-Comparators are well konw form older versions of Java. Java 8 adds various default methods to the interface.
+Comparators are well know form older versions of Java. Java 8 adds various default methods to the interface.
 
 ```java
 Comparator<Person> comparator = (p1, p2) -> p1.firstName.compareTo(p2.firstName);
