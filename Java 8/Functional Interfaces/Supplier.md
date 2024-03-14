@@ -1,12 +1,11 @@
 # Java 8 Supplier #
 
-In Java 8, **Supplier** is a functional interface, it takes no arguments and returns a result a given generic type.
+**Supplier** is a functional interface, it takes no arguments and returns a result a given generic type.
 
 
 ```java
 @FunctionalInterface
 public interface Supplier<T> {
-
       T get accept();
 }
 ```
@@ -16,8 +15,6 @@ public interface Supplier<T> {
 This example uses **Supplier** to return a current date-time.
 
 ```java
-SupplierExample1.java
-
 package com.alejo.supplier1;
 
 import java.time.LocalDateTime;
@@ -47,8 +44,6 @@ public class SupplierExample1 {
 
 
 ```java
-SupplierExample2.java
-
 package com.alejo.supplier1;
 
 import java.util.ArrayList;
@@ -58,9 +53,7 @@ import java.util.function.Supplier;
 public class SupplierExample2<T> {
 
     public static void main(String[] args) {
-
         Java8Supplier2<String> obj = new Java8Supplier2();
-
         List<String> list = obj.supplier().get();
 
     }
@@ -147,8 +140,8 @@ public class Developer {
 }
 ```
 
-````
-Output >>>>>
+```
+Output:
 
 Developer{name='default', salary=1, start=2017-08-08}
 Developer{name='alejo', salary=1, start=2017-08-08}
