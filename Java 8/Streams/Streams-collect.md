@@ -1,6 +1,8 @@
 # Streams - collect()
 
-Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a ```List```, ```Set``` or ```Map```. Collect accepts a ```Collector``` which consists of four different operations: a supplier, an accumulator, a combiner and a finisher. This sounds super complicated at first, but the good part is Java 8 supports various built-in collectors via the ```Collectors``` class. So for the most common operations you don't have to implement a collector yourself.
+- Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a `List`, `Set` or `Map`.
+
+- Collect accepts a `Collector` which consists of four different operations: a supplier, an accumulator, a combiner and a finisher. This sounds super complicated at first, but the good part is Java 8 supports various built-in collectors via the ```Collectors``` class.
 
 Let's start with a very common usecase:
 
@@ -38,7 +40,7 @@ List<Person> filtered =
 System.out.println(filtered);    // [Peter, Pamela]
 ```
 
-As you can see it's very simple to construct a list from the elements of a stream. Need a set instead of list - just use ```Collectors.toSet()```.
+As you can see it's very simple to construct a list from the elements of a stream. Need a set instead of list - just use `Collectors.toSet()`.
 
 The next example groups all persons by age:
 

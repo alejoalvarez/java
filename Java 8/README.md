@@ -17,7 +17,7 @@
   *  [BinaryOperator](https://github.com/alejoalvarez/Java/blob/main/Java%208/Functional%20Interfaces/BinaryOperator.md)
   *  [UnaryOperator](https://github.com/alejoalvarez/Java/blob/main/Java%208/Functional%20Interfaces/UnaryOperator.md)
 * [Optional](https://github.com/alejoalvarez/Java/blob/main/Java%208/Optional.md)
-* [Method References](https://github.com/alejoalvarez/Java/tree/main/Java%208/Method%20Reference)
+* [Method References](https://github.com/alejoalvarez/Java/tree/main/Java%208/Method%20Reference.md)
 * [Streams](https://github.com/alejoalvarez/Java/blob/main/Java%208/Streams/Streams.md)
   * [filter](https://github.com/alejoalvarez/Java/blob/main/Java%208/Streams/Streams-filter.md)
   * [sorted](https://github.com/alejoalvarez/Java/blob/main/Java%208/Streams/Streams-sorted.md)

@@ -6,12 +6,10 @@
 
 ## Example 1 - Streams filter() and collect()
 
-In this example, **streams.filter()** to filter a **List**, and **collect()** to convert a streams into a **List**
+In this example, `streams.filter()` to filter a `List`, and `collect()` to convert a streams into a `List`
 
 ```java
-StreamsFilter1.java
-
-package com-alejo-streams1;
+package com.alejo.streams1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,9 +33,7 @@ public class StreamsFilter1 {
 ## Example 2 -Streams filter(), findAny() and orElse()
 
 ```java
-Person.java
-
-package com-alejo-streams1;
+package com.alejo.streams1;
 
 public class Person {
 
@@ -55,9 +51,7 @@ public class Person {
 Before java 8, you get a **Person** by name like this:
 
 ```java
-StreamsFilter2.java
-
-package com-alejo-streams1;
+package com.alejo.streams1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -91,17 +85,15 @@ public class StreamsFilter2 {
 ```
 
 ```
-Output >>>>>>
+Output:
 
 Person{name= 'juan', age=20}
 ```
 
-The equivalent example in Java8, use **stream.filter()** to filter a **List**, and **,findAny().orElse (null) to return an object conditional
+The equivalent example in Java8, use **stream.filter()** to filter a **List**, and ,`findAny().orElse` (null) to return an object conditional
 
 ```java
-StreamsFilter2.java
-
-package com-alejo-streams1;
+package com.alejo.streams1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -116,10 +108,10 @@ public class StreamsFilter2 {
                 new Person("ana", 40)
         );
 
-        Person result1 = persons.stream()                        // Convert to steam
-                .filter(x -> "juan".equals(x.getName()))        // we want "juan" only
-                .findAny()                                      // If 'findAny' then return found
-                .orElse(null);                                  // If not found, return null
+        Person result1 = persons.stream() // Convert to steam
+                .filter(x -> "juan".equals(x.getName())) // we want "juan" only
+                .findAny() // If 'findAny' then return found
+                .orElse(null); // If not found, return null
 
         System.out.println(result1);
         
@@ -135,7 +127,7 @@ public class StreamsFilter2 {
 ```
 
 ```
-Output >>>
+Output: 
 
 Person{name='juan', age=20}
 null
@@ -144,9 +136,7 @@ null
 ## Example 3 - Streams filter() and map()
 
 ```java
-StreamsFilter3.java
-
-package com-alejo-streams1;
+package com.alejo.streams1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -164,7 +154,7 @@ public class StreamsFilter3 {
 
         String name = persons.stream()
                 .filter(x -> "juan".equals(x.getName()))
-                .map(Person::getName)                        //convert stream to String
+                .map(Person::getName) //convert stream to String
                 .findAny()
                 .orElse("");
 
@@ -182,7 +172,8 @@ public class StreamsFilter3 {
 ```
 
 ```
-name: juna
+Output: 
+name: juan
 
 alejo
 juan

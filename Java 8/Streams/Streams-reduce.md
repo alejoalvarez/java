@@ -1,6 +1,6 @@
 # Streams - reduce()
 
-This terminal operation performs a reduction on the elements of the stream with the given function. The result is an ```Optional``` holding the reduced value.
+This terminal operation performs a reduction on the elements of the stream with the given function. The result is an `Optional` holding the reduced value.
 
 ```java
 List<String> stringCollection = new ArrayList<>();

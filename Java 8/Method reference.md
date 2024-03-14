@@ -1,6 +1,6 @@
 # Java 8 Method References #
 
-In Java 8, the double colon (::) operator is called method refences. Refer to the following examples:
+The double colon (::) operator is called method references. Refer to the following examples:
 
 They are a new feature of Java 8 that allows us to refer to the constructor methods through a functional interface, in other words, we can implement the functionality of an abstract method through the implementation of an already implemented method, assigning the implemented method to the abstract method. This can stand out a bit strange, especially because java was, until version 8, a too strict language.
 
@@ -33,7 +33,7 @@ list.forEach(System.out::println);          // method references
 There are four kinds of method references:
 
 * Reference to a static method **ClassName::staticMethodName
-* Reference to a instance metho of a particular object **Object::instanceMethodName** 
+* Reference to a instance method of a particular object **Object::instanceMethodName** 
 * Reference to an instance method of an arbitrary object of a particular **ContainingType::methodName**
 * Reference to a constructor **ClassName::new**
 
@@ -50,11 +50,9 @@ Method reference
 ClassName::staticMethodName
 ```
 
-Example 1: This example prints a list of Strings, method reference to a static method **Simpleprinter::print**
+Example 1: This example prints a list of Strings, method reference to a static method **SimplePrinter::print**
 
 ```java
-MethodReference1.java
-
 package com.alejo.methodreference1;
 
 import java.util.Arrays;
@@ -80,9 +78,7 @@ public class Java8MethodReference1a {
 
         // method reference
         list.forEach(SimplePrinter::print);
-
     }
-
 }
 
 class SimplePrinter {
@@ -95,16 +91,12 @@ class SimplePrinter {
 Example 2: This example converts a list of String into a list of Interfers, method reference to a static method **Integer::parseInt**
 
 ```java
-Integer.java
-
 public static int parseInt(String s) throws NumberFormatException {
         return parseInt(s,10);
   }
 ```
 
 ```java
-MethodReference1.java
-
 package com.alejo.methodreference1;
 
 import java.util.Arrays;
@@ -145,8 +137,6 @@ public class MethodReference1 {
 Example 3: This example joins two **Integer** and returns a **String**. it passes a method reference static method **IntegerUtils::join** as an argument into another method that accepts a **BiFunction**.
 
 ```java
-MethodReference1.java
-
 package com.alejo.methodreference1;
 
 import java.util.function.BiFunction;
@@ -193,6 +183,7 @@ Lambda expression
 ```
 (args) -> object.instanceMethodName(args)
 ```
+
 Method reference
 ```
 object::instanceMethodName
@@ -201,8 +192,6 @@ object::instanceMethodName
 Example 1: This example sorts a list of **Employee** by salary. We can reference to an instance method **compareBySalary** of a particular object **ComparatorProvider** 
 
 ```java
-MethodReference2.java
-
 package com.alejo.methodreference1;
 
 import java.math.BigDecimal;
@@ -257,8 +246,6 @@ class ComparatorProvider {
 ```
 
 ```java
-Employee.java
-
 package com.alejo.methodreference1;
 
 import java.math.BigDecimal;
@@ -274,7 +261,7 @@ public class Employee {
 ```
 
 ```
-Output >>>>>>
+Output:
 
 Employee{name='maria', age=5, salary=100}
 Employee{name='juan', age=25, salary=2500}
@@ -284,7 +271,7 @@ Employee{name='unknown', age=99, salary=9999}
 
 ## 3. Reference to an instance method of an arbitrary object of a particular type.
 
-The statement is a bit confuding, need little explanation, see below samples:
+The statement is a bit confusing, need little explanation, see below samples:
 
 Lambda expression.
 
@@ -295,6 +282,7 @@ Lambda expression.
 // example, assume a and b are String
 (a, b) -> a.compareToIgnoreCase(b)
 ```
+
 Method reference
 
 ```
@@ -329,11 +317,9 @@ public static <T> void sort (T[] a, Comparator<? super T> c){
 }
 ```
 
-In the above example, **Array.sort** expects a **Comparator```<Sring>```**. The **Comparator** is a function interface, its abstract method **compare** matches **BiFunction<String, String, Integer>**, it takes two arguments of **String** and return an **int**.
+In the above example, **Array.sort** expects a **Comparator```<String>```**. The **Comparator** is a function interface, its abstract method **compare** matches **BiFunction<String, String, Integer>**, it takes two arguments of **String** and return an **int**.
 
 ```java
-Comparator.java
-
 @FunctionalInterface
 public interface Comparator<T> {
     int compare(T o1, T o2);  // this matches BiFunction<String, String, Integer>
@@ -343,8 +329,6 @@ public interface Comparator<T> {
 Review the **BiFunction** method signature:
 
 ```java
-BiFunction.java
-
 @FunctionalInterface
 public interface BiFunction<T, U, R> {
       R apply(T t, U u);
@@ -364,8 +348,6 @@ String::compareToIgnoreCase
 ### Example 2
 
 ```java
-MethodReference3.java
-
 package com.alejo.methodreference1;
 
 import java.util.function.BiPredicate;
@@ -410,8 +392,6 @@ public class MethodReference3 {
 ### Example 3
 
 ```java 
-MethodReference3.java
-
 package com.alejo.methodreference1;
 
 import java.math.BigDecimal;
@@ -496,9 +476,8 @@ ClassName::new
 ### Example1 
 
 Reference to a default constructor.
-```java
-MethodReference4.java
 
+```java
 package com.alejo.methodreference1;
 
 import java.math.BigDecimal;
@@ -546,8 +525,6 @@ class Invoice {
 Reference to a constructor which accepts an argument **Invoice(BigDecimal unitPrice)**
 
 ```java
-MethodReference4.java
-
 package com.alejo.methodreference1;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -599,7 +576,7 @@ class Invoice {
 ```
 
 ```
-Output >>>
+Output:
 
 Invoice{no='null', unitPrice=9.99, qty=null}
 Invoice{no='null', unitPrice=2.99, qty=null}

@@ -1,8 +1,11 @@
 # Streams - flatMap()
 
-We've already learned how to transform the objects of a stream into another type of objects by utilizing the ```map``` operation. Map is kinda limited because every object can only be mapped to exactly one other object. But what if we want to transform one object into multiple others or none at all? This is where ```flatMap``` comes to the rescue.
+- We've already learned how to transform the objects of a stream into another type of objects by utilizing the `map` operation.
+- Map is kinda limited because every object can only be mapped to exactly one other object. But what if we want to transform one object into multiple others or none at all? This is where `flatMap` comes to the rescue.
 
-FlatMap transforms each element of the stream into a stream of other objects. So each object will be transformed into zero, one or multiple other objects backed by streams. The contents of those streams will then be placed into the returned stream of the ```flatMap``` operation.
+FlatMap transforms each element of the stream into a stream of other objects.
+
+So each object will be transformed into zero, one or multiple other objects backed by streams. The contents of those streams will then be placed into the returned stream of the ```flatMap``` operation.
 
 Before we see ```flatMap``` in action we need an appropriate type hierarchy:
 
@@ -113,7 +116,4 @@ Optional.of(new Outer())
     .ifPresent(System.out::println);
 ```
 
-Each call to ```flatMap``` returns an ```Optional``` wrapping the desired object if present or null if absent.
-
-
-
+Each call to `flatMap` returns an `Optional` wrapping the desired object if present or null if absent.

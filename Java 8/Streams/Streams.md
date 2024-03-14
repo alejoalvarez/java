@@ -1,15 +1,12 @@
 # Streams
 
 
-It is a Java API for handling data in collections. [Streams JavaDoc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+- A java.util.Stream represents a sequence of elements on which one or more operations can be performed.
+- It is a Java API for handling data in collections. 
+- Streams are a sequence of elements that support sequential and parallel aggregation operations.
+- One of the new Java 8 features that allows you to manipulate collections like never before, almost dreamlike.
 
-It is a wrapper that wraps collections
-
-Streams are a sequence of elements that support sequential and parallel aggregation operations. One of the new Java 8 features that allows you to manipulate collections like never before, almost dreamlike.
-
-Streams are **Monads** (thus playing a big part int bringing functional programming, a mondas is a structure that represents computations defined as sequences of steps. A type with a monad structure defines what it means to chain operations, or nest functions of that type together).
-
-As a programmer you have surely worked with an infinity of collections, surely you have had to go through them, order them, divide them, filter them, eliminate or add new elements in the collection. And every time you did this you were almost forced to perform a foreach on the collection, you even had to do a nested foreach to be able to perform more complex operations; proof of this is that the name **ConcurrentModificationException** reminds you of something (or doesn't it?).
+Streams are `Monads` (thus playing a big part int bringing functional programming, a monads is a structure that represents computations defined as sequences of steps. A type with a monad structure defines what it means to chain operations, or nest functions of that type together).
 
 Well, Streams do not allow creating shortcuts when processing collections, creating data flows that allow processing in a declarative way, that is, we focus on what we want to solve, and not on how we should do it, as it happens in imperative programming.
 
@@ -24,12 +21,12 @@ public static void printForeach(){
 }
 ```
 
-This code that you are seeing is a normal scenario that you would use to print all the elements of a list (I bet it is), isn't there anything strange? The truth is that no, because we are already used to doing it like this, but I bet you that your point of view about this code would change if you said that I can do the foreach in a single line of code
-
+With Streams
 ```java
 public static void printStream(){
     List<String> names = getStringArray();
-    names.stream().forEach(System.out::println);
+    names.stream()
+         .forEach(System.out::println);
 }
 ```
 
@@ -45,20 +42,19 @@ We have a list of Employees, each employee has a DNI that identifies him as uniq
 
 | Id | Name | Department |
 |---|---|---|
-| 1  | Alejo Alvarez   |  System |
+| 1  | Alejo Alvarez   |  Systes |
 | 2  | Maria Gutierrez  | Sales  |
 | 3  | Manuela Rojas  |  RH |
 | 4  | Pepito Perez  |  Sales |
 | 5  | Laura Pulido |  Sales |
-| 1  | Alejo Alvarez |  System |
 </p> </br>
 
 Now, on this list we want to filter all the Employees that belong to the systems department, then we are going to order all the employees in ascending order by their name, then we are going to filter the repeated elements by their ID, finally, we will print the name of all employees who followed all the rules.
 
 ```java
 public static void printOrderedSystemEmployees(){
-    List<Employee> employess = getEmployeeArray();
-    employess.stream()
+    List<Employee> employees = getEmployeeArray();
+    employees.stream()
             .filter(x -> x.getDepartment().equals("Systems"))
             .sorted((x,y) -> x.getName().compareToIgnoreCase(y.getName()))
             .distinct()
@@ -72,21 +68,26 @@ A stream represents a sequence of elements and supports different kind of operat
 
 
 ```java
-List<String> myList =
-    Arrays.asList("a1", "a2", "b1", "c2", "c1");
+List<String> myList = Arrays.asList("a1", "a2", "b1", "c2", "c1");
 
-myList
-    .stream()
-    .filter(s -> s.startsWith("c"))
-    .map(String::toUpperCase)
-    .sorted()
-    .forEach(System.out::println);
-
-// C1
-// C2
+myList.stream()
+      .filter(s -> s.startsWith("c"))
+      .map(String::toUpperCase)
+      .sorted()
+      .forEach(System.out::println);
 ```
 
-Stream operations are either intermediate or terminal. Intermediate operations return a stream so we can chain multiple intermediate operations without using semicolons. Terminal operations are either void or return a non-stream result. In the above example ```filter```, ```map``` and ```sorted``` are intermediate operations whereas ```forEach``` is a terminal operation. For a full list of all available stream operations see the [Stream Javadoc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html). Such a chain of stream operations as seen in the example above is also known as operation pipeline.
+```
+Output
+C1
+C2
+```
+
+Stream operations are either intermediate or terminal. Intermediate operations return a stream so we can chain multiple intermediate operations without using semicolons.
+
+Terminal operations are either void or return a non-stream result. In the above example `filter`, `map` and `sorted` are intermediate operations whereas `forEach` is a terminal operation.
+
+ Such a chain of stream operations as seen in the example above is also known as operation pipeline.
 
 Most stream operations accept some kind of lambda expression parameter, a functional interface specifying the exact behavior of the operation. Most of those operations must be both non-interfering and stateless. What does that mean?
 
@@ -109,7 +110,7 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 
 When executing this code snippet, nothing is printed to the console. That is because intermediate operations will only be executed when a terminal operation is present.
 
-Let's extend the above example by the terminal operation ```forEach```:
+Let's extend the above example by the terminal operation `forEach`:
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -123,6 +124,8 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 Executing this code snippet results in the desired output on the console:
 
 ```
+Output: 
+
 filter:  d2
 forEach: d2
 filter:  a2
@@ -135,7 +138,7 @@ filter:  c
 forEach: c
 ```
 
-The order of the result might be surprising. A naive approach would be to execute the operations horizontally one after another on all elements of the stream. But instead each element moves along the chain vertically. The first string "d2" passes ```filter``` then ```forEach```, only then the second string "a2" is processed.
+The order of the result might be surprising. A naive approach would be to execute the operations horizontally one after another on all elements of the stream. But instead each element moves along the chain vertically. The first string "d2" passes `filter` then `forEach`, only then the second string "a2" is processed.
 
 This behavior can reduce the actual number of operations performed on each element, as we see in the next example:
 
@@ -150,16 +153,21 @@ Stream.of("d2", "a2", "b1", "b3", "c")
         return s.startsWith("A");
     });
 
-// map:      d2
-// anyMatch: D2
-// map:      a2
-// anyMatch: A2
 ```
 
-The operation ```anyMatch``` returns ```true``` as soon as the predicate applies to the given input element. This is true for the second element passed "A2". Due to the vertical execution of the stream chain, ```map``` has only to be executed twice in this case. So instead of mapping all elements of the stream, ```map``` will be called as few as possible.
+```
+Output
+
+map: d2
+anyMatch: D2
+map: a2
+anyMatch: A2
+```
+
+The operation `anyMatch` returns `true` as soon as the predicate applies to the given input element. This is true for the second element passed "A2". Due to the vertical execution of the stream chain, ```map``` has only to be executed twice in this case. So instead of mapping all elements of the stream, ```map``` will be called as few as possible.
 
 ### Why order matters
-The next example consists of two intermediate operations ```map``` and ```filter``` and the terminal operation ```forEach```. Let's once again inspect how those operations are being executed:    
+The next example consists of two intermediate operations `ma` and `filter` and the terminal operation `forEach`. Let's once again inspect how those operations are being executed:    
     
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -173,22 +181,27 @@ Stream.of("d2", "a2", "b1", "b3", "c")
     })
     .forEach(s -> System.out.println("forEach: " + s));
 
-// map:     d2
-// filter:  D2
-// map:     a2
-// filter:  A2
-// forEach: A2
-// map:     b1
-// filter:  B1
-// map:     b3
-// filter:  B3
-// map:     c
-// filter:  C
 ```
 
-As you might have guessed both ```map``` and ```filter``` are called five times for every string in the underlying collection whereas ```forEach``` is only called once.
+```
+Output
 
-We can greatly reduce the actual number of executions if we change the order of the operations, moving ```filter``` to the beginning of the chain:
+map: d2
+filter: D2
+map: a2
+filter: A2
+forEach: A2
+map: b1
+filter: B1
+map: b3
+filter: B3
+map: c
+filter: C
+```
+
+As you might have guessed both `map` and `filter` are called five times for every string in the underlying collection whereas `forEach` is only called once.
+
+We can greatly reduce the actual number of executions if we change the order of the operations, moving `filter` to the beginning of the chain:
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -202,18 +215,23 @@ Stream.of("d2", "a2", "b1", "b3", "c")
     })
     .forEach(s -> System.out.println("forEach: " + s));
 
-// filter:  d2
-// filter:  a2
-// map:     a2
-// forEach: A2
-// filter:  b1
-// filter:  b3
-// filter:  c
 ```
 
-Now, ```map``` is only called once so the operation pipeline performs much faster for larger numbers of input elements. Keep that in mind when composing complex method chains.
+```
+Output
 
-Let's extend the above example by an additional operation, ```sorted```:
+filter:  d2
+filter:  a2
+map:     a2
+forEach: A2
+filter:  b1
+filter:  b3
+filter:  c
+```
+
+Now, `map` is only called once so the operation pipeline performs much faster for larger numbers of input elements. Keep that in mind when composing complex method chains.
+
+Let's extend the above example by an additional operation, `sorted`:
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -275,16 +293,18 @@ Stream.of("d2", "a2", "b1", "b3", "c")
         return s.toUpperCase();
     })
     .forEach(s -> System.out.println("forEach: " + s));
+```
 
-// filter:  d2
-// filter:  a2
-// filter:  b1
-// filter:  b3
-// filter:  c
-// map:     a2
-// forEach: A2
-````
+```
+Output
+
+filter:  d2
+filter:  a2
+filter:  b1
+filter:  b3
+filter:  c
+map:     a2
+forEach: A2
+```
 
 In this example ```sorted``` is never been called because ```filter``` reduces the input collection to just one element. So the performance is greatly increased for larger input collections.
-    
-  
