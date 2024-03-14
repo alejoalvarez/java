@@ -1,12 +1,10 @@
 # Java 8 BiConsumer #
 
-In Java 8, **Consumer** is a functional interface, it takes two argument and returns nothing.
+**Consumer** is a functional interface, it takes two argument and returns nothing.
 
-
-```cs
+```java
 @FunctionalInterface
 public interface BiConsumer<T, U> {
-
       void accept(T t, U u);
 }
 ```
@@ -14,10 +12,7 @@ public interface BiConsumer<T, U> {
 ## 1. BiConsumer
 
 ```java
-BiConsumerExample1.java
-
 package com.alejo.biconsumer1;
-
 
 import java.util.function.Consumer;
 
@@ -36,8 +31,6 @@ public class BiConsumerExample1 {
 This example accepts **BiConsumer** as an argument, create a generic **addTwo** to join two objects.
 
 ```java
-BiConsumerExample2.java
-
 package com.alejo.biconsumer1;
 
 import java.util.function.BiConsumer;
@@ -61,8 +54,6 @@ public class BiConsumerExample2 {
 More **BiConsumer** examples
 
 ```java
-BiConsumerExample2.java
-
 package com.alejo.biconsumer1;
 
 import java.util.function.BiConsumer;
@@ -109,8 +100,6 @@ default void forEach(BiConsumer<? super K, ? super V> action) {
 ```
 
 ```java
-BiConsumerExample3.java
-
 package com.alejo.biconsumer1;
 
 public class BiConsumerExample3 {
