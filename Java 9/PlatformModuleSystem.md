@@ -1,23 +1,8 @@
 # Java Platform Module System (Project Jigsaw)
 
-It is a new kind of Java programing component that can be used to collect Java code (classes and packages). The main goal of this project is to easily scale down application to small devices. In Java 9, JDK itself has divided into set of modules to make it more lightweight. It also allows us to develop modular applications.
-
+It is a new kind of Java programming component that can be used to collect Java code (classes and packages). The main goal of this project is to easily scale down application to small devices. In Java 9, JDK itself has divided into set of modules to make it more lightweight. It also allows us to develop modular applications.
 
 Java Module System is a major change in Java 9 version. Java added this feature to collect Java packages and code into a single unit called module.
-
-In earlier versions of Java, there was no concept of module to create modular Java applications, that why size of application increased and difficult to move around. Even JDK itself was too heavy in size, in Java 8, rt.jar file size is around 64MB.
-
-To deal with situation, Java 9 restructured JDK into set of modules so that we can use only required module for our project.
-
-Apart from JDK, Java also allows us to create our own modules so that we can develop module based application.
-
-The module system includes various tools and options that are given below.
-
-Includes various options to the Java tools javac, jlink and java where we can specify module paths that locates to the location of module.
-Modular JAR file is introduced. This JAR contains module-info.class file in its root folder.
-JMOD format is introduced, which is a packaging format similar to JAR except it can include native code and configuration files.
-The JDK and JRE both are reconstructed to accommodate modules. It improves performance, security and maintainability.
-Java defines a new URI scheme for naming modules, classes and resources.
 
 ## Java 9 Module
 Module is a collection of Java programs or softwares. To describe a module, a Java file module-info.java is required. This file also known as module descriptor and defines the following
@@ -26,8 +11,8 @@ Module is a collection of Java programs or softwares. To describe a module, a Ja
 - What does it export
 - What does it require
 
-**Module Name**
-It is a name of module and should follow the reverse-domain-pattern. Like we name packages, e.g. com.co.alejo.
+`Module Name`
+It is a name of module and should follow the reverse-domain-pattern. Like we name packages, e.g. `com.co.alejo`
 
 ## How to create Java module
 Creating Java module required the following steps.
@@ -36,20 +21,19 @@ Creating Java module required the following steps.
 - Create a module declarator
 - Java source code
 
-
 ## Create a Directory Structure
 
 To create module, it is recommended to follow given directory structure, it is same as reverse-domain-pattern, we do to create packages / project-structure in Java.
 
-```The name of the directory containing a module's sources should be equal to the name of the module, e.g. com.alejo.```
+The name of the directory containing a module's sources should be equal to the name of the module, e.g. `com.alejo.`
 
 ```
 src
 |___com.alejo
    |__com
-   | |___alejo
-   |   |____Hello.java
-   |_module-info.java
+   |   |___alejo
+   |        |____Hello.java
+   |__module-info.java
 ```
 
 Create a file module-info.java, inside this file, declare a module by using module identifier and provide module name same as the directory name that contains it. In our case, our directory name is com.javatpoint.
