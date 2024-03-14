@@ -44,9 +44,6 @@ public class Main
 		System.out.println(s2);
 	}
 }
-
-Example1
-Example1
 ```
 
 ## Example: Variable must be Initialized
@@ -54,17 +51,20 @@ Example1
 This example explains that variable must be initialized when declared with var else the compiler will generate an error. See the example below.
 
 ```java
-public class Main
-{
-	public static void main(String args[])
-	{  
+public class Main{
+
+	public static void main(String args[]){  
 		String s = "Example1";
 		var s2 ;
 		System.out.println(s);  
 		System.out.println(s2);
 	}
 }
-RESULT
+```
+
+```
+Output:
+
 Error: Cannot use 'var' on variable without initializer
 ```
 
@@ -97,7 +97,11 @@ public class Main {
 		System.out.println(list2);
 	}
 }
-RESULT
+```
+
+```
+Output:
+
 [2, 5, 6, 8, 4, 7]
 ```
 
@@ -115,14 +119,17 @@ public class Main {
 		}
 	}
 }
-RESULT
+```
+
+```
+Output: 
+
 2
 5
 6
 8
 4
 7
-
 ```
 
 ## It cannot be used in the following context:
