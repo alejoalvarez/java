@@ -1,6 +1,6 @@
 # Java 8 - forEach() Examples
 
-In Java 8, we can use the new **forEach** to loop or **iterate** a **Map**, **List**, **Set**, or **Stream**.
+In Java 8, we can use the new `forEach` to loop or **iterate** a `Map`, `List`, `Set`, or `Stream`.
 
 ## 1 Loop a Map
 
@@ -20,11 +20,10 @@ public static void loopMapClassic() {
     for (Map.Entry<String, Integer> entry : map.entrySet()) {
         System.out.println("Key : " + entry.getKey() + ", Value : " + entry.getValue());
     }
-
 }
 ```
 
-In Java 8, we can use **forEach** to loop a **Map** and print out its entries.
+The same but forEach
 
 ```java
 public static void loopMapJava8() {
@@ -44,7 +43,7 @@ public static void loopMapJava8() {
 ```
 
 ```
-Output >>>
+Output:
 
 Key : A, Value : 10
 Key : B, Value : 20
@@ -77,7 +76,7 @@ public static void loopMapJava8() {
 ```
 
 ```
-Output >>>>>
+Output:
 
 Key : null, Value : 40
 Key : A, Value : 10
@@ -112,7 +111,7 @@ public static void loopMapJava8() {
 ```
 
 ```
-Output >>>
+Output:
 
 Key : A, Value : 10
 Key : B, Value : 20
@@ -164,7 +163,7 @@ public static void loopListJava8() {
 ```
 
 ```
-Output >>>
+Output:
 
 A
 B
@@ -194,7 +193,7 @@ This example filter the null value of a **List**
 ``` 
 
 ```
-Output >>>
+Output:
 
 A
 B
@@ -225,8 +224,6 @@ public interface Iterable<T> {
 ```
 
 ```java
-Streams.java
-
 public interface Stream<T> extends BaseStream<T, Stream<T>> {
 
   void forEach(Consumer<? super T> action);
@@ -238,8 +235,6 @@ public interface Stream<T> extends BaseStream<T, Stream<T>> {
 This example creates a **Consumer** method to print String to its Hex format. We can now reuse the same **Consumer** method and pass it to the forEach method of **List** and **Stream**.
 
 ```java
-ForEachConsumer.java
-
 package com.alejo.foreach;
 
 import java.util.*;
@@ -273,7 +268,7 @@ public class ForEachConsumer {
 ```
 
 ```
-Output >>>
+Output:
 
 abc       :616263
 java      :6a617661
@@ -289,8 +284,6 @@ python    :707974686f6e
 The **forEach** is not just for printing, and this example shows how to use **forEach** method to loop a list of objects and write it to files.
 
 ```java
-ForEachWriteFile.java
-
 package com.alejo.foreach;
 
 import java.io.IOException;
@@ -433,7 +426,7 @@ Stream<String> s = Stream.of("a", "b", "c", "1", "2", "3");
 Each run will generate different result:
 
 ```
-Output >>>>>
+Output:
 
 1
 2
@@ -452,7 +445,7 @@ The **forEachOrdered** guarantees the stream’s encounter order; thus, it sacri
 ```
 
 ```
-Output >>>
+Output:
 
 a
 b
@@ -460,5 +453,4 @@ c
 1
 2
 3
-``` 
-
+```
