@@ -13,8 +13,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;  
 public class FinalVariable {  
     public static void main(String[] args) throws FileNotFoundException {  
-        try(FileOutputStream fileStream=new FileOutputStream("javatpoint.txt");){  
-             String greeting = "Welcome to javaTpoint.";      
+        try(FileOutputStream fileStream = new FileOutputStream("file.txt");){  
+             String greeting = "Welcome to Java.";      
                 byte b[] = greeting.getBytes();       
                 fileStream.write(b);      
                 System.out.println("File written");           
@@ -37,9 +37,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;  
 public class FinalVariable {  
     public static void main(String[] args) throws FileNotFoundException {  
-        FileOutputStream fileStream=new FileOutputStream("javatpoint.txt");  
+        FileOutputStream fileStream=new FileOutputStream("file.txt");  
         try(fileStream){  
-             String greeting = "Welcome to javaTpoint.";      
+             String greeting = "Welcome to Java.";
                 byte b[] = greeting.getBytes();       
                 fileStream.write(b);      
                 System.out.println("File written");           
@@ -62,18 +62,21 @@ import java.io.FileOutputStream;
 
 public class Main {  
     public static void main(String[] args) throws FileNotFoundException {  
-        FileOutputStream fileStream=new FileOutputStream("java9-examample.txt");  
+        FileOutputStream fileStream = new FileOutputStream("file.txt");  
         try(fileStream){  
              String greeting = "Welcome to Java.";      
                 byte b[] = greeting.getBytes();       
                 fileStream.write(b);      
-                System.out.println("File written succesfully");           
+                System.out.println("File written successfully");           
         }catch(Exception e) {  
             System.out.println(e);  
         }         
     }  
 }  
+```
 
-RESULT
-File written succesfully
+```
+Output:
+
+File written successfully
 ```
