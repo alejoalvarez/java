@@ -1,16 +1,12 @@
 # Java 8 BiFunction #
 
-In Java 8, **BiFunction** is a functional interface; it takes two arguments and returns an object.
+**BiFunction** is a functional interface; it takes two arguments and returns an object.
 
 
-```cs
-BiFunction.java
-
+```java
 @FunctionalInterface
 public interface BiFunction<T, U, R> {
-
       R apply(T t, U u);
-
 }
 ```
 
@@ -22,9 +18,7 @@ public interface BiFunction<T, U, R> {
 
 This example takes two **Integer** and returns an **Integer**, **Double** or **List**
 
-```cs
-BiFunctionExample1.java
-
+```java
 package com.alejo.bifunctions1;
 
 import java.util.Arrays;
@@ -66,9 +60,7 @@ public class BiFunctionExample1 {
 
 This **BiFunction** takes two **Integer** and return a **Double**, and uses **andThen** to chain it with a **Function** to convert the **Double** into a **String**.
 
-```cs
-FunctionsExample.java
-
+```java
 package com.alejo.bifunctions1;
 
 import java.util.function.BiFunction;
@@ -85,23 +77,16 @@ public class FunctionsExample {
         Function<Double, String> func2 = (input) -> "Result : " + String.valueOf(input);
 
         String result = func1.andThen(func2).apply(2, 4);
-
         System.out.println(result); // 16.0
-
     }
-
 }
-
 ```
 
 ## 3. Factory
 
 This example uses **BiFunction** to create an object, acts as a factory pattern.
 
-
-```cs
-BiFunctionsExample2.java
-
+```java
 package com.alejo.bifunctions1;
 
 import java.util.function.BiFunction;
@@ -162,11 +147,8 @@ class GPS {
 
 Filtering a **List** by some conditions.
 
-```cs
-BiFunctionsExample3.java
-
+```java
 package com.alejo.functions1;
-
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -245,4 +227,3 @@ public class BiFunctionsExample3 {
 
 }
 ```
-
