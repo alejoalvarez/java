@@ -2,16 +2,16 @@
 
 Java 8 created a series of new date and time APIs in **java.time** package.
 
-* **java.time**
-* **java.time.LocalDate** – date without time, no time-zone.
-* **java.time.LocalTime** – time without date, no time-zone.
-* **java.time.LocalDateTime** – date and time, no time-zone.
-* **java.time.ZonedDateTime** – date and time, with time-zone.
-* **java.time.DateTimeFormatter** – formatting (date -> text), parsing (text -> date) for java.time.
-* **java.time.Instant** – date and time for machine, seconds passed since the Unix epoch time (midnight of January 1, 1970 UTC)
-* **java.time.Duration** – Measures time in seconds and nanoseconds.
-* **java.time.Period** – Measures time in years, months and days.
-* **java.time.TemporalAdjuster** – Adjust date.
+* `java.time`
+* `java.time.LocalDate` – date without time, no time-zone.
+* `java.time.LocalTime` – time without date, no time-zone.
+* `java.time.LocalDateTime` – date and time, no time-zone.
+* `java.time.ZonedDateTime` – date and time, with time-zone.
+* `java.time.DateTimeFormatter` – formatting (date -> text), parsing (text -> date) for java.time.
+* `java.time.Instant` – date and time for machine, seconds passed since the Unix epoch time (midnight of January 1, 1970 UTC)
+* `java.time.Duration` – Measures time in seconds and nanoseconds.
+* `java.time.Period` – Measures time in years, months and days.
+* `java.time.TemporalAdjuster` – Adjust date.
 
 ## Clock
 
