@@ -1,12 +1,10 @@
-# Java 8 BinaryOperator #
+# Java 8 BinaryOperator
 
-In Java 8, **BinaryOperator** is a functional interface and it extends **BiFunction**.
+**BinaryOperator** is a functional interface and it extends **BiFunction**.
 
 The **BinaryOperator** takes two arguments of the same type and returns a result of the same type of its arguments.
 
-```cs
-BinaryOperator.java
-
+```java
 @FunctionalInterface
 public interface BinaryOperator<T> extends BiFunction<T,T,T> {
 
@@ -15,23 +13,18 @@ public interface BinaryOperator<T> extends BiFunction<T,T,T> {
 
 The **BiFunction** takes two argument of any type, and returns a result of any type.
 
-```cs
-BiFunction,java
-
+```java
 @FunctionalInterface
 public interface BiFunction<T, U, R>{
     R apply(T t, U u);
 }
 ```
 
-
 ## 1. BinaryOperator
 
 In this example, the **BiFunction<Integer,Integer, Integer>** which accepts and return the same type, can be replaced with BinaryOperator `<Integer>`. 
 
-```cs
-BinaryOperator1.java
-
+```java
 package com.alejo.binaryOperator1;
 
 import java.util.function.BiFunction;
@@ -63,9 +56,7 @@ public class BinaryOperator1 {
 
 This example simulates a **stream.reduce()** to sum all the **Integer**.
 
-```cs
-BinaryOperator2.java
-
+```java
 package com.alejo.binaryOperator1;
 
 import java.util.Arrays;
@@ -104,10 +95,7 @@ public class BinaryOperator2 {
 
 If the math operations involve primitive types like **int**, change to **IntBinaryOperator** for better performance.
 
-
-```cs
-BinaryOperator3.java
-
+```java
 package com.alejo.binaryOperator1;
 
 import java.util.function.IntBinaryOperator;
@@ -125,9 +113,7 @@ public class BinaryOperator3 {
 
         int result2 = math((numbers), 0, Integer::sum);
 
-        System.out.println(result2); // 55
-
-        IntStream
+        System.out.println(result2); // 55 
     }
 
     public static int math(int[] list, int init, IntBinaryOperator accumulator) {
@@ -145,9 +131,7 @@ public class BinaryOperator3 {
 
 This example uses **BinaryOperator** and a custom **Comparator** to find the highest and lowest pay developer from a list of developers.
 
-```cs
-BinaryOperator4.java
-
+```java
 package com.alejo.binaryOperator1;
 
 import java.math.BigDecimal;
@@ -162,9 +146,9 @@ public class BinaryOperator4 {
 
         Developer dev1 = new Developer("jordan", BigDecimal.valueOf(9999));
         Developer dev2 = new Developer("jack", BigDecimal.valueOf(8888));
-        Developer dev3 = new Developer("jaden", BigDecimal.valueOf(10000));
+        Developer dev3 = new Developer("alejo", BigDecimal.valueOf(10000));
         Developer dev4 = new Developer("ali", BigDecimal.valueOf(2000));
-        Developer dev5 = new Developer("mkyong", BigDecimal.valueOf(1));
+        Developer dev5 = new Developer("juan", BigDecimal.valueOf(1));
 
         List<Developer> list = Arrays.asList(dev1, dev2, dev3, dev4, dev5);
 
@@ -176,17 +160,17 @@ public class BinaryOperator4 {
 
         Developer result = find(list, bo);
 
-        System.out.println(result);     // Developer{name='jaden', salary=10000}
+        System.out.println(result);     // Developer{name='alejo', salary=10000}
 
         // one line
 
         // find developer with highest pay
         Developer developer = find(list, BinaryOperator.maxBy(Comparator.comparing(Developer::getSalary)));
-        System.out.println(developer);  // Developer{name='jaden', salary=10000}
+        System.out.println(developer);  // Developer{name='alejo', salary=10000}
 
         // find developer with lowest pay
         Developer developer2 = find(list, BinaryOperator.minBy(Comparator.comparing(Developer::getSalary)));
-        System.out.println(developer2); // Developer{name='mkyong', salary=1}
+        System.out.println(developer2); // Developer{name='juan', salary=1}
 
     }
 
@@ -201,13 +185,10 @@ public class BinaryOperator4 {
         }
         return result;
     }
-
 }
 ```
 
-```cs
-Developer.java
-
+```java
 package com.alejo.binaryOperator1;
 
 import java.math.BigDecimal;
@@ -227,11 +208,9 @@ public class Developer {
 ```
 
 ```
-Output >>>>>>>>
+Output:
 
 Developer{name='jaden', salary=10000}
 Developer{name='jaden', salary=10000}
 Developer{name='mkyong', salary=1}
-
 ```
-
